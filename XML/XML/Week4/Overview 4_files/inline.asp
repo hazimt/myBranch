@@ -1,0 +1,2 @@
+
+window._angelConfig={activate:true,linkDefault:false,linkLabel:'HTML Editor',editorBase:'/inlineeditor/',sessionBasePath:'',sectionPath:'/AngelUploads/Content/LWTC_S12_3620/',angelPath:'/',pluginScripts:'/InlineEditor/extensions/scripts/',uploadPath:'/AngelUploads/',spellCheck:'/spellcheck.asp?SPCK_SHOW_RESULTS=0&SPCK_CUSTOM_DICTIONARY=Custom%2F925919de%2D8e30%2D4372%2D8e0b%2D6cafdce3f107%2Edic',fontSizes:'70%/xx-small;80%/x-small;90%/small;100%/medium;120%/large;150%/x-large;175%/xx-large',lang:'en'}

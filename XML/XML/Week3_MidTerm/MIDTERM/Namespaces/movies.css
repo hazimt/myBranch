@@ -1,0 +1,38 @@
+/*
+   Filename: movies.css
+
+   Author: Hazim Mohaisen
+   Date:   05/21/2012 
+
+   This file contains styles for used for movies.
+
+*/
+
+@namespace mov url(http://www.superstarmovies.com/movies);
+
+mov|movie    
+	{display:block; font-family: Arial, Helvetica, sans-serif}
+
+mov|name, mov|date, mov|length  
+	{display: inline}
+
+mov|name     
+	{font-weight: bold}
+
+mov|length   
+	{font-style: italic; padding-left: 0.5em}
+
+
+/* place namespace escape style below */
+
+mov\:movie    
+	{display:block; font-family: Arial, Helvetica, sans-serif}
+
+mov\:name, mov\:date, mov\:length  
+	{display: inline}
+
+mov\:name     
+	{font-weight: bold}
+
+mov\:length   
+	{font-style: italic; padding-left: 0.5em}

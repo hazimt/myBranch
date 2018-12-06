@@ -1,0 +1,280 @@
+Select regrade mode    
+
+Choose a regrade mode 
+ Change points or correct answer 
+ Drop question 
+ Give full credit 
+This regrade will affect all users who submitted this Assessment containing this question. 
+   
+Regrade not available    
+
+This content item's settings prohibit regrade on this item.   
+Time expired    
+
+Your time has expired. The assessment has been automatically submitted. 
+  
+Regrade not available    
+
+This is a linked Assessment or Question. Only the owner has edit rights.   
+   
+Maximum number of choices allowed is {0}.
+Submitted by MOHAISEN, HAZIM (885001082) on 6/21/2012 12:01:07 AM
+
+Points Awarded 104.00 
+Points Missed 6.00 
+Percentage 94.5% 
+
+
+
+   1. 
+It is customary to distinguish an XSLT style sheet document from other XML documents by using the file extension ____.
+A) .xcs
+B) .xsl
+C) .css
+D) .xst
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   2. 
+An XSLT style sheet is not in itself an XML document.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   3. 
+Under XPath, each component in a document is referred to as a(n)
+A) node
+B) space
+C) element
+D) tree
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   4. 
+With a relative path, the location of the node is indicated relative to a specific node in the tree called the ____ node.
+A) context
+B) integral
+C) absolute
+D) referential
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   5. 
+____ allows you to transform your XML data into a variety of formats.
+A) XSL
+B) Java
+C) XMLT
+D) HTML
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   6. 
+The root element of an XSLT style sheet is
+A) <node>.
+B) <stylesheet>.
+C) Either A or B
+D) <transform>.
+
+Points Earned:  0.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+   7. 
+Which of the following expressions would you use to process only the last node from a branch of the node tree?
+A) node_last
+B) node[last()]
+C) node[last]
+D) node(last)
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   8. 
+The node at the top of the branch is referred to as the ____ of all nodes that lie beneath it.
+A) ancestor
+B) child
+C) parent
+D) descendant
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   9. 
+To select all of the nodes in the node tree, you can use the path: ____.
+A) ++*
+B) //*
+C) &&%
+D) ##@
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   10. 
+XPath provides the syntax to refer to the various nodes in the node tree.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): True 
+
+
+
+
+   11. 
+Nodes that share a common parent are called ____ nodes.
+A) sibling
+B) brother
+C) sister
+D) family
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   12. 
+The root template can be located anywhere between the opening and closing <xsl:stylesheet> tags of the XSLT document.
+
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): True 
+
+
+
+
+   13. 
+The XPath syntax for attribute values is
+A) @attribute.
+B) #attribute.
+C) &attribute.
+D) *attribute.
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   14. 
+The XSLT namespace is associated with a namespace prefix of ____.
+A) xslt
+B) xs
+C) sl
+D) xsl
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): D 
+
+
+
+
+   15. 
+XPath allows you to refer to groups of nodes by using the wildcard character, ____.
+A) %
+B) *
+C) &
+D) $
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   16. 
+The default version number of XSLT is ____.
+A) 2.0
+B) 1.0
+C) 0.0
+D) 3.5
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   17. 
+If you use XSLT to create an HTML file, any HTML tags in the style sheet are considered ____ result elements because they are ignored by the XSLT processor and sent directly to the result document.
+A) referential
+B) literal
+C) contextual
+D) absolute
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   18. 
+A node that contains other nodes is called a ____ node.
+A) parent
+B) roster
+C) catalog
+D) container
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   19. 
+The transformation of a source document to a result document can be performed by a server, but not by a client.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   20. 
+The root template can be located anywhere between the opening and closing tags of the XSLT document.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): True 
+
+
+
+
+ 

@@ -1,0 +1,171 @@
+Incomplete Submission    
+
+You did not answer the following questions:
+
+
+
+Click Ok to answer these questions.   
+Upload files    
+
+Incomplete Submission    
+
+You did not answer the following questions:
+
+
+
+Click Ok to submit the assessment or Cancel to answer these questions.    
+Answers Saved    
+
+Your answers will be saved, but the assessment will not be submitted. 
+
+Click Ok to finish the assessment later or Cancel to continue taking the assessment.    
+Error    
+
+The following error occurred:
+
+
+  
+Time warning    
+
+You have  minute(s) remaining for this question set.   
+Error    
+
+The following error occurred while submitting your answers:
+
+
+Please correct the problem and try submitting again.   
+Time expired    
+
+Your time has expired. Submit the assessment now or you may be penalized. 
+Your time has expired. The assessment will be automatically submitted. 
+  
+Time warning    
+
+You have  minute(s) remaining.   
+Time expired    
+
+Your time for this question set has expired. Proceed to the next question set or submit the assessment now or you may be penalized. 
+Your time for this question set has expired. You will automatically move to the next question set. 
+Your time for the last question set has expired. The assessment will be automatically submitted. 
+  
+ 
+ 
+Maximum number of choices allowed is {0}.
+  
+  
+1. It is required that you use namespace prefixes for all of the elements in a compound XML document.
+A) True
+B) False
+2. You can declare a ____ namespace by omitting the prefix in the namespace declaration.
+A) main-level
+B) root
+C) base
+D) default
+3. Name collisions are always avoidable with good planning.
+A) True
+B) False
+4. Which of the following supports the definition of namespaces using the escape character?
+A) Internet Explorer
+B) Firefox
+C) All of the above
+D) Opera
+5. To apply an XML namespace, you give elements and attributes ____ names.
+A) documented
+B) qualified
+C) registered
+D) unique
+6. Nothing prevents you from using almost any unique identifier to declare a namespace.
+A) True
+B) False
+7. ____ serve as built-in mechanisms on the Web for generating unique addresses
+A) Host names
+B) URLs
+C) Client names
+D) Protocols
+8. One version of a ____ is a URL.
+A) URN
+B) URI
+C) URH
+D) URN
+9. The first step in applying a namespace to an XML document is to ____ the namespace.
+A) call
+B) invoke
+C) declare
+D) initiate
+10. A ____ is a mechanism that permits elements from one vocabulary to be distinguished from elements in another.
+A) MML
+B) schematic
+C) CML
+D) namespace
+11. Vocabularies like RSS and MathML cannot be combined within single documents.
+A) True
+B) False
+12. All URIs are URLs.
+A) True
+B) False
+13. A(n) ____ name is a name without a namespace reference.
+A) empty
+B) open
+C) null
+D) unqualified
+14. What is the maximum number of namespace attributes you can declare within an element?
+A) 3
+B) There is no limit.
+C) 2
+D) 1
+15. One of the benefits of XML ____ is the ability to use simple element names to describe data.
+A) sort orders
+B) indices
+C) vocabularies
+D) glossaries
+16. Given this declaration: <model xmlns:mod="http://jacksonelect.com/models”>the prefix is ____.
+
+A) xml
+B) mod
+C) model
+D) xmlns
+17. A URL does not have to actually point to a real site on the Web to be used to define a namespace.
+A) True
+B) False
+18. Common XHTML element names like title, name, first, last, or address are likely to be found in the thousands of XML vocabularies currently available.
+A) True
+B) False
+19. A namespace ____ identifies the namespace.
+A) registry
+B) model
+C) prefix
+D) keytag
+20. A string of characters that uniquely identifies a resource is called a(n) ____.
+A) URM
+B) URP
+C) URI
+D) URH
+21. An attribute name without a ____ is assumed to belong to the same namespace as the element that contains it.
+A) model
+B) link
+C) opening tag
+D) prefix
+22. All browsers support the use of the @namespace rule.
+A) True
+B) False
+23. Converting an HTML file to an XHTML file can be done by adding a(n) ____ declaration at the top of the file and setting the default namespace of the document to the XHTML vocabulary.
+A) Any of the above
+B) xsl
+C) xml
+D) xhtml
+24. The purpose of a ____ is to provide a unique string of characters identifying a resource.
+A) protocol
+B) hostname
+C) URI
+D) client name
+ 
+
+ 
+ 
+      
+ 
+Time
+Assessment: 00:24:20 
+Question Set:  
+ 
+Could not connect to server; your work may not be saved. 

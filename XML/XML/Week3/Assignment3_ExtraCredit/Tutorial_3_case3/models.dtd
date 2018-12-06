@@ -1,0 +1,26 @@
+<!--
+   New Perspectives on XML
+   Tutorial 3
+   Case Problem 3
+
+   Jackson Electronics Models DTD
+      Author: Hazim Mohaisen
+      Date:   05/15/2012
+
+   Filename:         models.dtd
+   Supporting Files: 
+-->
+
+<!ATTLIST ml:models xmlns:ml CDATA #FIXED "http://wwww.jacksonelect.com/models">
+
+<!ELEMENT ml:models (ml:model+)>
+<!ELEMENT ml:model (ml:title, ml:description, ml:ordered)>
+<!ELEMENT ml:title (#PCDATA)>
+<!ELEMENT ml:description (#PCDATA)>
+<!ELEMENT ml:ordered (#PCDATA)>
+
+<!ATTLIST ml:model mid ID #REQUIRED>
+
+<!-- Decalre the attribute part containing a list of ID references-->
+<!ATTLIST ml:model parts IDREFS #REQUIRED>
+<!ATTLIST ml:model type (scanner | color_laser | bw_laser | inkjet | camera) #REQUIRED>

@@ -1,0 +1,29 @@
+/*
+   New Perspectives on XML
+   Tutorial 2
+   Tutorial Case
+   Filename: parts.css
+
+   Author: Hazim Mohaisen
+   Date:   5/01/2012
+
+   This file contains styles used in the parts.xml file.
+
+*/
+
+
+/* Insert CSS namespace escape styles here */
+
+/* @namespace mod url(http://jacksonelect.com/models); */
+
+parts  
+       {font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+
+part   
+       {display: block; width: 500px; margin: 15px; padding: 5px;
+        border-top: 1px dashed black; border-left: 1px dashed red}
+
+title, description, instock
+       {display: list-item; list-style-type: circle; 
+        padding-left: 10px; margin-left: 15px}
+

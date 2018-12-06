@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+   MMDP 234 XML/XSL
+   Midterm Exam 
+   Part 2
+   
+   Author: 
+   Date:  
+
+ 
+-->
+
+
+<catalog>
+  <movies>
+    <movie movieID="m0100" genre="drama">
+      <title>Monster&apos;s Ball</title>
+      <year>2001</year>
+      <length>111 minutes</length>
+      <topBilledActors actorIDs="a0100 a0102" />
+    </movie>
+    
+    <movie movieID="m0101" genre="fantasy">
+      <title>X-Men</title>
+      <year>2000</year>
+      <length>104 minutes</length>
+      <topBilledActors actorIDs="a0100 a0103" />
+    </movie>
+    
+    <movie movieID="m0105" genre="action" earningsRank="17">
+      <title>Lord of the Rings: The Fellowship of the Ring</title>
+      <year>2001</year>
+      <length>178 minutes</length>
+      <topBilledActors actorIDs="a0103" />
+    </movies>
+    
+    <movie movieID="m0103" genre="comedy" earningsRank="14">
+      <title>Forrest Gump</title>
+      <year>1994</year>
+      <length>142 minutes</length>
+      <topBilledActors actorIDs="a0101 a0105 a0106" />
+    </movie>
+    
+    <movie movieID="m0102" genre="action" earningsRank="50">
+      <title>Saving Private Ryan</title>
+      <year>1998</year>
+      <length>170 minutes</length>
+      <topBilledActors actorIDs="a0101 a0104" />
+    </movie>
+    
+    <movie movieID="m0105" genre="comedy" earningsRank="14">
+      <name>Forrest Gump</name>
+      <date>1994</date>
+      <length>142 minutes</length>
+      <topBilledActors actorIDs="a0101 a0105 a0106" />
+    </movie>
+    
+    <movie movieID="m0104" genre="drama">
+      <name>Philadelphia</name>
+      <date>1993</date>
+      <length>125 minutes</length>
+      <topBilledActors actorIDs="a0101 a0107" />
+    </movie>
+
+    <movie movieID= m0106 genre= drama >
+      <title>Apollo 13</title>
+      <year>1995</year>
+      <length>140 minutes</length>
+      <topBilledActors actorIDs="a0101 a0106" />
+    </movie>
+
+  </movie>
+  
+  <actors>
+    
+    <actor actorID="a0100" oscarWinner="yes">
+      <name>Halle Berry</name>
+      <date>August 14, 1966</date>
+      <birthplace>Cleveland, Ohio</birthplace>
+      <role character="Leticia Musgrove" movie="m0100" />
+      <role character="Storm" movie="m0101" />
+    </actor>
+    
+    <actor actorID="a0102" oscarWinner="yes">
+      <name>Billy Bob Thornton</name>
+      <role character="Hank Grotowski" movie="m0100" />
+    </actor>
+    
+    <actor actorID="a0103" oscarWinner="no">
+      <name>Ian McKellen</name>
+      <role character="Magneto" movie="m0101" />
+      <role character="Gandolf" movie="m0105" />
+      <role character="Gandolf" movie="m0107" />
+    </actors>
+    
+    <actor actorID="a0101" oscarWinner="yes">
+      <name>Tom Hanks</name>
+      <date>July 9, 1956</date>
+      <birthplace>Concord, California</birthplace>
+      <role character="Captain John H. Miller" movie="m0102" />
+      <role character="Forrest Gump" movie="m0103" />
+      <role character="Andrew Beckett" movie="m0104" />
+    </actor>
+    
+    <actor actorID="a0102" oscarWinner="yes">
+      <name>Matt Damon</name>
+      <date>October 8, 1970</date>
+      <birthplace>Cambridge, Massachusetts</birthplace>
+      <role character="Private James Francis Ryan" movie="m0102" />
+    </actor>
+    
+    <actor actorID="a0105" oscarWinner="yes">
+      <name>Sally Field</name>
+      <birthplace>Pasadena, California</birthplace>
+      <role character="Mrs. Gump" movie="m0103" />
+    </actor>
+    
+    <actor actorID="a0106">
+      <name>Gary Sinise</name>
+      <role character="Lt. Dan Taylor" movie="m0103" />
+      <role character="Ken Mattingly" movie="m0106" />
+    </actor>
+    
+    <actor actorID="a0107" oscarWinner="yes">
+      <name>Denzel Washington</name>
+      <role character="Joe Miller" movie="m0104" />
+    </actor>
+    
+  </actors>
+
+</catalog>

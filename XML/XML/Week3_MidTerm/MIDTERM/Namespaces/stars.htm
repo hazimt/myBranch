@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- Convert this html doc to xhtml doc-->
+<!-- Insert the xml declaration -->
+
+<!--
+   MMDP 234 XML/XSL
+   Midterm Exam 
+   Part 1
+   
+   Superstar Movies
+   Stars of the Month: a page of movies by this month's highlighted actor and actress
+   Author: Hazim Mohaisen
+   Date:   05/21/2012
+
+
+   Filename:         superstar.htm
+   Supporting Files: actors.css, movies.css, superstar.css, logo.gif
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ag="http://www.superstarmovies.com/actors"
+      xmlns:mov="http://www.superstarmovies.com/movies">
+
+<head>
+<title>Superstar Movies: Stars of the Month</title>
+<link href="superstar.css" rel="stylesheet" type="text/css" />
+<link href="actors.css" rel="stylesheet" type="text/css" />
+<link href="movies.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="heading"><img src="logo.gif" alt="Superstar Movies" /></div>
+
+<div id="main">
+<h1>Stars of the Month</h1>
+<h3>Movies by Our Featured Stars!</h3>
+
+<!-- Insert actors.xml -->
+<ag:actors>
+  <ag:actor>
+    <ag:name>Halle Berry</ag:name>
+    <ag:date>August 14, 1966</ag:date>
+    <ag:birthplace>Cleveland, Ohio</ag:birthplace>
+    
+    <!-- Insert the first actor from the movies.xml file-->
+    <mov:movie genre="action" star="Halle Berry">
+      <mov:name>Catwoman</mov:name>
+      <mov:date>(2004)</mov:date>
+      <mov:length>104 minutes</mov:length>
+    </mov:movie>
+
+    <mov:movie genre="horror" star="Halle Berry">
+      <mov:name>Gothika</mov:name>
+      <mov:date>(2003)</mov:date>
+      <mov:length>98 minutes</mov:length>
+    </mov:movie>
+
+    <mov:movie genre="drama" star="Halle Berry">
+      <mov:name>Monster&apos;s Ball</mov:name>
+      <mov:date>(2001)</mov:date>
+      <mov:length>111 minutes</mov:length>
+    </mov:movie>
+
+    <mov:movie genre="fantasy" star="Halle Berry">
+      <mov:name>X-Men</mov:name>
+      <mov:date>(2000)</mov:date>
+      <mov:length>104 minutes</mov:length>
+    </mov:movie>
+
+    <mov:movie genre="romance" star="Halle Berry">
+      <mov:name>Jungle Fever</mov:name>
+      <mov:date>(1991)</mov:date>
+      <mov:length>132 minutes</mov:length>
+    </mov:movie>
+  </ag:actor>
+
+  <ag:actor>
+    <ag:name>Tom Hanks</ag:name>
+    <ag:date>July 9, 1956</ag:date>
+    <ag:birthplace>Concord, California</ag:birthplace>
+  </ag:actor>
+  
+  <!-- Insert the second actor from the movies.xml file-->
+    <mov:movie genre="drama" star="Tom Hanks">
+      <mov:name>Catch Me If You Can</mov:name>
+      <mov:date>(2002)</mov:date>
+      <mov:length>141 minutes</mov:length>
+    </mov:movie>
+
+    <mov:movie genre="adventure" star="Tom Hanks">
+      <mov:name>Cast Away</mov:name>
+      <mov:date>(2000)</mov:date>
+      <mov:length>143 minutes</mov:length>
+    </mov:movie>
+
+    <mov:movie genre="action" star="Tom Hanks">
+      <mov:name>Saving Private Ryan</mov:name>
+      <mov:date>(1998)</mov:date>
+      <mov:length>170 minutes</mov:length>
+    </mov:movie>
+
+    <mov:movie genre="adventure" star="Tom Hanks">
+      <mov:name>Apollo 13</mov:name>
+      <mov:date>(1995)</mov:date>
+      <mov:length>140 minutes</mov:length>
+    </mov:movie>
+
+    <mov:movie genre="comedy" star="Tom Hanks">
+      <mov:name>Forrest Gump</mov:name>
+      <mov:date>(1994)</mov:date>
+      <mov:length>142 minutes</mov:length>
+    </mov:movie>
+
+    <mov:movie genre="drama" star="Tom Hanks">
+      <mov:name>Philadelphia</mov:name>
+      <mov:date>(1993)</mov:date>
+      <mov:length>125 minutes</mov:length>
+    </mov:movie>
+
+    <mov:movie genre="comedy" star="Tom Hanks">
+      <mov:name>Big</mov:name>
+      <mov:date>(1988)</mov:date>
+      <mov:length>104 minutes</mov:length>
+    </mov:movie>
+
+</ag:actors>
+
+</div>
+
+<address>
+Superstar Movies &#183; 123 Moviestar Lane &#183; Hollywood, FL 12345
+</address>
+
+</body>
+
+</html>

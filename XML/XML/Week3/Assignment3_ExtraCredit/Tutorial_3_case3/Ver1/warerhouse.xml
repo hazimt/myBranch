@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!--
+   New Perspectives on XML
+   Tutorial 3
+   Case Problem 3
+
+   Jackson Electronics Warehouse Summary
+      Author: Hazim Mohaisen
+      Date:   05/15/2012
+      
+   Filename:         warehouse.xml
+   Supporting Files: models.dtd, parts.dtd, parts.xml, printers.xml
+-->
+
+
+<!-- Doctype declaration: An internal DTD subset declaration -->
+<!DOCTYPE warehouse_list 
+[
+  <!-- Internal DTD declaration -->
+  <!-- warehouse_list element containing two child elements -->
+  <!ELEMENT warehouse_list (ml:models, pa:parts)>
+  
+  <!-- Fixed attribute of the warehouse_list element named xmlns:ml and xmlns:pa -->
+  <!ATTLIST warehouse_list xmlns:ml CDATA #FIXED "http://wwww.jacksonelect.com/models">
+  <!ATTLIST warehouse_list xmlns:pa CDATA #FIXED "http://wwww.jacksonelect.com/parts" >
+  
+  <!-- Parameter entity with system location of the dtd file-->
+  <!ENTITY models_dtd SYSTEM "models.dtd">
+  <!ENTITY parts_dtd SYSTEM "parts.dtd">
+  
+  <!-- External Entity with system location pointing to models.xml -->
+  <!ENTITY models_list SYSTEM  "models.xml">
+  <!ENTITY parts_list SYSTEM "parts.xml">
+
+  <!-- External "parameter" entity declaration referencing the *.dtd parameters-->
+  <!-- modesls_dtd list DTD-->
+  <!ENTITY % models_dtd SYSTEM "models.dtd">
+  <!-- parts_dtd list DTD-->
+  <!ENTITY % parts_dtd SYSTEM "parts.dtd">
+
+  <!-- models list DTD-->
+  %models_dtd;
+  <!-- parts list DTD-->
+  %parts_dtd;
+
+]>
+
+
+<warehouse_list xmlns:ml="http://wwww.jacksonelect.com/models"
+                xmlns:pa="http://wwww.jacksonelect.com/parts">
+
+  <!-- Referencing a general entity - Reference to the models_list and parts_list entities -->
+  &models_list;
+  &parts_list;
+
+</warehouse_list>

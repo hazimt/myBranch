@@ -1,0 +1,58 @@
+How to Build Test Automation from Scratch? A Top-Down Approach
+
+Phase I - Pre-execution:
+A - What is your business model?
+
+B - Set your objectives
+
+C - Define channel with manual testing
+	1) Test Case Generation & Handshake:
+	2) Test Case Validation:
+	3) Test Results Validation:
+
+
+D - Get input from stakeholders
+
+
+
+E - Plan test automation integration into existing process
+
+
+F - Research your tool set
+
+
+
+Phase II - Implementation:
+
+A - Define the development process
+B - Design it
+	1) The Architecture Design
+		Model the architecture in mirror to application-under-test
+		
+		Create helper methods
+
+		Separate test data - And design it
+
+		Separate files for configurations and environments
+
+		
+D - Automate 
+	Develop independent tests
+
+	Everything is an object
+
+	Every scenario has a unique identifier
+
+	
+Phase III - Maintenance & Evolution
+	Application-under-test Code Coverage by test automation
+
+	Bugs discovered by automation vs. Manual QA
+
+	Manual execution time (per test case)
+
+	Automated test script development time
+
+	Automated test script maintenance time
+
+

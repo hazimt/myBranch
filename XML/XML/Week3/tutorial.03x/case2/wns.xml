@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!--
+   New Perspectives on XML
+   Tutorial 3
+   Case Problem 2
+
+   WNS news feed
+   Author: 
+   Date:   
+
+   Filename:         wns.xml
+   Supporting Files: articles.dtd, headlines.xml, images.dtd, news.dtd
+ 
+-->
+
+<!DOCTYPE news_feed
+[
+  <!ELEMENT news_feed (story+)>
+  
+  <!--entity again is a declarartion -->
+  <!-- parameter entities can be refered to only inside DTD-->
+  <!ENTITY % articles SYSTEM "aricles.dtd">
+  <!ENTITY % images SYSTEM "Images.dtd">
+  <!ENTITY % news SYSTEM "news.dtd">
+
+  %articles; <!-- linking file articles.dtd in here-->
+  %images;
+  %news;
+
+  <!-- reqular entity declartions can be refered to in the XML document itself.  see below inside news_feed tags -->  
+  <!ENTITY headlines SYSTEM "headlines.xml">
+  
+]>
+
+<news_feed>
+&headlines;
+</news_feed>

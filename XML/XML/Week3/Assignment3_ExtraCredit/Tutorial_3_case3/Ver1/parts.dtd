@@ -1,0 +1,27 @@
+<!--
+   New Perspectives on XML
+   Tutorial 3
+   Case Problem 3
+
+   Jackson Electronics Parts DTD
+      Author: Hazim Mohaisen
+      Date:   05/15/2012
+
+   Filename:         parts.dtd
+   Supporting Files: 
+-->
+
+<!-- Ln 14 Col 57 - Attribute "xmlns:pa" must be declared for element type "pa:parts".-->
+<!ATTLIST pa:parts xmlns:pa CDATA #FIXED "http://wwww.jacksonelect.com/parts">
+
+
+<!ELEMENT pa:parts (pa:part+)>
+<!ELEMENT pa:part (pa:title, pa:description, pa:in_stock)>
+<!ELEMENT pa:title (#PCDATA)>
+<!ELEMENT pa:description (#PCDATA)>
+<!ELEMENT pa:in_stock (#PCDATA)>
+
+<!ATTLIST pa:part pid ID #REQUIRED>
+
+<!-- Decalre the attribute model containing a list of ID references-->
+<!ATTLIST pa:part model IDREF #REQUIRED>

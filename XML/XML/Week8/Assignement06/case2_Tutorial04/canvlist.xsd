@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   New Perspectives on XML
+   Tutorial 4
+   Case Problem 2
+
+   Canvasser list schema
+   Author: Hazim Mohaisen
+   Date:   06/14/2012
+
+   Filename:         canvlist.xsd
+   Supporting Files: clist.xsd, lib.xsd
+ 
+-->
+
+<!--Step 13-->
+<!-- Root Schema element line 1-->
+<!-- Decalring the XML Schema namespace with xs line 1-->
+<!--Declare the library namespace using the lib prefix line 2-->
+<!--Declare the contributors namespace using the clist prefix line 3-->
+<!--Set the default nsamespace (line 4) and the schema target (line 5) to canvassers -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:lib="http://epacmo.org/library"
+           xmlns:clist="http://epacmo.org/contributors"
+           xmlns="http://epacmo.org/canvassers"
+           targetNamespace="http://epacmo.org/canvassers">
+
+  <!--Step 14-->
+  <!-- Import 2 schema's-->
+  <!--Import the library Schemas using the appropriate namespace and schema lcoation (you will need to import elements??) -->
+  <!--namespace + schemalocation-->
+  <xs:import namespace="http://epacmo.org/library"
+             schemaLocation="lib.xsd"/>
+
+  <!--Import the contributors shcmas using the appropriate namespace URIs and schema location-->
+  <!--to add lib:contributors add this-->
+  <!--namespace + schemalocation-->
+  <xs:import namespace="http://epacmo.org/contributors"
+             schemaLocation="clist.xsd"/>
+
+  <!--Step 14, step 15-->
+  <!--Step 15 Using Russian Doll design-->
+  <!--Import elements-->
+  <xs:element name="canvassers">
+    <xs:complexType>
+      <xs:sequence>
+
+        <!--Step 15 decalre children-->
+        <!--Declare contributions child elements-->
+        <!-- ********************************** -->
+        <xs:element name="canvasser" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <!--Step 16 types-->
+              <xs:element name="name" type="lib:nameType"/>
+              <xs:element name="address" type="lib:addressType"/>
+              <xs:element name="phone" type="lib:phoneType" minOccurs="0" maxOccurs="unbounded"/>
+              <xs:element name="collected" type="xs:positiveInteger"/>
+              <!-- Reference Element: Reference the elements-->
+              <!--????? -->
+              <xs:element ref="clist:contributions"/>
+            </xs:sequence>
+            <!--Declare contributor attributes-->
+            <!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+            <xs:attribute name="id" type="xs:ID" use="required"/>
+            <xs:attribute name="list" type="xs:IDREFS"/>
+            <!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+          </xs:complexType>
+        </xs:element>
+        <!-- ********************************** -->
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

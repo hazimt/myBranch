@@ -1,0 +1,25 @@
+/*
+
+   Filename: actors.css
+
+   Author: 
+   Date:   
+
+   This file contains styles for used for actors.
+
+*/
+
+
+actor    {display: block; font-family: Arial, Helvetica, sans-serif;
+              margin-bottom: 20pt}
+
+name, date  {display: block}
+
+name     {font-size: 14pt; color: DarkRed; font-style: bold}
+
+date, birthplace   {display: inline; font-style: italic; color: DarkRed}
+
+birthplace         {padding-left: 0.5em}
+
+
+/* place namespace escape style below */

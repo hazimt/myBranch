@@ -1,0 +1,78 @@
+<!-- File Name: ShowNodes.htm -->
+
+<HTML>
+
+<HEAD>
+
+   <TITLE>Show DOM Nodes</TITLE>
+
+   <SCRIPT LANGUAGE="JavaScript" FOR="window" EVENT="ONLOAD">
+      /* get Document node: */
+      Document = dsoXML.XMLDocument;
+
+      /* start by passing the Document node to DisplayNodes: */
+      DisplayDIV.innerText = DisplayNodes(Document, 0); 
+
+      function DisplayNodes (Node, IndentLevel)
+         {
+         /* declare local variables for recursion: */
+         var i;
+         var DisplayString = "";
+
+         /* build up the indentation for this level: */
+         Indent = "";
+         IndentDelta = "      ";
+         for (i=0; i < IndentLevel; ++i)
+            Indent += IndentDelta;    
+ 
+         /* display the current node's properties: */
+         DisplayString += Indent + "nodeName: "       
+                        + Node.nodeName + "\n"
+                        + Indent + "nodeTypeType: "   
+                        + Node.nodeType + "\n"
+                        + Indent + "nodeTypeString: " 
+                        + Node.nodeTypeString + "\n"
+                        + Indent + "nodeValue: "      
+                        + Node.nodeValue + "\n\n";
+
+         /* display each of the node's attribute child nodes: */
+         Indent += IndentDelta;
+         for (i=0; 
+              Node.attributes != null 
+              && i < Node.attributes.length; 
+              ++i)
+            DisplayString += Indent + "nodeName: "       
+                           + Node.attributes(i).nodeName + "\n"
+                           + Indent + "nodeTypeType:   " 
+                           + Node.attributes(i).nodeType + "\n"
+                           + Indent + "nodeTypeString: " 
+                           + Node.attributes(i).nodeTypeString 
+                           + "\n"
+                           + Indent + "nodeValue: "      
+                           + Node.attributes(i).nodeValue 
+                           + "\n\n";
+
+         /* display each of the node's nonattribute child 
+            nodes: */
+         for (i=0; i < Node.childNodes.length; ++i)
+            DisplayString += 
+              DisplayNodes (Node.childNodes(i), IndentLevel + 1);
+
+         /* return the string containing the results: */
+         return DisplayString;
+         }
+   </SCRIPT>
+
+</HEAD>
+
+<BODY>
+
+   <XML ID="dsoXML" SRC="Inventory Dom.xml"></XML>
+
+   <H2>XML Document Object Model (DOM) Nodes</H2>
+   
+   <DIV ID="DisplayDIV"></DIV>
+
+</BODY>
+
+</HTML>

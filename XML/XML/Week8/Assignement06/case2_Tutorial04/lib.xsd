@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   New Perspectives on XML
+   Tutorial 4
+   Case Problem 2
+
+   Library of data types and complex types
+   Author: Hazim Mohaisen
+   Date:   06/14/2012
+ 
+
+   Filename:         lib.xsd
+   Supporting Files: 
+ 
+-->
+
+<!--Step 2-->
+<!-- To asscociate a schema with a namesapce-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://epacmo.org/library"
+           targetNamespace="http://epacmo.org/library">
+
+  <!--Create Data types-->
+  <!--Step 3-->
+  <!-- Decalre the stateType custom type-->
+  <xs:simpleType name="stateType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!--Step 3-->
+  <!-- Decalre the stateType custom type-->
+  <xs:simpleType name="zipType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]\d{4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!--Step 3-->
+  <!-- Decalre the stateType custom type-->
+  <xs:simpleType name="phoneType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]\d{2}-\d{4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!--Step 4-->
+  <!-- Declare Complex types -->
+  <!-- Create a complex type named studyType has a refernce to the studyElements element group-->
+  <xs:complexType name="nameType">
+    <xs:sequence>
+      <xs:element name="firstName"  type="xs:string"/>
+      <xs:element name="lastName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!--Step 5-->
+  <xs:complexType name="addressType">
+    <xs:sequence>
+      <xs:element name="street" type="xs:string"/>
+      <xs:element name="city" type="xs:string"/>
+      <xs:element name="state" type="stateType"/>
+      <xs:element name="zip" type="zipType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

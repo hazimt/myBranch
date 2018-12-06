@@ -1,0 +1,26 @@
+/*
+   Filename: movies.css
+
+   Author: Hazim Mohaisen
+   Date:   05/21/2012 
+
+   This file contains styles for used for movies.
+
+*/
+
+
+movie    
+	{display:block; font-family: Arial, Helvetica, sans-serif}
+
+name, date, length  
+	{display: inline}
+
+name     
+	{font-weight: bold}
+
+length   
+	{font-style: italic; padding-left: 0.5em}
+
+
+/* place namespace escape style below */
+

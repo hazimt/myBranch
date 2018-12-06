@@ -1,0 +1,52 @@
+/*
+   New Perspectives on XML
+   Tutorial 2
+   Review Assignment
+   Filename: printer.css
+
+   Author: Hazim Mohaisen
+   Date:   05/09/2010
+
+   This file contains styles used with information on JE printers
+
+*/
+
+@namespace prnt url("http://jacksonelect.com/printers");
+
+prnt|name 
+           {display: block; width: 650px; margin: 15px;
+            font-family: Arial, Helvetica, sans-serif; 
+            font-size: 14pt; font-weight: bold}
+
+prnt|description
+           {display: block; width: 650px; text-align: justify; margin: 15px}
+
+prnt|price 
+           {display: block; font-style: italic; margin: 15px}
+
+prnt|specs 
+           {display: block; margin: 5px}
+
+prnt|item  
+           {display: list-item; list-style-type: square; margin-left: 25px}
+
+
+/* Place namespace escape styles below */
+
+prnt\:name 
+           {display: block; width: 650px; margin: 15px;
+            font-family: Arial, Helvetica, sans-serif; 
+            font-size: 14pt; font-weight: bold}
+
+prnt\:description
+           {display: block; width: 650px; text-align: justify; margin: 15px}
+
+prnt\:price 
+           {display: block; font-style: italic; margin: 15px}
+
+prnt\:specs 
+           {display: block; margin: 5px}
+
+prnt\:item  
+           {display: list-item; list-style-type: square; margin-left: 25px}
+

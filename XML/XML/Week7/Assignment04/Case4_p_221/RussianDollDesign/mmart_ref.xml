@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   New Perspectives on XML
+   Tutorial 4
+   Case Problem 4
+
+   
+   Author: Hazim Mohaisen
+   Date:   05/30/2012
+
+-->
+<md:Media xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:md="http://mediamart.com/products/ns"
+          xsi:schemaLocation="http://mediamart.com/products/ns mmart.xsd">
+  
+
+  <bk:books xmlns:bk="http://mediamart.com/books/ns"
+            xsi:schemaLocation="http://mediamart.com/books/ns books.xsd">
+
+    <book genre = "Nonfiction" format = "Hardcover" price = "$14.95">
+      <title>When Character was King</title>
+      <author>Peggy Noonan</author>
+    </book>
+    <book genre = "Nonfiction" format = "Hardcover" price = "$22.50">
+        <title>Democracy in America</title>
+        <author>Alexis de Tocqueville</author>
+     </book>
+     <book genre = "Fiction" format = "Paperback" price = "$4.95">
+        <title>Tom Sawyer</title>
+        <author>Samuel Clemens</author>
+     </book>
+     <book genre = "Fiction" format = "Paperback" price = "$7.95">
+        <title>The Bear and the Dragon</title>
+        <author>Tom Clancy</author>
+     </book>
+     <book genre = "Nonfiction" format = "Hardcover" price = "$19.95">
+        <title>The Coming Age</title>
+        <author>Stewart Oates</author>
+     </book>
+     <book genre = "Nonfiction" format = "Paperback" price = "$4.95">
+        <title>Mars and Beyond</title>
+        <author>Linda Rao</author>
+     </book>
+     <book genre = "Fiction" format = "Hardcover" price = "$39.95">
+        <title>The Complete Works</title>
+        <author>William Shakespeare</author>
+     </book>
+     <book genre = "Nonfiction" format = "Paperback" price = "$29.95">
+        <title>Lectures on Physics</title>
+        <author>Richard Fenyman</author>
+     </book>
+     <book genre = "Fiction" format = "Hardcover" price = "$12.95">
+        <title>David Copperfield</title>
+        <author>Charles Dickens</author>
+     </book>
+     <book genre = "Fiction" format = "Paperback" price = "$4.95">
+        <title>Friday</title>
+        <author>Robert Heinlein</author>
+     </book>
+     <book genre = "Nonfiction" format = "Paperback" price = "$19.95">
+        <title>The Civil War Vol. I</title>
+        <author>Shelbe Foote</author>
+     </book>
+     <book genre = "Nonfiction" format = "Paperback" price = "$9.95">
+        <title>Scippio Africanus</title>
+        <author>Doug Whyte</author>
+     </book>
+  </bk:books>
+
+  <mv:movies  xmlns:mv="http://mediamart.com/movies/ns"
+              xsi:schemaLocation="http://mediamart.com/movies/ns movies.xsd">
+
+    <movie genre = "Comedy" year = "1974" format = "VHS" price = "$9.95" >
+      <title>The Sting</title>
+      <actor>Paul Newman</actor>
+      <actor>Robert Redford</actor>
+    </movie>
+    <movie genre = "Drama" year = "1939" format = "VHS" price = "$9.95" >
+      <title>Mr. Smith Goes to Washington</title>
+      <actor>James Stewart</actor>
+      <actor>Claude Raines</actor>
+      <actor>Jean Arthur</actor>
+    </movie>
+    <movie genre = "Fantasy" year = "2001" format = "DVD" price = "$19.95" >
+      <title>The Fellowship of the Ring</title>
+      <actor>Ian McKellen</actor>
+      <actor>Orlando Bloom</actor>
+      <actor>Elijah Wood</actor>
+    </movie>
+    <movie genre = "Fantasy" year = "2002" format = "DVD" price = "$19.95" >
+      <title>The Two Towers</title>
+      <actor>Ian McKellen</actor>
+      <actor>Orlando Bloom</actor>
+      <actor>Elijah Wood</actor>
+    </movie>
+    <movie genre = "Fantasy" year = "2003" format = "DVD" price = "$19.95" >
+      <title>The Return of the King</title>
+      <actor>Ian McKellen</actor>
+      <actor>Orlando Bloom</actor>
+      <actor>Elijah Wood</actor>
+    </movie>
+    <movie genre = "Drama" year = "1995" format = "DVD" price = "$8.95" >
+      <title>Crimson Tide</title>
+      <actor>Denzel Washington</actor>
+      <actor>Gene Hackman</actor>
+    </movie>
+    <movie genre = "Drama" year = "1992" format = "VHS" price = "$9.95" >
+      <title>Unforgiven</title>
+      <actor>Clint Eastwood</actor>
+      <actor>Gene Hackman</actor>
+      <actor>Morgan Freeman</actor>
+      <actor>Richard Harris</actor>
+    </movie>
+    <movie genre = "Children" year = "1989" format = "DVD" price = "$12.95" >
+      <title>The Little Mermaid</title>
+    </movie>
+    <movie genre = "Comedy" year = "1979" format = "VHS" price = "$7.95" >
+      <title>Manhattan</title>
+      <actor>Woody Allen</actor>
+      <actor>Diane Keaton</actor>
+      <actor>Mariel Hemingway</actor>
+    </movie>
+    <movie genre = "Drama" year = "1976" format = "VHS" price = "$8.95" >
+      <title>Rocky</title>
+      <actor>Sylvester Stallone</actor>
+      <actor>Talia Shire</actor>
+    </movie>
+    <movie genre = "Drama" year = "1972" format = "DVD" price = "$12.95" >
+      <title>The Godfather</title>
+      <actor>Marlon Brando</actor>
+      <actor>Al Pacino</actor>
+      <actor>Diane Keaton</actor>
+      <actor>Robert Duval</actor>
+      <actor>James Caan</actor>
+      <actor>Talia Shire</actor>
+    </movie>
+    <movie genre = "Comedy" year = "1971" format = "VHS" price = "$9.95" >
+      <title>Harold and Maude</title>
+      <actor>Bud Cort</actor>
+      <actor>Ruth Gordon</actor>
+    </movie>
+    <movie genre = "Drama" year = "1953" format = "VHS" price = "$9.95" >
+      <title>Stalag 17</title>
+      <actor>William Holden</actor>
+    </movie>
+  </mv:movies>
+
+  <mu:music xmlns:mu="http://mediamart.com/music/ns"
+            xsi:schemaLocation="http://mediamart.com/music/ns music.xsd">
+
+    <album genre = "Rock" format = "Cassette" price = "$12.95" >
+      <artist>The Beatles</artist>
+      <title>Abbey Road</title>
+    </album>
+
+    <album genre = "Rock" format = "CD" price = "$14.95">
+      <artist>The Beatles</artist>
+      <title>The White Album</title>
+    </album>
+
+    <album genre = "Jazz" format = "CD" price = "$11.50">
+      <artist>Mile Davis</artist>
+      <title>Cookin'</title>
+    </album>
+
+    <album genre = "Opera" format = "CD" price = "$29.95">
+      <artist>Richard Wagner</artist>
+      <title>Das Rheingold</title>
+    </album>
+
+    <album genre = "Rock" format = "Cassette" price = "$14.95">
+      <artist>Jethro Tull</artist>
+      <title>Stand Up</title>
+    </album>
+
+    <album genre = "Classical" format = "CD" price = "$17.48">
+      <artist>Richard Strauss</artist>
+      <title>Wind Concertos</title>
+    </album>
+
+    <album genre = "Classical" format = "CD" price = "$21.55">
+      <artist>Antonin Dvorak</artist>
+      <title>The 8th Symphony</title>
+    </album>
+
+    <album genre = "Rock" format = "Cassette" price = "$14.95">
+      <artist>The Police</artist>
+      <title>The Police</title>
+    </album>
+
+    <album genre = "Jazz" format = "CD" price = "$19.95">
+      <artist>Duke Ellington</artist>
+      <title>Live at Newport</title>
+    </album>
+
+    <album genre = "Classical" format = "CD" price = "$11.95">
+      <artist>Carl Orff</artist>
+      <title>Carmina Burana</title>
+    </album>
+
+    <album genre = "Opera" format = "CD" price = "$29.95">
+      <artist>Giuseppe Verdi</artist>
+      <title>Aida</title>
+    </album>
+
+
+  </mu:music>
+
+</md:Media>
+

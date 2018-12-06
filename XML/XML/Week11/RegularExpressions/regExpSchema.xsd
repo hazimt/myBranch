@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <!-- REFERENCE:
+      http://www.w3schools.com/jsref/jsref_obj_regexp.asp
+  -->
+  <!--This is really a phone number-->
+  <!-- ^ means start with and $ means the expression ends with-->
+  <!-- Problem 1: "^\(?\d{3}\)?-?\s*\d{3}\s*-?\d{4}$"-->
+
+  <!-- Problem 2: International phone number:
+      011 49 762 899 20
+   -->
+  <!--  Problem 3: UK postal code:
+        Start with a one- or two-character code of the UK postal district 
+        (B or RH), followed by one or two-digit sector number (HM1 or CM23)
+        Following the sector is a space, 
+        followed by a digit and two characters (4GJ)-->
+
+  <xs:simpleType name="UKpost">
+    <xs:restriction base="xs:string">
+      <!--a means the string should start with character a-->
+      <!--\d means starts with any digit-->
+      <!--[A-Z] means starts with letter between A to Z-->
+      <!--{1,2} means the letters are one or two.-->
+      <!--[A-Z]{2} means followed by two characters -->
+      <xs:pattern value ="[A-Z]{1,2}\d{1,2}\s\d[A-Z]{2}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="justA">
+    <xs:restriction base="xs:string">
+      <!--a means the string should start with character a-->
+      <!--\d means starts with any digit-->
+      <xs:pattern value ="a\d" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="justA1">
+    <xs:restriction base="xs:string">
+      <!--a means the string should start with character a-->
+      <!--\d means starts with any digit-->
+      <!--{4} means will have exactly 4 digits-->
+      <xs:pattern value ="a\d{4}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="digits">
+    <xs:restriction base="xs:string">
+      <!--a means the string should start with character a-->
+      <!--\d means starts with any digit-->
+      <!--{4} means will have between 1 to 4 digits-->
+      <xs:pattern value ="a\d{1,4}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="moreDigits">
+    <xs:restriction base="xs:string">
+      <!--a means the string should start with character a-->
+      <!--\d means starts with any digit-->
+      <!--[1-6] the range of the digits is between 1 and 6. i.e 1, 2, 3, 4, 5, 6 but nothing else-->
+      <!--{4} means will have between 1 to 4 digits-->
+      <xs:pattern value ="AAA[1-6]{1,4}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="phone">
+    <xs:restriction base="xs:string">
+      <!--a means the string should start with character a-->
+      <!--\d means starts with any digit-->
+      <!--[1-6] the range of the digits is between 1 and 6. i.e 1, 2, 3, 4, 5, 6 but nothing else-->
+      <!--{4} means will have between 1 to 4 digits-->
+      <!-- \(  the slash here is to escape the the (-->
+      <!-- ? means the character before it is a optional ( is optional -->
+      <!-- \s is space-->
+      <!-- * means 0 or more-->
+      <!--\s* means zero or more spaces i.e it's optional-->
+      <!--bind an expression with ^ and $: to concatinate several expressions together. e.g. you can put several expression next to each other separated by say | i.e or so if one fails the other one is used-->
+      <xs:pattern value ="^\(?\d{3}\)?-?\s*\d{3}\s*-?\s*\d{4}$" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="expression">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name ="test" type ="justA" />
+        <xs:element name ="justA1" type ="justA1" />
+        <xs:element name ="digits" type ="digits" />
+        <xs:element name ="moreDigits" type ="moreDigits" />
+        <xs:element name ="phone" type ="phone" />
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

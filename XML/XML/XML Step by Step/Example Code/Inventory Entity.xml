@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<!-- File Name: Inventory Entity.xml -->
+
+<!DOCTYPE INVENTORY
+   [
+   <!NOTATION TXT SYSTEM "plain text file">
+   <!ENTITY rev_huck SYSTEM "Review of Huckleberry Finn.txt" 
+      NDATA TXT> 
+   <!ENTITY rev_leaves SYSTEM "Review of Leaves of Grass.txt" 
+      NDATA TXT>
+   <!ENTITY rev_legend SYSTEM "Review of Sleepy Hollow.txt" 
+      NDATA TXT>
+
+   <!ELEMENT INVENTORY (BOOK)*>
+   <!ELEMENT BOOK (TITLE, AUTHOR, BINDING, PAGES, PRICE)> 
+   <!ATTLIST BOOK   Review ENTITY #IMPLIED>
+   <!ELEMENT TITLE (#PCDATA)>
+   <!ELEMENT AUTHOR (#PCDATA)>
+   <!ELEMENT BINDING (#PCDATA)>
+   <!ELEMENT PAGES (#PCDATA)>
+   <!ELEMENT PRICE (#PCDATA)>
+   ]
+>
+
+<INVENTORY>
+   <BOOK Review="rev_huck">
+      <TITLE>The Adventures of Huckleberry Finn</TITLE>
+      <AUTHOR>Mark Twain</AUTHOR>
+      <BINDING>mass market paperback</BINDING>
+      <PAGES>298</PAGES>
+      <PRICE>$5.49</PRICE>
+   </BOOK>
+   <BOOK Review="rev_leaves">
+      <TITLE>Leaves of Grass</TITLE>
+      <AUTHOR>Walt Whitman</AUTHOR>
+      <BINDING>hardcover</BINDING>
+      <PAGES>462</PAGES>
+      <PRICE>$7.75</PRICE>
+   </BOOK>
+   <BOOK Review="rev_legend">
+      <TITLE>The Legend of Sleepy Hollow</TITLE>
+      <AUTHOR>Washington Irving</AUTHOR>
+      <BINDING>mass market paperback</BINDING>
+      <PAGES>98</PAGES>
+      <PRICE>$2.95</PRICE>
+   </BOOK>
+</INVENTORY>

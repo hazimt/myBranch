@@ -1,0 +1,68 @@
+<!-- File Name: Inventory Find.htm -->
+
+<HTML>
+
+<HEAD>
+
+   <TITLE>Book Finder</TITLE>
+
+</HEAD>
+
+<BODY>
+
+   <XML ID="dsoInventory" SRC="Inventory Big.xml"></XML>
+   
+   <H2>Find a Book</H2>
+ 
+   Title text: <INPUT TYPE="TEXT" ID="SearchText">&nbsp
+   <BUTTON ONCLICK='FindBooks()'>Search</BUTTON>
+   <HR>
+   Results:<P>
+   <DIV ID=ResultDiv></DIV>
+
+   <SCRIPT LANGUAGE="JavaScript">
+      function FindBooks ()
+         {
+         SearchString = SearchText.value.toUpperCase();
+         if (SearchString == "")
+            {
+            ResultDiv.innerHTML = "&ltYou must enter text into "
+                                + "'Title text' box.&gt";
+            return;
+            }
+
+         dsoInventory.recordset.moveFirst();
+
+         ResultHTML = "";
+         while (!dsoInventory.recordset.EOF)
+            {
+            TitleString = dsoInventory.recordset("TITLE").value;
+
+            if (TitleString.toUpperCase().indexOf(SearchString) 
+               >=0)
+               ResultHTML += "<I>" 
+                           + dsoInventory.recordset("TITLE") 
+                           + "</I>, "
+                           + "<B>" 
+                           + dsoInventory.recordset("AUTHOR") 
+                           + "</B>, "
+                           + dsoInventory.recordset("BINDING") 
+                           + ", "
+                           + dsoInventory.recordset("PAGES") 
+                           + " pages, "
+                           + dsoInventory.recordset("PRICE") 
+                           + "<P>";   
+              
+            dsoInventory.recordset.moveNext();
+            }
+         
+         if (ResultHTML == "")
+            ResultDiv.innerHTML = "&ltno books found&gt";
+         else
+            ResultDiv.innerHTML = ResultHTML;
+         }
+   </SCRIPT>
+
+</BODY>
+
+</HTML>

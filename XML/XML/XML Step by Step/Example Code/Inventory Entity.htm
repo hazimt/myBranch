@@ -1,0 +1,46 @@
+<!-- File Name: Inventory Entity.htm -->
+
+<HTML>
+
+<HEAD>
+   
+   <TITLE>Get Entity Information</TITLE>
+
+   <SCRIPT LANGUAGE="JavaScript" FOR="window" EVENT="ONLOAD">
+     Document = dsoInventory.XMLDocument;
+     Attribute = 
+        Document.documentElement.childNodes(0).attributes(0);
+     if (Attribute.dataType == "entity")
+     {
+     DisplayText = "'" + Attribute.nodeName 
+        + "' attribute has ENTITY type" + "\n";
+     DisplayText += "attribute value = " 
+        + Attribute.nodeValue + "\n";
+     Entity = 
+     Document.doctype.entities.getNamedItem(Attribute.nodeValue);
+     DisplayText += "entity file = " 
+        + Entity.attributes.getNamedItem("SYSTEM").nodeValue 
+        + "\n";
+     NotationName = 
+        Entity.attributes.getNamedItem("NDATA").nodeValue;
+     DisplayText += "entity notation = " + NotationName + "\n";
+     Notation = 
+        Document.doctype.notations.getNamedItem(NotationName);
+     DisplayText += "notation URI or description = " 
+        + Notation.attributes.getNamedItem("SYSTEM").nodeValue 
+        + "\n";
+     alert (DisplayText);
+     location.href = 
+        Entity.attributes.getNamedItem("SYSTEM").nodeValue;
+     }
+   </SCRIPT>
+
+</HEAD>
+
+<BODY>
+
+   <XML ID="dsoInventory" SRC="Inventory Entity.xml"></XML>
+
+</BODY>
+
+</HTML>

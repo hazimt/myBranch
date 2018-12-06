@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<!-- File Name: Inventory04.xml -->
+
+<?xml-stylesheet type="text/css" href="Inventory02.css"?>
+
+<INVENTORY>
+   <BOOK Binding="mass market paperback">
+      <TITLE>The Adventures of Huckleberry Finn</TITLE>
+      <AUTHOR Born="1835">Mark Twain</AUTHOR>
+      <PAGES>298</PAGES>
+      <PRICE>$5.49</PRICE>
+   </BOOK>
+   <BOOK Binding="hardcover">
+      <TITLE>Leaves of Grass</TITLE>
+      <AUTHOR Born="1819">Walt Whitman</AUTHOR>
+      <PAGES>462</PAGES>
+      <PRICE>$7.75</PRICE>
+   </BOOK>
+   <BOOK Binding="trade paperback">
+      <TITLE>The Marble Faun</TITLE>
+      <AUTHOR Born="1804">Nathaniel Hawthorne</AUTHOR>
+      <PAGES>473</PAGES>
+      <PRICE>$10.95</PRICE>
+   </BOOK>
+   <BOOK Binding="hardcover">
+      <TITLE>Moby-Dick</TITLE>
+      <AUTHOR Born="1819">Herman Melville</AUTHOR>
+      <PAGES>724</PAGES>
+      <PRICE>$9.95</PRICE>
+   </BOOK>
+</INVENTORY>
+
+

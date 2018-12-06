@@ -1,0 +1,31 @@
+<!--
+   New Perspectives on XML
+   Tutorial 3
+   Case Problem 4
+
+   The Lighthouse Contribution List DTD
+   Author: Hazim Mohaisen
+   Date:   05/15/2012
+
+   Filename:         lhouse.dtd
+   Supporting Files: 
+-->
+
+
+<!ELEMENT List (Member+)>
+
+<!ELEMENT Member (Name, Address, Phone, Email?, Contribution, Contact, Notes?)>
+<!ATTLIST Member Level (Platinum | Gold | Premium) #REQUIRED>
+
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Address (#PCDATA)>
+<!ATTLIST Address City CDATA #REQUIRED>
+<!ATTLIST Address State CDATA #REQUIRED>
+<!ATTLIST Address Zipcode CDATA #REQUIRED>
+
+<!ELEMENT Phone (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT Contribution (#PCDATA)>
+<!ELEMENT Contact (#PCDATA)>
+<!ELEMENT Notes (#PCDATA)>
+

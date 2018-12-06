@@ -1,0 +1,45 @@
+D:\me\OneDrive\Company\Hesco\Phase2
+
+
+
+3. Copy the contents of a directory to another directory and create the destination directory if it does not exist
+Copy-Item C:\Logfiles -Destination C:\Drawings\Logs -Recurse
+
+The Container parameter is set to true by default. This preserves the directory structure.
+
+
+//creates a session to the remote computer named Server01 with the credential of Contoso\PattiFul and stores the results in the variable named $Session.
+$Session = New-PSSession -ComputerName "Server04" -Credential "Contoso\PattiFul"
+
+//The subfolders are copied with their file trees intact. Since this command uses the Recurse parameter, the operation creates the Folder003_Copy folder if it does not already exist
+Copy-Item "D:\Folder003\" -Destination "C:\Folder003_Copy\" -ToSession $Session -Recurse
+
+
+ 
+3. Copy the contents of a directory to another directory and create the destination directory if it does not exist
+Copy-Item C:\Logfiles -Destination C:\Drawings\Logs -Recurse
+
+D:\Source\Phase2
+
+=================================== Test ============================
+
+Copy-Item D:\Source\Phase2 -Destination D:\Dest -Recurse
+
+
+Copy-Item "C:\Logfiles" -Destination "C:\Drawings" -Recurse
+
+Copy-Item "D:\Source\Phase2" -Destination "D:\Dest\CreateOnFile" -Recurse
+
+
+$Session = New-PSSession -ComputerName "DELL01" -Credential "Mars"
+Copy-Item "D:\Source\Phase2" -Destination "D:\Dest\CreateOnFile" -ToSession $Session -Recurse
+
+=========================================================
+
+How to recover a failing hyper-V machine manually
+
+https://www.google.com/search?client=opera&hs=w9o&ei=dEwtW9CFIces0PEPvdO_SA&q=How+to+recover+a+failing+hyper-V+machine+manually&oq=How+to+recover+a+failing+hyper-V+machine+manually&gs_l=psy-ab.3..33i22i29i30k1.7428.23323.0.23502.51.48.0.3.3.0.200.4110.38j7j1.46.0....0...1c.1.64.psy-ab..2.49.4129...0j0i67k1j0i131k1j0i20i264k1j0i20i263k1j0i20i263i264k1j0i22i30k1j33i160k1.0.u4taF8u-3W0
+
+
+
+

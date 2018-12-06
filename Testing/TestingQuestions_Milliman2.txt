@@ -1,0 +1,562 @@
+1.Introduction : 
+Vending machine is a unit which provides food/drink in exchange of coins. 
+
+2.Goal : Test the functionality of vending machine 
+
+3.Team involved : 
+
+4.Bugs Information 
+
+5.Spec Links 
+
+6.Known Issues: 
+
+7.Test Scope : 
+
+
+https://khyatisehgal.wordpress.com/2017/02/16/functional-test-cases-of-shopping-cart/
+
+1. Test an Amazon shopping cart that has 5 items
+ 
+Write 10 test cases for each
+1. Funcational 
+b. UI 
+c.  Your own choice
+
+2. Write a test plan.  
+
+3. What would you be targeting in each item in the test plan!!???
+
+
+3. Chose one of 3 questions
+1. What would the developer role be in the test plan
+2. Exclusion of the test: What would you exclude from the test plan/matrix
+3. Security
+
+
+1) Functional test cases of shopping cart.
+SingleProductAddToCart
+1. Select any product.
+2. Select Add to Cart icon.
+
+
+1. Verify that the correct PDP page is shown with all the necessary
+links and information.
+2. Verify that product should be successfully added to cart and in the Cart icon, 1 should be displayed.
+
+
+
+MultipleProductsAddToCart
+1. Select any product.
+2. Select Add to Cart icon for the First Product.
+3. Select Add to Cart icon for the Second Product.
+
+
+
+1. Verify that the correct PDP page is shown with all the necessary
+links and information.
+2. Verify that product should be successfully added to cart.
+3. Verify that both the products should be shown in the cart and in the cart icon, 2 should be displayed.
+
+
+
+
+
+
+EditQuantityValidationCart
+1. Select any product.
+2. Select Add to Cart icon for the First Product.
+3. Select Add to Cart icon for the Second Product.
+4. Try editing the quantity of the item in cart with valid and invalid quantities(only spaces, negative values, 0, characters etc).
+1. Verify that the correct PDP page is shown with all the necessary
+links and information.
+2. Verify that product should be successfully added to cart.
+3. Verify that the items quantity should be successfully edited if user gives a integer value otherwise a warning message should be displayed to the user.
+
+
+
+
+
+
+
+
+EditQuantityCartBoundryVaue
+1. Select any product.
+2. Select Add to Cart icon for the Product.
+3. Try editing the quantity of the item in cart with a value greater then 5 and try checkout.
+1. Verify that the correct PDP page is shown with all the necessary
+links and information.
+2. Verify that product should be successfully added to cart.
+3. Verify that if the items quantitiy count is greater then 5 then chekout is not allowed and an appropriate error should be presented to the user for the same.
+
+
+
+
+
+
+
+Cart – Backend sync validation
+1. Select any product whose inventry count is less then 5 (to be validated at backend)
+2. Select Add to Cart icon for the Product.
+3. Try Editing the quantity of the product in cart with a 5 and try checkout.
+1. Verify that the correct PDP page is shown with all the necessary
+links and information.
+2. Verify that product should be successfully added to cart.
+3. Verify that if the items quantitiy count is greater then its actual inventry count then chekout should not allowed and an appropriate error should be presented to the user for the same.
+
+
+
+
+
+SingleProductRemoveFromCart
+1. Select any product.
+2. Select Add to Cart icon.
+3. Select the Cart icon.
+4. Select the Cross symbol to remove the product from the cart.
+1. Verify that the correct PDP page is shown with all the necessary
+links and information.
+2. Verify that product should be successfully added to cart and Cart Icon should show 1 item in it.
+3. Verify that the product added in cart should be displayed.
+4. Verify that the Product should be removed from the cart and Cart icon should  show 0 items.
+
+
+
+
+
+MultipleProductsRemoveFromCart
+1. Select any product.
+2. Select Add to Cart icon for the First Product.
+3. Select Add to Cart icon for the Second Product.
+4. Select the Cross symbol to remove the any of the product from the cart.
+1. Verify that the correct PDP page is shown with all the necessary
+links and information.
+2. Verify that product should be successfully added to cart and Cart Icon should show 1 item in it.
+3. Verify that both the products should be shown in the cart and Cart Icon should show 2 items in it.
+4. Verify that the Product should be removed from the cart and Cart icon should  show 1 items.
+
+
+
+
+MultipleProductsRemoveFromCart
+1. Select any product.
+2. Select Add to Cart icon for the First Product.
+3. Select Add to Cart icon for the Second and third Product.
+4. Select the Cross symbol to remove the any of the 2 products from the cart.
+1. Verify that the correct PDP page is shown with all the necessary
+links and information.
+2. Verify that product should be successfully added to cart and Cart Icon should show 1 item in it.
+3. Verify that all the 3 products should be shown in the cart and Cart Icon should show 3 items in it.
+4. Verify that the 2 Products should be removed from the cart and Cart icon should  show 1 items.
+
+
+
+
+
+BuyNow
+1. Select any product.
+2. Select Buy Now option.
+1. Verify that the correct PDP page is shown with all the necessary
+links and information.
+2. Verify that Product purchase page with all the available payment methods should be shown to the user.
+
+
+
+
+
+
+
+GuestCheckout
+1. Launch the test app. Do not sign in.
+2. Select any product to purchase.
+3. Sign In and Checkout.
+1. Verify that the test app should be successfully launched and Hello, Guest should be shown in the top of the app.
+2. Verify that the correct PDP page with all the payment methods should be shown to the user and it should ask for user Sign In.
+3. Verify that user should successful checkout the product.
+
+
+
+
+
+RegisteredCheckOut
+1. Launch the test app. Sign in.
+2. Select any product to purchase.
+3. Checkout.
+1. Verify that the test app should be successfully launched and Hello, Username should be shown in the top of the app.
+2. Verify that the correct PDP page with all the payment methods should be shown to the user.
+3. Verify that user should successful checkout the product.
+
+
+
+
+
+
+CheckOutMandatoryFieldValidaion.
+1. Try completing the check out process by leaving any mandatory field blank in shipping or billing address.
+1. Application should pop up a corresponding error message.
+
+
+
+
+
+ProductTitleMaxStringLength
+1. Observe the uniformity in Product title maximum string length for any particular product at various pages like PDP, wishlist, cart, Checkout e.t.c
+1. Verify that the product title should be  of uniform string at all the pages.
+
+
+
+
+
+
+DeliveryLocationWarning
+1. Try Checkout for product which is not deliverable in your area (cross verify it through Check delivery area options)
+1. Verify that application should give a warning message that “Change delivery area”.
+
+
+
+
+
+
+
+OrderConfirmationMsg OrderIdValidation
+1. Do checkout for any of the product.
+2. Check for the order Id (received from the order confirmation message) is generated in the OMS.
+1. Verify that the Order Confirmation message should be shown to the user.
+2. Verify that the order id shown in the Order confirmation message should be correct and OMS should have entry for that.
+
+
+
+
+
+
+
+
+OrderConfirmationMsg LinksValidation
+1. Do checkout for any of the product.
+2. Check for the different links (share, continue shopping) available in the order confirmation message.
+1. Verify that the Order Confirmation message should be shown to the user.
+2. Verify that the links should direct to the appropriate pages.
+
+
+
+
+
+ClickToCallValidation
+1. Observe the checkout page for any of the Product.
+2. Click on the ‘Click to call’ button.
+1. Verify that the checkout page should have product Code for each of the product with ‘Click To Call’ button.
+2. Verify that the Call should made to the test shopping call centre.
+
+
+
+
+
+GiftCoupon
+1. Select a product having Gift Coupon associated with it.
+2. Observe the validity of the Coupon while checkout process.
+1. Verify Gift Coupon availability along with its code should be tagged with the product in a user friendly manner.
+2. Verify that Gift Coupon amount should be successfully deducted during checkout.
+
+
+
+
+
+
+
+
+
+OneTimeDiscountCoupon
+1. Select a product and use the discount coupon while checkout by entering the valid discount coupon code in the field specified.
+1. Verify that Discount Coupon amount should be successfully deducted during checkout.
+
+
+
+
+
+
+OneTimeDiscountCouponDuplicacy
+1. Select a product and use a duplicate discount coupon (Which has been used earlier by same/other) while checkout by entering the valid discount coupon code in the field specified.
+1. Verify that app should pops up warning message stating “The coupon has been already used”
+
+
+
+
+
+
+
+OneTimeDiscountCouponInvalidCode
+1. Select a product and entering an Invalid discount coupon code / GiftCoupen in the field specified at the checkout page.
+1. Verify that app should pops up warning message stating “Invalid code”.
+
+
+
+
+
+DeliveryDurationEstimationOnCheck out
+1. While performing checkout for any of the product, Analyse the estimated delivery time on the checkout page.
+1. Verify that app should display the estimated delivery time of the purchased product to the user in user friendly format.
+
+
+
+
+ProductCheckoutBasedOnQuantity
+1. Select a particular product but in multiple quantity and observe the net payable amt at checkout.
+1. Verify the the net amt payable should be the correct amount that includes all replicas of the single product selected.
+
+
+
+PaymentOptions
+1. Open the PDP page for any of the Product.
+2. Select the Payment option link.
+1. Verify that the PDP page should be displayed correctly.
+2. Verify that all below options should be displayed :
+Internet Banking
+Credit Card (Visa/Master)
+Debit Card (Visa/MasterCard/Maestro)
+Paid by Gift certificate
+Airtel Money
+EMI option of the Credit Card
+Check/DD
+
+
+
+
+CODPages
+1. Open the PDP page for any of the Product.
+2. Select the COD option and check all the pages associated with COD.
+1. Verify that the PDP page should be displayed correctly.
+2. Verify that all the pages associated with COD should be displayed correctly.
+
+
+
+ValidateUnavailabilityOfCODforExpensive items-SingleProduct
+1. Launch the application
+2. Try checkout of an expensive product via COD method.
+1. Verify that app is successfully launched.
+2. Verify that COD option for checkout is not available for the expensive product.
+
+ValidateUnavailabilityOfCODforExpensive items-MultipleProduct
+1. Launch the application.
+2. Move multiple product having COD method available with them into the Cart.
+3. Move an expensive product having COD not availble for it.
+2. Try checkout you cart.
+1. Verify that app is successfully launched.
+2. Verify that products are added to the user’s cart.
+3. Verify that the product is added to the user’s cart.
+2. Verify that an appropriate error message should be dispalyed to either remove the product without COD option or chnage the payment mode.
+
+PaymentModeCheck
+1. Open the PDP page for any of the Product.
+2. Check all the below payment modes one by one :
+Internet Banking
+Credit Card (Visa/Master)
+Debit Card (Visa/MasterCard/Maestro)
+Paid by Gift certificate
+Airtel Money
+EMI option of the Credit Card
+Check/DD
+1. Verify that the PDP page should be displayed correctly.
+2. Verify that all the payment modes should be working fine
+
+Across Platform cart update
+
+Open app add a product to cart(Let say from mobile app)
+
+Login with the same credentials from different platform let say mobile website and make changes in cart – by adding/removing element from cart.
+
+Update shall see the change happening in the cart whenever screen will be refreshed.
+
+
+Corner Cases:
+1. Verify if the cart keeps track of its state across instances of browser by adding products to cart, closing the browser instance and opening it again.
+If the state is maintained by browser cookies, verify the same having cookies disabled. 
+
+
+
+2. Browser Compatibility: Most of the websites use CSS scripts. Verify all the test cases in all commonly used browser versions as there may be a chance of browser not supporting the script.
+
+
+3. Verify the maximum limit of items that can be added to cart. Try adding as much as possible if there is no limit. Verify if the paging is used if the items are more to render on a page.
+
+4. Out of stock scenario: Generally, if an item is out of stock the “Add to cart” option would not be available. Now think about this scenario:
+
+
+I have added an item to my cart but logged out before proceeding to check out.
+Logged-in again after some time and that item got out of stock. Will the cart still show the item? If no, will there be any notification to user that the item(s) that was added to cart is out of stock and will not be shown anymore. If yes, will it show that message at the time of check out?
+
+
+Another scenario is that if a user has added an item to cart and later the Item price has changed, will the cart reflect the changes?
+
+
+5. Duplicate Items: Verify the cart does not hold duplicate items if user has added same item in different instances.
+
+Load testing is also very important aspect of a shopping website in my opinion. I see popular websites keep coming with “Flash Sales” for a certain period of time. Lot of times I observed/heard the cases of website crashes if lot of users tried to add same item into their cart. We should definitely test making concurrent connections to the system and add the same item to the cart.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1) Functional test pass 
+What type of coins does the vending machine accept? 
+Verify what type power input does vending machine handle?(Voltage) 
+Verify what is the capacity of the vending machine 
+Verify what type of food does it contains? 
+
+2) Stress Testing:
+Verify that at what level vending machine stops accepting orders? 
+
+3) Load testing:
+verify what is the threshold of the machine
+
+4) Usability testing:
+verify who will use this machine i.e what is the age group 
+
+5) Security testing : 
+Verify what type of security concerns you want to capture? 
+
+6) Performance testing : 
+How many transacactions does this machine handles in a day? 
+
+7) Acceptance testing 
+how would user get money back if there is a problem in machine
+
+
+
+
+Functional testing
+Instability testing
+Usability testing
+Performance
+Stress
+Compatibility
+Capability testing
+Equivalence partioning /boundary value.
+
+
+
+
+Functional testing
+	check proper change 
+	check improper change
+	check proper itrem and improper item
+	no item is there .
+	more than available items stuffed in the tray
+	machine does not have change.?
+
+Instability testing
+check if vending machine can be inztalled properly with proper connection
+check if it is movable.
+
+Usability testing
+	check if vending machine has proper buttons
+	check if it has 0-9 numbers to select
+	check if it has coin return 
+	dispenser/provision for hands to fit in  to take the product
+	buttons are not too rough
+	check for the height of the operationabilty.
+
+Performance
+	how quickly it drops
+	test on differnt plugs and power 110 v 220 v 440v 
+	test on incremental loads of coins and keep selecting 
+	keep inserting coins continously for 1 hr then select
+
+
+Stress
+	shake the machine
+	switch on/switch off machine alternatingly and select it.
+	in severe cold/hot atmosphere does it work.
+	keep inserting coins continously for 1 hr then select
+	insert nothing and keep pressing
+
+Compatibility
+	different coins/dollars
+ 	takes a 1 dollr 5 dollar 100 dollar etc....
+ 	can vending machine work properly outside 
+
+
+Capability testing
+	what can vending machine do other than vending solid items ?
+	keep liquid and solid items 
+  	
+	can it be used just for vending coins?
+	(this is a useful feature for
+	 taking quarters!!)
+
+
+Equivalence partioning /boundary value.
+
+
+
+What is a bug?
+	 is an error, flaw, failure or fault in a computer program or system 	that causes it to produce an incorrect or unexpected result, or to 	behave in unintended ways.
+
+
+http://istqbexamcertification.com/what-is-the-difference-between-severity-and-priority/
+
+What is the Difference 
+severirty and priority?
+
+Severirty 
+Critical, Major, Moderate, Minor, Cosmetic
+
+Critical (Crash, Data Corruption, failed major functionality), 
+Major (like Critical but an alternative solution exist), 
+Moderate ( incorrect, incomplete or inconsistent results ), 
+Minor (no termination and does not damage the usability of the, working around the defects), 
+Cosmetic (Enhancement of the system, )
+	
+Priority?
+Low (irritant), Medium (defect should be resolved), High (defect must be resolved as soon as possible)
+
+
+Usually the severity is defined in terms of financial loss, 
+damage to environment, company’s reputation and loss of life. 
+
+Priority of a defect is related to how quickly a bug should be fixed and deployed to live servers.
+
+It is the extent to which the defect can affect the software. In other words it defines the impact that a given defect has on the system. For example: If an application or web page crashes when a remote link is clicked, in this case clicking the remote link by an user is rare but the impact of  application crashing is severe. So the severity is high but priority is low.
+
+
+
+
+
+what must appear in a bug report?
+
+
+
+what are the some of the things that must appear in a test plan?
+
+
+what is the BRD? FRS?
+
+Business requierment doucmet 
+ software requirement specification;
+
+Have you ever created 
+a test case 
+or where test cses given to you?
+and how many test cases did you execute
+
+what should be included in test case template?
+
+what is 
+ad-hoc testing?
+accessiblity testing?
+
+end-to-end testing?
+
+what interest you in most about website and application from user perspective for forturne 500 companes for a company using tablet or cell phone?
+
+

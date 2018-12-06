@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<!--
+   New Perspectives on XML
+   Tutorial 3
+   Case Problem 4
+
+   The Lighthouse Contribution List
+   Author: Hazim Mohaisen
+   Date:   05/15/2012 
+
+   Filename:         list.xml
+   Supporting Files: lhouse.dtd
+-->
+
+
+<!--  -->
+<!-- External DTD subset -->
+<!DOCTYPE List SYSTEM "lhouse.dtd">
+
+<List>
+  <Member Level="Platinum">        <!--Platinum | Gold | Premium-->
+    <Name>David Olson</Name>  <!-- Has to be ID unique -->
+    <Address City="Delphi" State="KY" Zipcode="89011">5133 Oak Street</Address>
+    <Phone>(532) 555-8981</Phone>
+    <Email>dolson@delisp.net</Email>  <!-- Optional -->
+    <Contribution>$25,000</Contribution>
+    <Contact>personal</Contact>     <!-- personal Phone Mail -->
+    <Notes>Founding member</Notes>  <!-- Optional -->
+  </Member>
+
+  <Member Level="Platinum">        <!--Platinum | Gold | Premium-->
+    <Name>Cindy Wu</Name>
+    <!-- Has to be ID unique -->
+    <Address City="Delphi" State="KY" Zipcode="89011">31 Alice Avenue</Address>
+    <Phone>(532) 555-7212</Phone>
+    <Email>cwu@ispnet.net</Email>
+    <!-- Optional -->
+    <Contribution>$25,000</Contribution>
+    <Contact>personal</Contact>
+    <!-- personal Phone Mail -->
+    <Notes>Founding member</Notes>
+    <!-- Optional -->
+  </Member>
+
+  <Member Level="Gold">      <!--Platinum | Gold | Premium-->
+    <Name>Lee Unwin</Name>                   <!-- Has to be ID unique -->
+    <Address City="Jasper" State="KY" Zipcode="89381">451 Unwin Ct.</Address>
+    <Phone>(534) 555-9082</Phone>
+    <Email>leeunwin@clarion.net</Email>           <!-- Optional -->
+    <Contribution>$18,000</Contribution>
+    <Contact>Personal</Contact>       <!-- personal Phone Mail -->
+    <Notes>Will add a second payment this summer</Notes>           <!-- Optional -->
+  </Member>
+
+  <Member Level="Gold">      <!--Platinum | Gold | Premium-->
+    <Name>Jane Whitney</Name>                   <!-- Has to be ID unique -->
+    <Address City="Jasper" State="KY" Zipcode="89381">87 Hilltop Drive</Address>
+    <Phone>(534) 555-7493</Phone>
+    <Contribution>$15,000</Contribution>
+    <Contact>Personal</Contact>       <!-- personal Phone Mail -->
+  </Member>
+
+  <Member Level="Gold">      <!--Platinum | Gold | Premium-->
+    <Name>Andrew Sanchez</Name>                   <!-- Has to be ID unique -->
+    <Address City="Delphi" State="KY" Zipcode="89011">891 Lindon Lane</Address>
+    <Phone>(532) 555-4313</Phone>
+    <Email>asanchez@yulit.com</Email>           <!-- Optional -->
+    <Contribution>$15,000</Contribution>
+    <Contact>Personal</Contact>       <!-- personal Phone Mail -->
+    <Notes>Founding member</Notes>           <!-- Optional -->
+  </Member>
+
+  <Member Level="Premium">      <!--Platinum | Gold | Premium-->
+    <Name>Gary Windt</Name>                   <!-- Has to be ID unique -->
+    <Address City="Delphi" State="KY" Zipcode="89011">55 Hawking Street</Address>
+    <Phone>(532) 555-9939</Phone>
+    <Email>windtg@brockton.com</Email>           <!-- Optional -->
+    <Contribution>$10,000</Contribution>
+    <Contact>Phone</Contact>       <!-- personal Phone Mail -->
+  </Member>
+  
+  <Member Level="Premium">      <!--Platinum | Gold | Premium-->
+    <Name>Cynthia Browne</Name>                   <!-- Has to be ID unique -->
+    <Address City="Wheaton" State="KY" Zipcode="89321">71 Circuit Ct.</Address>
+    <Phone>(532) 555-3813</Phone>
+    <Email>cynthia@brownes.com</Email>           <!-- Optional -->
+    <Contribution>$10,000</Contribution>
+    <Contact>Phone</Contact>       <!-- personal Phone Mail -->
+  </Member>
+
+  <Member Level="Premium">      <!--Platinum | Gold | Premium-->
+    <Name>Howard Li</Name>                   <!-- Has to be ID unique -->
+    <Address City="Youngston" State="KY" Zipcode="89318">4312 East Oak Avenue</Address>
+    <Phone>(532) 555-3921</Phone>
+    <Contribution>$10,000</Contribution>
+    <Contact>Mail</Contact>       <!-- personal Phone Mail -->
+  </Member>
+
+  <Member Level="Premium">      <!--Platinum | Gold | Premium-->
+    <Name>Uma Thu</Name>                   <!-- Has to be ID unique -->
+    <Address City="Delphi" State="KY" Zipcode="89011">25 Longton Lane</Address>
+    <Phone>(531) 555-8730</Phone>
+    <Contribution>$10,000</Contribution>
+    <Contact>Personal</Contact>       <!-- personal Phone Mail -->
+  </Member>
+
+    <Member Level="Premium">      <!--Platinum | Gold | Premium-->
+    <Name>Alan Wilkes</Name>                   <!-- Has to be ID unique -->
+    <Address City="Jasper" State="KY" Zipcode="89831">321 Ashburn</Address>
+    <Phone>(532) 555-1181</Phone>
+    <Email>wilkes_alan@wuilt.edu</Email>           <!-- Optional -->
+    <Contribution>$5,000</Contribution>
+    <Contact>Mail</Contact>       <!-- personal Phone Mail -->
+    <Notes>Please no personal visits</Notes>           <!-- Optional -->
+  </Member>
+
+  <Member Level="Premium">      <!--Platinum | Gold | Premium-->
+    <Name>Steve Bones</Name>                   <!-- Has to be ID unique -->
+    <Address City="Wheaton" State="KY" Zipcode="89211">900 Lawton Street</Address>
+    <Phone>(533) 555-5434</Phone>
+    <Contribution>$5,000</Contribution>
+    <Contact>Personal</Contact>       <!-- personal Phone Mail -->
+    <Notes></Notes>           <!-- Optional -->
+  </Member>
+
+  <Member Level="Premium">      <!--Platinum | Gold | Premium-->
+    <Name>Jeri White</Name>                   <!-- Has to be ID unique -->
+    <Address City="Delphi" State="KY" Zipcode="89211">Hawkes Lane</Address>
+    <Phone>(542) 555-8828</Phone>
+    <Email>jeri_white@kyu.edu</Email>           <!-- Optional -->
+    <Contribution>$3,000</Contribution>
+    <Contact>Phone</Contact>       <!-- personal Phone Mail -->
+  </Member>
+
+  <Member Level="Premium">      <!--Platinum | Gold | Premium-->
+    <Name>Tom Thomas</Name>                   <!-- Has to be ID unique -->
+    <Address City="Drake" State="KY" Zipcode="89411">Rigel Avenue</Address>
+    <Phone>(531) 555-8311</Phone> 
+    <Contribution>$1,000</Contribution>
+    <Contact>Phone</Contact>       <!-- personal Phone Mail -->
+  </Member>
+  
+</List>

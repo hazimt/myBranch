@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<expression xmlns:xsi ="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="regExpSchema.xsd">
+
+  <!--<xs:pattern value ="a\d" />-->
+  <!--This good-->
+  <test>a3</test>
+
+  <!--This bad--><!--
+  <test>A5</test>-->
+
+  <!--This bad--><!--
+  <test>b3</test>-->
+
+  <!--<xs:pattern value ="a\d" />-->
+  <justA1>a1234</justA1>
+
+  <digits>a1</digits>
+  <!--<digits>a12</digits>
+  <digits>a145</digits>
+  <digits>a1987945</digits>-->
+
+  <moreDigits>AAA136</moreDigits>
+  <!--<moreDigits>AAA1237</moreDigits>-->
+  <phone>(123) 123 4576</phone>
+  <!--<phone>(123 123 4576</phone>
+  <phone>123 123 4576</phone>-->
+
+  <phone></phone>
+  
+</expression>

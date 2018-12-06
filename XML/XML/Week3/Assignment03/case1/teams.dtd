@@ -1,0 +1,37 @@
+<!--
+   New Perspectives on XML
+   Tutorial 3
+   Case Problem 1
+
+   PBA team roster DTD
+   Author: Hazim Mohaisen
+   Date:   05/15/2012  
+
+   Filename:         teams.dtd
+   Supporting Files: 
+-->
+
+
+<!ELEMENT League (Team+)>
+<!ELEMENT Team (Team_Name, City, Logo?, Players)>
+<!-- ? Logo optional -->
+<!ELEMENT Team_Name (#PCDATA)>
+<!ELEMENT City (#PCDATA)>
+<!ELEMENT Logo EMPTY>
+<!ELEMENT Players (Player, Player, Player, Player, Player)>
+<!ELEMENT Player (#PCDATA)>
+
+<!ATTLIST League LName CDATA #REQUIRED>
+<!-- Single??-->
+<!ATTLIST Logo Source CDATA #REQUIRED>
+<!ATTLIST Player Position (Center  | Forward | Guard) #REQUIRED>
+<!ATTLIST Player PPG CDATA #IMPLIED>
+<!ATTLIST Player RPG CDATA #IMPLIED>
+<!ATTLIST Player Assists CDATA #IMPLIED>
+
+<!--pp. 128-130-->
+<!-- Declare unparsed notation to identify data type of the unparsed data-->
+<!NOTATION BMP SYSTEM "image\bmp">
+
+
+

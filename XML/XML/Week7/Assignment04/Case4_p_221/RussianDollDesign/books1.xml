@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   New Perspectives on XML
+   Tutorial 4
+   Case Problem 4
+
+   
+   Author: Hazim Mohaisen
+   Date:   05/30/2012
+
+-->
+<md:Media xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:md="http://mediamart.com/products/ns"
+          xsi:schemaLocation="http://mediamart.com/products/ns books1.xsd">
+  
+
+  <bk:books xmlns:bk="http://mediamart.com/books/ns"
+            xsi:schemaLocation="http://mediamart.com/books/ns books.xsd">
+
+    <book genre = "Nonfiction" format = "Hardcover" price = "$14.95">
+      <title>When Character was King</title>
+      <author>Peggy Noonan</author>
+    </book>
+    <book genre = "Nonfiction" format = "Hardcover" price = "$22.50">
+        <title>Democracy in America</title>
+        <author>Alexis de Tocqueville</author>
+     </book>
+     <book genre = "Fiction" format = "Paperback" price = "$4.95">
+        <title>Tom Sawyer</title>
+        <author>Samuel Clemens</author>
+     </book>
+     <book genre = "Fiction" format = "Paperback" price = "$7.95">
+        <title>The Bear and the Dragon</title>
+        <author>Tom Clancy</author>
+     </book>
+     <book genre = "Nonfiction" format = "Hardcover" price = "$19.95">
+        <title>The Coming Age</title>
+        <author>Stewart Oates</author>
+     </book>
+     <book genre = "Nonfiction" format = "Paperback" price = "$4.95">
+        <title>Mars and Beyond</title>
+        <author>Linda Rao</author>
+     </book>
+     <book genre = "Fiction" format = "Hardcover" price = "$39.95">
+        <title>The Complete Works</title>
+        <author>William Shakespeare</author>
+     </book>
+     <book genre = "Nonfiction" format = "Paperback" price = "$29.95">
+        <title>Lectures on Physics</title>
+        <author>Richard Fenyman</author>
+     </book>
+     <book genre = "Fiction" format = "Hardcover" price = "$12.95">
+        <title>David Copperfield</title>
+        <author>Charles Dickens</author>
+     </book>
+     <book genre = "Fiction" format = "Paperback" price = "$4.95">
+        <title>Friday</title>
+        <author>Robert Heinlein</author>
+     </book>
+     <book genre = "Nonfiction" format = "Paperback" price = "$19.95">
+        <title>The Civil War Vol. I</title>
+        <author>Shelbe Foote</author>
+     </book>
+     <book genre = "Nonfiction" format = "Paperback" price = "$9.95">
+        <title>Scippio Africanus</title>
+        <author>Doug Whyte</author>
+     </book>
+
+  </bk:books>
+</md:Media>
+

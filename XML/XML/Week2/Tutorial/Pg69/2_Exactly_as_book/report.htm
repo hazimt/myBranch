@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>        
+
+<!--This is the statement 1 in step 1 to convert this doc from html to XHTML-->
+
+<!--
+   New Perspectives on XML
+   Tutorial 2
+   Tutorial Case
+
+   Jackson Electronics Shipping Report
+   Author:   Hazim Mohaisen
+   Date:    5/8/2010
+
+   Filename:         report.xml
+   Supporting Files: model.css, parts.css, pr205.jpg, report.css
+-->
+
+<!-- This is the default naming space.  And it's statement 2 in step 2 that converts this doc from html to xhtml.-->
+<html  xmlns="http://www.w3.org/1999/xhtml"                     
+        xmlns:pa="http://jacksonelect.com/parts"                
+        xmlns:mod="http://jacksonelect.com/models">             <!-- This is the naming space for the parts section--><!-- this is the naming space for the mod section-->
+
+<head>
+   <title>Jackson Electronics Shipping Order</title>
+   <link rel="stylesheet" href="report.css" type="text/css" />          <!-- This links the default (report) cascading style sheet to this XHTML doc.-->
+   <link rel="Stylesheet" href="parts2.css" type="text/css" />          <!-- This links the parts2 CSS to this XHTML doc.-->
+   <link rel="Stylesheet" href="model2.css" type="text/css" />          <!-- This links the model2 CSS to this XHTML doc.-->
+</head>
+
+<body>    
+   <h1>JE Shipping Report</h1>
+   <h2>Model Order</h2>
+
+   <table border="1" cellpadding="5">
+   <tr>
+      <td rowspan="4"><img src="pr205.jpg" alt="" /></td>
+      <th>Title</th>
+      <td><mod:title>Laser4C (PR205)</mod:title>        <!-- The mod:title is the namespace specific to the model section that applies to the title tag.-->
+   </tr>
+   <tr>
+      <th>Description</th>
+      <td><mod:description>Entry level color laser printer</mod:description></td>
+   </tr>
+   <tr>
+      <th>Type</th>
+      <td><mod:type>color laser</mod:type></td>
+   </tr>
+   <tr>
+      <th>Items to be Built</th>
+      <td><mod:ordered>320</mod:ordered></td>
+   </tr>
+   </table>
+
+   <h2>Parts List</h2>          <!-- http://support.microsoft.com/kb/180153 span tag-->
+
+      <pa:parts>
+        <pa:part id="chx201">
+          <pa:title><span>Title</span>Chassis and Roller Kit</pa:title>
+          <pa:description><span>Description</span>PR205 chassis and rollers</pa:description>            <!-- Here we apply span within an element. To change it's look/format-->
+          <pa:instock><span>Parts in Stock</span>512</pa:instock>
+        </pa:part>
+
+        <pa:part id="fa100-5">
+          <pa:title><span>Title</span>Fuser Assembly</pa:title>
+          <pa:description><span>Description</span>Fuser assembly/JE series</pa:description>
+          <pa:instock><span>Part in Stock</span>1253</pa:instock>
+        </pa:part>
+
+        <pa:part id="eng005-2">
+          <pa:title><span>Title</span>Engine Kit</pa:title>
+          <pa:description><span>Description</span>Printer engine kit/JE series</pa:description>
+          <pa:instock><span>Parts in Stock</span>3895</pa:instock>
+        </pa:part>
+
+        <pa:part id="cbx-450V4">
+          <pa:title><span>Title</span>Controller board</pa:title>
+          <pa:description><span>Description</span>PR205 printer controller board</pa:description>
+          <pa:instock><span>Parts in Stock</span>483</pa:instock>
+        </pa:part>
+
+        <pa:part id="tn01-53">
+          <pa:title><span>Title</span>Toner Kit</pa:title>
+          <pa:description><span>Description</span>PR205 toner kit (b,m,c,y)</pa:description>
+          <pa:instock><span>Parts in Stock</span>812</pa:instock>
+        </pa:part>
+      </pa:parts>
+
+</body>
+</html>
+

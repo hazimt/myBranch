@@ -1,0 +1,26 @@
+<!--
+   New Perspectives on XML
+   Tutorial 3
+   Case Problem 2
+
+   Online news DTD
+   Author: 
+   Date:   
+
+   Filename:         news.dtd
+   Supporting Files: 
+-->
+<!ELEMENT story (headline, synopsis, article, image*)>
+<!ATTLIST story category (national| international| sports| entertainment| leisure |weather) #REQUIRED>
+<!ATTLIST story byline CDATA #IMPLIED>
+
+<!ELEMENT headline (#PCDATA)>
+<!ELEMENT synopsis (#PCDATA)>
+
+<!ELEMENT article EMPTY>
+<!ATTLIST article ref ENTITY #REQUIRED>
+
+<!ELEMENT image EMPTY>
+<!ATTLIST image src ENTITY #REQUIRED>
+
+

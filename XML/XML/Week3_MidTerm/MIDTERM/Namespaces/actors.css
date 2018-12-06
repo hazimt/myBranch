@@ -1,0 +1,38 @@
+/*
+
+   Filename: actors.css
+
+   Author: Hazim Mohaisen
+   Date:   05/21/2012
+
+   This file contains styles for used for actors.
+
+*/
+
+@namespace ag url(http://www.superstarmovies.com/actors);
+
+ag|actor    {display: block; font-family: Arial, Helvetica, sans-serif;
+              margin-bottom: 20pt}
+
+ag|name, ag|date  {display: block}
+
+ag|name     {font-size: 14pt; color: DarkRed; font-style: bold}
+
+ag|date, ag|birthplace   {display: inline; font-style: italic; color: DarkRed}
+
+ag|birthplace         {padding-left: 0.5em}
+
+
+/* place namespace escape style below */
+
+ag\:actor    {display: block; font-family: Arial, Helvetica, sans-serif;
+              margin-bottom: 20pt}
+
+ag\:name, ag\:date  {display: block}
+
+ag\:name     {font-size: 14pt; color: DarkRed; font-style: bold}
+
+ag\:date, ag\:birthplace   {display: inline; font-style: italic; color: DarkRed}
+
+ag\:birthplace         {padding-left: 0.5em}
+

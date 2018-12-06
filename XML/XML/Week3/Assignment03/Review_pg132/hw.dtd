@@ -1,0 +1,23 @@
+<!--
+   New Perspectives on XML
+   Tutorial 3
+   Review Assignment
+
+   Hardware list DTD
+   Author: Hazim Mohaisen
+   Date:   05/15/2012
+
+   Filename:         hw.dtd
+   Supporting Files: 
+-->
+
+<!ELEMENT hlist (hardware+)>
+<!ELEMENT hardware (model, manufacturer, mPrice)>
+<!ELEMENT model (#PCDATA)>
+<!ELEMENT manufacturer (#PCDATA)>
+<!ELEMENT mPrice (#PCDATA)>
+<!ATTLIST model MID ID #REQUIRED>
+<!ATTLIST model category (Camera | Scanner | Tablet) #REQUIRED>
+<!ATTLIST model sBundle IDREF #IMPLIED>
+
+

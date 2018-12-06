@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   New Perspectives on XML
+   Tutorial 4
+   Case Problem 2
+
+   Contribution list schema
+   Author: Adrian Balasa
+   Date:   06/12/2012
+
+   Filename:         clist.xsd
+   Supporting Files: lib.xsd
+ 
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:lib="http://epacmo.org/library"
+           xmlns="http://epacmo.org/contributors"
+           targetNamespace="http://epacmo.org/contributors">
+
+    <xs:import namespace="http://epacmo.org/library"
+               schemaLocation="lib.xsd"/>
+
+    <xs:element name="contributions">
+        <xs:complexType >
+            <xs:sequence>
+                <xs:element name="contributor"   minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="lib:nameType"/>
+                            <xs:element name="address" type="lib:addressType"/>
+                            <xs:element name="phone"   minOccurs="0" maxOccurs="unbounded" type="lib:phoneType"/>
+                            <xs:element name="donated" type="xs:positiveInteger"/>
+                        </xs:sequence>
+                        <xs:attribute name="id"  type="xs:ID"/>
+                        <xs:attribute name="canvasser"  type="xs:IDREF"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+  
+
+    
+    
+      
+                
+</xs:schema>

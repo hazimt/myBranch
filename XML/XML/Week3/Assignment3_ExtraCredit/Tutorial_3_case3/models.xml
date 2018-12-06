@@ -1,0 +1,28 @@
+<!--
+   New Perspectives on XML
+   Tutorial 3
+   Case Problem 3
+
+   Jackson Electronics Model Orders
+      Author: Hazim Mohaisen
+      Date:   05/15/2012 
+
+   Filename:         models.xml
+   Supporting Files: 
+-->
+
+<!-- Add the namespace prefix to all the elements -->
+<ml:models xmlns:ml="http://wwww.jacksonelect.com/models">
+   <ml:model mid="pr205" parts="chx201 fa100-5 eng005-2 cbx-450V4 tn01-53" type="color_laser">
+      <ml:title>Laser4C (PR205)</ml:title>
+      <ml:description>Entry level color laser printer</ml:description>
+      <ml:ordered>220</ml:ordered>
+   </ml:model>
+
+  <ml:model mid="pr105" parts="chx201 fa100-5 eng005-2 cbx-050V4 tn01-003" type="bw_laser">
+      <ml:title>Laser I (PR105)</ml:title>
+      <ml:description>Workgroup BW Laser Printer</ml:description>
+      <ml:ordered>116</ml:ordered>
+  </ml:model>
+
+</ml:models>

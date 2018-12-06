@@ -1,0 +1,349 @@
+Playing with words questions come on 
+
+19. 
+To indicate whether an attribute is required, you add the ____ attribute to the element declaration or reference.
+A) optional
+B) attach
+C) use
+D) require
+
+
+
+
+
+Select regrade mode    
+
+Choose a regrade mode 
+ Change points or correct answer 
+ Drop question 
+ Give full credit 
+This regrade will affect all users who submitted this Assessment containing this question. 
+   
+Regrade not available    
+
+This content item's settings prohibit regrade on this item.   
+Time expired    
+
+Your time has expired. The assessment has been automatically submitted. 
+  
+Regrade not available    
+
+This is a linked Assessment or Question. Only the owner has edit rights.   
+   
+Maximum number of choices allowed is {0}.
+Submitted by MOHAISEN, HAZIM (885001082) on 6/20/2012 8:56:10 PM
+
+Points Awarded 126.00 
+Points Missed 12.00 
+Percentage 91.3% 
+
+
+
+   1. 
+A(n) ____ design does not declare elements and attributes globally but instead creates named types and references those types within a single global element.
+A) Venetian blind
+B) flat catalog
+C) aggregated
+D) Russian doll
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   2. 
+An integer data type can be constrained to fall within a range of values.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): True 
+
+
+
+
+   3. 
+Any time the minOccurs attribute is set to ____ the declared item is optional.
+A) null
+B) 0
+C) -1
+D) 1
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   4. 
+An attribute is an example of a(n) ____ type
+A) integrated
+B) simple
+C) complex
+D) aggregated
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   5. 
+The ____ facet constrains the data type to be less than a maximum value.
+A) maxExclusive
+B) fractionDigits
+C) minInclusive
+D) totalDigits
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   6. 
+The ____ compositor allows any one of the child elements to appear in the instance document.
+A) all
+B) sequence
+C) choice
+D) target
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+   7. 
+A ____ expression is a text string that defines a character pattern.
+A) base
+B) regular
+C) stated
+D) defined
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   8. 
+XML Schema supports a collection of built-in data types but does not allow users to define their own.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   9. 
+The ____ facet constrains the data type to a specified list of values.
+A) enumeration
+B) pattern
+C) member
+D) length
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   10. 
+Declarations with ____ scope are available only to a given complex type.
+A) minor
+B) local
+C) limited
+D) global
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   11. 
+An attribute may be required for one element and optional for another.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): True 
+
+
+
+
+   12. 
+A file written in XML Schema typically ends with the ____ file extension.
+A) .xs
+B) .xsl
+C) .xst
+D) .xsd
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): D 
+
+
+
+
+   13. 
+Examples of a(n) ____ type of content are empty elements that contain attributes or elements that contain child elements.
+A) simple
+B) aggregated
+C) complex
+D) integrated
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+   14. 
+Examples of a(n) ____ type of content are the value of an attribute or the textual content of an element.
+A) integrated
+B) aggregated
+C) simple
+D) complex
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+   15. 
+In a(n) ____ design, all declarations are made globally.
+A) Russian doll
+B) flat catalog
+C) aggregated
+D) Venetian blind
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   16. 
+A primitive data type is also known as a ____ type.
+A) indexed
+B) base
+C) main
+D) key
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   17. 
+The idea of using XML to create a markup language that can validate other XML documents is the idea behind ____.
+A) namespaces
+B) All of the above
+C) DTDs
+D) schemas
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): D 
+
+
+
+
+   18. 
+If both the maxOccurs and minOccurs attributes are missing, their values are assumed to be ____.
+A) -1
+B) 1
+C) null
+D) 0
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   19. 
+To indicate whether an attribute is required, you add the ____ attribute to the element declaration or reference.
+A) optional
+B) attach
+C) use
+D) require
+
+Points Earned:  0.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+   20. 
+The ____ compositor defines a specific order for the child elements.
+A) target
+B) all
+C) choice
+D) sequence
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): D 
+
+
+
+
+   21. 
+The ____ data type allows an element to contain any text string.
+A) text
+B) alpha
+C) string
+D) pcdata
+
+Points Earned:  0.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+   22. 
+A(n) ____ design has only one global element with everything else nested inside of it.
+A) Russian doll
+B) flat catalog
+C) Venetian blind
+D) aggregated
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   23. 
+If an element contains attributes, you have to extend the simple content model to include attributes through the use of the <____> tag.
+
+A) integrated
+B) extension
+C) extensible
+D) additive
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   24. 
+Which of the following is NOT a primitive data type?
+A) float
+B) double
+C) decimal
+D) unary
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): D 
+
+
+
+
+ 

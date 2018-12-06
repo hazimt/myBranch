@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+   New Perspectives on XML
+   Tutorial 4
+   Tutorial Case
+
+   Grant information schema
+   Author:  Hazim Mohaisen
+   Date:    05/29/2012
+
+   Filename:         grant.xsd
+   Supporting Files: slist.xsd
+   
+   http://www.scribd.com/doc/82829782/104/Deriving-Data-Types-Using-Regular-Expressions
+-->
+
+<!-- To asscociate a schema with a namesapce-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://uhosp.edu/grant/ns"
+           targetNamespace="http://uhosp.edu/grant/ns">
+
+
+  <xs:element name="grant">
+
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="title" type="xs:string"/>
+        <xs:element name="agency" type="xs:string"/>
+        <xs:element name="department" type="xs:string"/>
+        <xs:element name="summary" type="xs:string"/>
+        <xs:element name="initiated" type="xs:date"/>
+        <xs:element name="expires" type="xs:date"/>
+        <xs:element name="coordinator" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="grantNum">
+        <!--Decalre the grantType custom type-->
+        <xs:simpleType>
+          <xs:restriction base="xs:ID">
+            <xs:pattern value="[A-Z]{6}-\d{4}-\d{2}"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+
+      <xs:attribute name="funding">
+        <!--Decalre the fundingType custom type-->
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="federal"/>
+            <xs:enumeration value="staet"/>
+            <xs:enumeration value="local"/>
+            <xs:enumeration value="private"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

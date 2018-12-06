@@ -1,0 +1,37 @@
+<!-- File Name: Inventory Image Table.htm -->
+
+<HTML>
+
+<HEAD>
+   <TITLE>Book Inventory</TITLE>
+</HEAD>
+
+<BODY>
+
+   <XML ID="dsoInventory" SRC="Inventory Image.xml"></XML>
+
+   <H2>Book Inventory</H2>
+   
+   <TABLE DATASRC="#dsoInventory" BORDER="1" CELLPADDING="5">
+      <THEAD>
+         <TH>Cover</TH>
+         <TH>Title</TH>
+         <TH>Author</TH>
+         <TH>Binding</TH>
+         <TH>Pages</TH>
+         <TH>Price</TH>
+      </THEAD>     
+      <TR ALIGN="center">
+         <TD><IMG DATAFLD="COVERIMAGE"></TD>
+         <TD><SPAN DATAFLD="TITLE" 
+            STYLE="font-style:italic"></SPAN></TD>
+         <TD><SPAN DATAFLD="AUTHOR"></SPAN></TD>
+         <TD><SPAN DATAFLD="BINDING"></SPAN></TD>
+         <TD><SPAN DATAFLD="PAGES"></SPAN></TD>
+         <TD><SPAN DATAFLD="PRICE"></SPAN></TD>
+      </TR>
+   </TABLE>
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,7 @@
+C:\Users\Mars\source\MyownCode\InterviewCSharp\bin\Debug\InterviewCSharp.exe.config
+C:\Users\Mars\source\MyownCode\InterviewCSharp\bin\Debug\InterviewCSharp.exe
+C:\Users\Mars\source\MyownCode\InterviewCSharp\bin\Debug\InterviewCSharp.pdb
+C:\Users\Mars\source\MyownCode\InterviewCSharp\obj\Debug\InterviewCSharp.csprojAssemblyReference.cache
+C:\Users\Mars\source\MyownCode\InterviewCSharp\obj\Debug\InterviewCSharp.csproj.CoreCompileInputs.cache
+C:\Users\Mars\source\MyownCode\InterviewCSharp\obj\Debug\InterviewCSharp.exe
+C:\Users\Mars\source\MyownCode\InterviewCSharp\obj\Debug\InterviewCSharp.pdb

@@ -1,0 +1,399 @@
+Select regrade mode    
+
+Choose a regrade mode 
+ Change points or correct answer 
+ Drop question 
+ Give full credit 
+This regrade will affect all users who submitted this Assessment containing this question. 
+   
+Regrade not available    
+
+This content item's settings prohibit regrade on this item.   
+Time expired    
+
+Your time has expired. The assessment has been automatically submitted. 
+  
+Regrade not available    
+
+This is a linked Assessment or Question. Only the owner has edit rights.   
+   
+Maximum number of choices allowed is {0}.
+Submitted by MOHAISEN, HAZIM (885001082) on 6/20/2012 11:38:30 AM
+
+Points Awarded 156.00 
+Points Missed 4.00 
+Percentage 97.5% 
+
+
+
+   1. 
+An XML document that satisfies the rules of a DTD or schema is said to be a(n) ____ document.
+A) roster
+B) free
+C) indexed
+D) valid
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): D 
+
+
+
+
+   2. 
+HTML can be inconsistently applied.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): True 
+
+
+
+
+   3. 
+XML element names are not case sensitive.
+A) True
+B) False
+
+Points Earned:  0.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   4. 
+The ____ symbol indicates that a child element occurs once or not at all.
+A) -
+B) +
+C) ?
+D) *
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+   5. 
+Every element in an XML document can contain at most one attribute.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   6. 
+____ is an XML vocabulary used for presenting and evaluating equations and operations.
+A) CML
+B) MML
+C) MathML
+D) XHTML
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+   7. 
+Elements that are side-by-side in a document’s hierarchy are ____ elements.
+A) extended
+B) extensible
+C) sibling
+D) familial
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+   8. 
+SGML is an easy language to learn and apply.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   9. 
+XML is a markup language that can be extended and modified to match the needs of the author and the data content.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): True 
+
+
+
+
+   10. 
+The XML ____ signals to the program reading the file that the document is written in XML.
+A) statement
+B) link
+C) index
+D) declaration
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): D 
+
+
+
+
+   11. 
+The ____ symbol indicates that a child element occurs any number of times.
+A) *
+B) +
+C) -
+D) ?
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   12. 
+The name in an element’s closing tag must match the name in the opening tag.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): True 
+
+
+
+
+   13. 
+An XML document consists of the ____, the document body, and the epilog.
+A) prolog
+B) index
+C) chapter
+D) grammar
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   14. 
+All of the elements in the body are children of a single element called the ____ element.
+A) key
+B) base
+C) root
+D) fundamental
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+   15. 
+XML documents should be ____ files.
+A) binary
+B) text
+C) tab-delimited
+D) comma-separated
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   16. 
+XML has its roots in ____.
+A) HTML
+B) Perl
+C) XHTML
+D) SGML
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): D 
+
+
+
+
+   17. 
+If an XML document does not include a root element, it is not considered well-formed and is rejected
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): True 
+
+
+
+
+   18. 
+As XML has grown in popularity, standard ____ have been developed across a wide range of disciplines.
+A) glossaries
+B) indices
+C) vocabularies
+D) legends
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+   19. 
+HTML was originally desired as a primary source for information storage and retrieval.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   20. 
+SGML has many of the properties of HTML, but without the expensive overhead.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   21. 
+The standards for XML are developed and maintained by ____.
+A) DARPA
+B) NASA
+C) the NSF
+D) the W3C
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): D 
+
+
+
+
+   22. 
+XML has to be compatible with the major Web protocols, including ____.
+A) Java
+B) HTTP
+C) ASP
+D) STP
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   23. 
+A ____ document contains no syntax errors and satisfies the general specifications for XML code.
+A) synthesized
+B) well-formed
+C) checked
+D) compound
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   24. 
+____ is an XML vocabulary used for exchanging financial data between financial institutions, for example.
+A) CML
+B) OFX
+C) MML
+D) MathML
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   25. 
+____ is the style-sheet standard developed for use with HTML on the Web
+A) XSL
+B) CSS
+C) MSXML
+D) XSM
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   26. 
+Empty element tags are not part of pcdata.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   27. 
+The default encoding scheme for an XML declaration is ____.
+A) DTD 2.0
+B) ISO-8859-1
+C) Latin-1
+D) UTF-8
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): D 
+
+
+
+
+   28. 
+An open element is also known as a(n) ____ element.
+A) empty
+B) void
+C) null
+D) key
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   29. 
+Controlling what code and content a document from a given vocabulary may have can be done by attaching a ____.
+A) valid document
+B) glossary
+C) DTD
+D) dictionary
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+   30. 
+XML must be effective for which of the following?
+A) All of the above
+B) voice mail
+C) word processing
+D) financial transactions
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+ 

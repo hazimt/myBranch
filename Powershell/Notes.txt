@@ -1,0 +1,4 @@
+get-help -name Get-Service -parameter *
+get-help -name Get-Service -detailed
+Get-Help Get-Service -Online			Examples 
+

@@ -1,0 +1,11 @@
+open cmd
+py
+py hello.py
+
+or 
+
+python C:\Users\Mars\source\MyownCode\Python\Coding\HelloWorld\hello.py
+
+or
+
+py C:\Users\Mars\source\MyownCode\Python\Coding\HelloWorld\hello.py

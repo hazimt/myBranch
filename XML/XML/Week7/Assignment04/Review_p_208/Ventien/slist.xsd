@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+   New Perspectives on XML
+   Tutorial 4
+   Review Assignment
+
+   Study list schema
+   Author:  Hazim Mohaisen
+   Date:    05/29/2012
+
+   Filename:         slist.xsd
+   Supporting Files: 
+ 
+-->
+
+<!-- To asscociate a schema with a namesapce-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://uhosp.edu/studies/ns"
+           targetNamespace="http://uhosp.edu/studies/ns">
+  
+  <!--Declare the sub-root complex type element-->
+  <xs:element name="studies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="study" type="studyType" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Definitions of simple types -->
+  <!-- Create a complex type named studyType has a refernce to the studyElements element group-->
+  <xs:complexType name="studyType">
+    <xs:group ref="studyElements"/>
+    <!--xs:attribute ref="studyID"/-->
+    <!--Declare the studyID attribute. Containing the studyIDType data-->
+    <!--Create a complex type named studyType Within this complex type, do thefollowing:a. Insert a reference to the studyElements element group.b. Insert the studyID attribute containing studyIDType data-->
+    <xs:attribute name="studyID" type="studyIDType"/>
+  </xs:complexType>
+
+  <!-- Decalre the studyIDType custom type-->
+  <xs:simpleType name="studyIDType">
+    <xs:restriction base="xs:ID">
+      <xs:pattern value="CCC-\d{3}-\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Decalre the genderType custom type-->
+  <xs:simpleType name="genderType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="female"/>
+      <xs:enumeration value="male"/>
+      <xs:enumeration value="all"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Decalre the phaseType custom type-->
+  <xs:simpleType name="phaseType">
+    <xs:restriction base="xs:integer">
+      <xs:maxInclusive value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:group name="studyElements">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string"/>
+      <xs:element name="summary" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="pi" type="xs:string"/>
+      <xs:element name="startDate" type="xs:date"/>
+      <xs:element name="stopDate" type="xs:date"/>
+      <xs:element name="enrollment" type="xs:nonNegativeInteger"/>
+      <xs:element name="gender" type="genderType"/>
+      <xs:element name="phase" type="phaseType"/>
+      <xs:element name="site" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:group>
+
+</xs:schema>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/css" href="model6.css"?>
+<?xml-stylesheet type="text/css" href="parts6.css"?>
+
+<!-- In this document we separate the elements on the namespaces and also
+put the styles on the namespaces. The DTD part is still not separated.
+Although it is displayed correctly, this document is not valid. -->
+
+<!DOCTYPE mod:model 
+[
+<!ELEMENT mod:model (mod:title, mod:description, mod:type, mod:ordered,
+parts)>
+  <!ATTLIST mod:model mod:id ID #REQUIRED>  
+  <!ATTLIST mod:model xmlns:mod CDATA #FIXED
+"http://mcs.uwsuper.edu/sb/model">
+<!ELEMENT mod:title (#PCDATA)>
+<!ELEMENT mod:description (#PCDATA)>
+<!ELEMENT mod:type (#PCDATA)>
+<!ELEMENT mod:ordered (#PCDATA)>
+
+<!ELEMENT parts (part+)>
+  <!ATTLIST parts xmlns CDATA #FIXED "http://mcs.uwsuper.edu/sb/250/parts">
+<!ELEMENT part (title, description, instock)>
+  <!ATTLIST part id ID #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT instock (#PCDATA)>  
+]>
+
+
+<!-- put the model document on the mod namespace -->
+<mod:model mod:id="pr205" xmlns:mod="http://mcs.uwsuper.edu/sb/model">
+  <mod:title>Laser4C (pr205)</mod:title>
+  <mod:description>Entry level color laser printer</mod:description>
+  <mod:type>color laser</mod:type>
+  <mod:ordered>320</mod:ordered>
+
+<!-- put the parts document on the default namespace -->
+<parts xmlns="http://mcs.uwsuper.edu/sb/250/parts">
+  <part id="chx201">
+    <title>Chassis and Roller kit</title>
+    <description>PR205 chassis and rollers</description>
+    <instock>512</instock>
+  </part>
+
+  <part id="fa100-5">
+    <title>Fuser Assembly</title>
+    <description>Fuser assembly/JE series</description>
+    <instock>1253</instock>
+  </part>
+
+  <part id="eng005-2">
+    <title>Engine Kit</title>
+    <description>Printer engine kit/JE series</description>
+    <instock>3895</instock>
+  </part>
+
+  <part id="cbx-450V4">
+    <title>controller board</title>
+    <description>PR205 printer controller board</description>
+    <instock>483</instock>
+  </part>
+
+  <part id="tn01-53">
+    <title>Toner Kit</title>
+    <description>PR205 toner kit (b,m,c,y)</description>
+    <instock>812</instock>
+  </part>
+</parts>
+
+</mod:model>

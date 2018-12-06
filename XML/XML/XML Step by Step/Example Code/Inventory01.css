@@ -1,0 +1,13 @@
+/* File Name: Inventory01.css */
+
+BOOK     
+   {display:block;
+    margin-top:12pt;
+    font-size:10pt}
+
+TITLE    
+   {font-style:italic}
+
+AUTHOR   
+   {font-weight:bold}
+

@@ -1,0 +1,21 @@
+<!--
+   New Perspectives on XML
+   Tutorial 3
+   Tutorial Case
+
+   List of Pixal Product Codes
+   Author: 
+   Date:   
+
+   Filename:         codes.dtd
+   Supporting Files: 
+-->
+
+<!ENTITY DCT5Z "Tapan Digital Camera 5 Mpx - zoon">
+<!ENTITY SM128 "SamrtMedia 128M card">
+<!ENTITY RCL "Rechargable Lithium Ion Battary">
+<!ENTITY BCE4L "Battary Charger 4pt Lithium">
+<!ENTITY RCA "WebNow Webcam 500">
+<!ENTITY RCA "Rechargeable Alcaline Battery">
+<!ENTITY SCL4C "Lithium Flatbed Scanner 4C">
+

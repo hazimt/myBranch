@@ -1,0 +1,32 @@
+<!-- File Name: Book.htm -->
+
+<HTML>
+
+<HEAD>
+   <TITLE>Book Description</TITLE>
+</HEAD>
+
+<BODY>
+
+   <XML ID="dsoBook" SRC="Book.xml"></XML>
+   
+   <H2>Book Description</H2>
+ 
+   <SPAN STYLE="font-style:italic">Title: </SPAN>
+   <SPAN STYLE="font-weight:bold" DATASRC="#dsoBook" 
+      DATAFLD="TITLE"></SPAN>      
+   <BR>
+   <SPAN STYLE="font-style:italic">Author: </SPAN>
+   <SPAN DATASRC="#dsoBook" DATAFLD="AUTHOR"></SPAN>      
+   <BR>
+   <SPAN STYLE="font-style:italic">Binding type: </SPAN>
+   <SPAN DATASRC="#dsoBook" DATAFLD="BINDING"></SPAN>      
+   <BR>
+   <SPAN STYLE="font-style:italic">Number of pages: </SPAN>
+   <SPAN DATASRC="#dsoBook" DATAFLD="PAGES"></SPAN>      
+   <BR>
+   <SPAN STYLE="font-style:italic">Price: </SPAN>
+   <SPAN DATASRC="#dsoBook" DATAFLD="PRICE"></SPAN>      
+
+</BODY>
+</HTML>

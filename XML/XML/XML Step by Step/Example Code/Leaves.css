@@ -1,0 +1,14 @@
+/* File Name: Leaves.css */
+
+POEM
+   {font-size:145%}
+
+POEM, TITLE, SUBTITLE, AUTHOR, SECTION, NUMBER, STANZA, VERSE
+   {display:block}
+
+SECTION, STANZA 
+   {margin-top:1em}
+
+STANZA
+   {background-image:url(Leaf.bmp)}
+

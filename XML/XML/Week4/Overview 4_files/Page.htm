@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0176)http://angel.lwtc.edu/Section/Content/Page.aspx?EntryId=740229676B2B42079E48976724F31464&caller=%2Fsection%2Fcontent%2Fdefault%2Easp&WCI=pgDisplay%5FObject&WCU=CRSCNT&Preview=0 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="ctl00_ctl00_Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	Overview 4
+</title>
+    <script language="javascript" type="text/javascript">
+    var Page = function() { };
+    </script>
+    
+    
+<script type="text/javascript" language="javascript" src="HelpPopup-min.js"></script>
+
+
+<!--<base href="http://angel.lwtc.edu/AngelUploads/Content/LWTC_S12_3620/_assoc/740229676B2B42079E48976724F31464/">--><base href=".">
+<link rel="stylesheet" type="text/css" href="Ivy.css"><link rel="stylesheet" type="text/css" href="Ivy.css"><script language="JavaScript">if(!run){ document.write('<SCRI' + 'PT LANGUAGE="JavaScript" src="/jscript/Localization-min.js"><\/SCRIPT>'); var run = true; }</script><script language="JavaScript" src="Localization-min.js"></script><script type="text/javascript" language="javascript" src="fckeditor.js"></script><script type="text/javascript" language="javascript" src="inline.asp"></script><script type="text/javascript" language="javascript">
+if (window.ActiveXObject && !window.XMLHttpRequest) {
+  window.XMLHttpRequest = function() {
+    var msxmls = new Array('Msxml2.XMLHTTP.5.0','Msxml2.XMLHTTP.4.0','Msxml2.XMLHTTP.3.0','Msxml2.XMLHTTP','Microsoft.XMLHTTP');
+    for (var i = 0; i < msxmls.length; i++) { try { return new ActiveXObject(msxmls[i]); } catch (e) { } }
+    return null;
+  };
+}
+top.window.sectionCheck = {
+		pageSection:function() { return 'LWTC_S12_3620'; },
+       cookieSection:function() { 
+               // cookies are separated by semicolons
+               var aCookie = document.cookie.split("; ");
+               for (var i=0; i < aCookie.length; i++)
+               {
+                   // a name/value pair (a crumb) is separated by an equal sign
+                   var aCrumb = aCookie[i].split("=");
+                   if ("AngelSection" == aCrumb[0] || "AngelSync" == aCrumb[0]){ //sectionid is in angelsection or angelsync cookie for 7.4
+       	            return decodeURIComponent(aCookie[i]).replace(/^.*Values\=([^\^]*)[\^]?.*$/gi, '$1');
+                   }
+               }
+               return "";
+           },
+		reactivate:function() { 
+				var div = top.window.document.getElementById('invalidSection');
+				var sURL = '/api/v1.0/default.asp?APIACTION=SECTION_ENTER&SECTION=LWTC_S12_3620';
+				var oXMLHTTP = new XMLHttpRequest;
+				oXMLHTTP.open( 'GET', sURL, false );
+				oXMLHTTP.send('');
+               results = oXMLHTTP.responseText;
+               if (results.search('Not authenticated')!= -1 ){
+               sURL = '/default.asp' ;
+               if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)){ 
+               top.window.location.href = sURL;}
+               else {top.window.location.href(sURL);}}
+			},
+		timer:null,
+		check:function() {
+		    try{
+			    var div = top.window.document.getElementById('invalidSection');
+			    var cookie = top.window.sectionCheck.cookieSection();
+			    var sectionId = top.window.sectionCheck.pageSection(); 
+			    if (!div && cookie && (cookie != sectionId && cookie != encodeURIComponent(sectionId))&& sectionId != '') { 
+			    	var div = top.window.document.createElement('div');
+			    	div.id = 'invalidSection';
+                   div.innerHTML = "<div id=\"invalidSectionPanel\"><p>This section is not currently active.</p><p><a href=\"javascript:void(top.window.sectionCheck.reactivate())\">Click to Reactivate</a></p></div>";
+			    	top.window.document.body.appendChild(div);
+			    } else if (div && (cookie==sectionId)) {
+			    	top.window.document.body.removeChild(div);
+			    }
+		    }catch(e){
+		        if (e.number != -2146823277) throw e; //supress function not found (window may have closed)
+		    }
+			return;
+		}
+	}
+	top.window.sectionCheck.timer = setInterval(top.window.sectionCheck.check, 1000);
+</script>
+
+
+<script language="javascript" type="text/javascript">
+<!--//
+var gblnRefreshIndex = false;
+var gstrAPI = '/api/default.asp';
+var gstrAngelApp = 'CRSCNT';
+var gstrWCI = '';
+var gstrWCE = '';
+var gstrFinalWCI = '';
+var gstrFinalWCE = '';
+var gstrScriptURL = 'http://angel.lwtc.edu/section/content/Default.asp?WCU=CRSCNT';
+var gstrPostURL = '';
+var gstrBaseHref = 'http://angel.lwtc.edu/AngelUploads/Content/LWTC_S12_3620/_assoc/740229676B2B42079E48976724F31464';
+var gstrStylesheet = '/AngelThemes/Stylesheets/Dark_Glass.css';
+var glngUserRights = 2;
+var gstrUserID = '925919de-8e30-4372-8e0b-6cafdce3f107';
+var gstrSectionID = 'LWTC_S12_3620';
+var gstrRootID = 'ROOT';
+var gstrParentID = 'A9CCEF993FD144AD9925A61633E66A84';
+var gstrObjectID = '883F84F83B204F2F979A3106AEF8A401';
+var gstrObjectType = 'PAGE';
+var gstrBaseType = 'PAGE';
+var gstrEntryID = '740229676B2B42079E48976724F31464';
+var gstrEntrySection = 'LWTC_S12_3620';
+var gstrEntryTitle = 'Overview 4';
+var gstrBoardID = '';
+var gstrBoardTitle = '';
+var gstrShortcutID = '';
+var gstrShortcuts = '';
+var gblnSubmit = true;
+var gblnForceSubmitting = false;
+
+//The same variables, but in a hierarchical structure
+var LO = (function(){
+    var constructor = function(){
+    }
+    
+    return constructor;
+})();
+
+LO.API = gstrAPI;
+LO.angelApp = gstrAngelApp;
+LO.scriptURL = gstrScriptURL;
+LO.postURL = '';
+LO.baseHref = gstrBaseHref;
+LO.stylesheet = gstrStylesheet;
+LO.userRights = glngUserRights;
+LO.userID = gstrUserID;
+LO.sectionID = gstrSectionID;
+LO.rootID = gstrRootID;
+LO.parentID = gstrParentID;
+LO.objectID = gstrObjectID;
+LO.objectType = gstrObjectType;
+LO.baseType = gstrBaseType;
+LO.entryID = gstrEntryID;
+LO.entrySection = gstrEntrySection;
+LO.entryTitle = gstrEntryTitle;
+
+var LearningObject = LO;
+
+//-->
+</script><script type="text/javascript" language="javascript" src="jsActions-min.js"></script>
+
+</head>
+<body id="740229676B2B42079E48976724F31464" class="bodyLessons cmTypePAGE PGDISPLAY_PAGE PGDISPLAY_PAGE_RESPOND">
+    
+    
+
+
+    <form name="aspnetForm" method="post" action="http://angel.lwtc.edu/AngelUploads/Content/LWTC_S12_3620/_assoc/740229676B2B42079E48976724F31464/Page.aspx?EntryId=740229676B2B42079E48976724F31464&caller=%2fsection%2fcontent%2fdefault.asp&WCI=pgDisplay_Object&WCU=CRSCNT&Preview=0" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2NDYyNDgyNTQPZBYCZg9kFgJmD2QWAgIKD2QWAgIDDw8WAh4HVmlzaWJsZWhkZGSZwHcrmErNTqDCCxMveTpy8+Xz4g==">
+</div>
+
+        <div class="normalDiv">
+            <div class="normalSpan">
+                <div id="”subject_image”"></div>
+                
+    
+
+    <div style="margin-top:.7em;width:100%">
+        
+    </div>
+
+            </div>
+        </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+issueRedirect((parent && parent.location && parent.frames && parent.frames.length > 0 && parent.frames[0].name == 'lsn_header') ? parent : null);//]]>
+</script>
+</form>
+    
+    <div class="normalDiv">
+    <div class="normalSpan">    
+        
+    
+    <div id="ActionMessages"></div>
+    
+    <div class="normalSpan">
+        <p>&nbsp;</p>
+<div style="margin: 0in 0in 10pt"><a name="OLE_LINK3"><span style="line-height: 115%; color: black; font-size: 10pt">This page is an </span></a><span><b><span style="line-height: 115%; color: black; font-size: 10pt">Overview Page </span></b></span><span><span style="line-height: 115%; color: black; font-size: 10pt">for</span></span><span><b><span style="line-height: 115%; color: black; font-size: 10pt"> Week 4 </span></b></span><span><span style="line-height: 115%; color: black; font-size: 10pt">Module. It is used in this learning module to guide you through the learning activities.&nbsp;</span></span></div>
+<div style="text-align: center; margin: 0in 0in 10pt" align="center"><span><span style="line-height: 115%; color: black; font-size: 10pt"><hr align="center" width="100%" size="2">
+</span></span></div>
+<div style="margin: 0in 0in 10pt"><span><b><span style="line-height: 115%; color: black; font-size: 10pt">Goal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b></span></div>
+<div style="margin: 0in 0in 10pt"><span><span style="line-height: 115%; color: black; font-size: 10pt">Continue working with DTDs and validate XML document against DTD.</span></span></div>
+<div style="margin: 0in 0in 10pt"><span><span style="line-height: 115%; color: black; font-size: 10pt">Start working with schemas.</span></span></div>
+<div style="text-align: center; margin: 0in 0in 10pt" align="center"><span><span style="line-height: 115%; color: black; font-size: 10pt"><hr align="center" width="100%" size="2">
+</span></span></div>
+<div style="margin: 0in 0in 10pt"><span><b><span style="line-height: 115%; color: black; font-size: 10pt">Objectives </span></b></span></div>
+<div style="margin: 0in 0in 10pt"><span><span style="line-height: 115%; color: black; font-size: 10pt">The students will listen to the class presentation and participate in the hands-on exercise to achieve the following objectives: </span></span></div>
+<div style="line-height: normal; text-indent: -0.25in; margin: 0in 0in 0pt 0.55in"><span><span style="color: black; font-size: 10pt"><span>·<span style="font: 7pt &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: black; font-size: 10pt">Place internal and external content in an entity</span></span></span></div>
+<div style="line-height: normal; text-indent: -0.25in; margin: 0in 0in 0pt 0.55in"><span><span style="color: black; font-size: 10pt"><span>·<span style="font: 7pt &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: black; font-size: 10pt">Add entity reference to an XML document</span></span></span></div>
+<div style="line-height: normal; text-indent: -0.25in; margin: 0in 0in 0pt 0.55in"><span><span style="color: black; font-size: 10pt"><span>·<span style="font: 7pt &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: black; font-size: 10pt">Store DTD code in parameter entities</span></span></span></div>
+<div style="line-height: normal; text-indent: -0.25in; margin: 0in 0in 0pt 0.55in"><span><span style="color: black; font-size: 10pt"><span>·<span style="font: 7pt &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: black; font-size: 10pt">Create entities for noncharacter data</span></span></span></div>
+<div style="line-height: normal; text-indent: -0.25in; margin: 0in 0in 0pt 0.55in"><span><span style="color: black; font-size: 10pt"><span>·<span style="font: 7pt &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: black; font-size: 10pt">Compare schemas and DTDs</span></span></span></div>
+<div style="line-height: normal; text-indent: -0.25in; margin: 0in 0in 0pt 0.55in"><span><span style="color: black; font-size: 10pt"><span>·<span style="font: 7pt &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: black; font-size: 10pt">Declare simple type elements and attributes</span></span></span></div>
+<div style="line-height: normal; text-indent: -0.25in; margin: 0in 0in 0pt 0.55in"><span><span style="color: black; font-size: 10pt"><span>·<span style="font: 7pt &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: black; font-size: 10pt">Declare complex type elements</span></span></span></div>
+<div style="line-height: normal; text-indent: -0.25in; margin: 0in 0in 0pt 0.55in"><span><span style="color: black; font-size: 10pt"><span>·<span style="font: 7pt &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="color: black; font-size: 10pt">Apply a schema to an instance document</span></span></span></div>
+<div style="line-height: normal; margin: 0in 0in 0pt 0.55in"><span><b>&nbsp;</b></span></div>
+<div style="text-align: center; margin: 0in 0in 10pt" align="center"><span><span style="line-height: 115%; color: black; font-size: 10pt"><hr align="center" width="100%" size="2">
+</span></span></div>
+<div style="margin: 0in 0in 10pt"><span><b>&nbsp;</b></span></div>
+<div style="margin: 0in 0in 10pt"><span><b><span style="line-height: 115%; color: black; font-size: 10pt">Instructions</span></b></span><span><span style="line-height: 115%; color: black; font-size: 10pt">&nbsp;&nbsp;</span></span></div>
+<div style="line-height: normal; text-indent: -0.25in; margin: 0in 0in 0pt 36.05pt"><span><span style="color: black; font-size: 10pt"><span>1.<span style="font: 7pt &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp; </span></span><b><span style="color: red; font-size: 10pt">Take Tutorial 3 Quiz</span></b></span></span><span><span style="color: black; font-size: 10pt">. The quiz is due next Monday. You can find it in Week 4 folder.</span></span></div>
+<div style="line-height: normal; text-indent: -0.25in; margin: 0in 0in 0pt 36.05pt"><span><span style="color: black; font-size: 10pt"><span>2.<span style="font: 7pt &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp; </span></span><span style="color: black; font-size: 10pt">During the class we will complete Session 3.3 (Tutorial 3) and Session 4.1 (Tutorial 4) from the text book. Please read those Sessions at home.</span></span></span></div>
+<div style="line-height: normal; text-indent: -0.25in; margin: 0in 0in 0pt 36.05pt"><span><span style="color: black; font-size: 10pt"><span>3.<span style="font: 7pt &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp; </span></span><span style="color: black; font-size: 10pt">Assignment 3 on Tut. 3 is posted. Please start working on it. It is due next week.</span></span></span></div>
+<div style="line-height: normal; text-indent: -0.25in; margin: 0in 0in 0pt 36.05pt"><span><span style="color: black; font-size: 10pt"><span>4.<span style="font: 7pt &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp; </span></span><span style="color: black; font-size: 10pt">During the class we will complete Case Problem 2 as an example of using unparsed entities in DTDs. This will help you with Assignment 3. The code of the Case 2 will be posted in Week 4 folder.</span></span></span></div>
+<div style="line-height: normal; margin: 0in 0in 0pt 36.05pt"><span>&nbsp;</span></div>
+<div style="line-height: normal; margin: 0in 0in 0pt 36.05pt"><span><span style="color: black; font-size: 10pt">&nbsp;&nbsp;</span></span></div>
+<div style="text-align: center; margin: 0in 0in 10pt" align="center"><span><span style="color: black"><hr align="center" width="100%" size="2">
+</span></span></div>
+    </div>
+
+
+    
+   
+    <script type="text/javascript" language="Javascript">
+        setTimeout(function()
+                {
+                    if (parent.parent.ANGEL && parent.parent.ANGEL.ui && parent.parent.ANGEL.ui.bc) 
+                    { 
+                        if(this.parent.name == "AngelContent")
+                        {
+                            parent.parent.ANGEL.ui.bc.update(this.parent);
+                            
+                            // this lesson item is contained inside an iframe, so hide the NavbarFooter if it exists
+                            if(document.getElementById("contentFooterNavigation"))
+                            {
+                                document.getElementById("contentFooterNavigation").style.display = "none";
+                            }
+                        }
+                        else if(this.name == "AngelContent")
+                        {
+                            parent.parent.ANGEL.ui.bc.update(this); 
+                        }
+                    }
+                    document.close();
+                }
+        ,0);
+    </script>
+
+        
+                
+    </div>
+    </div>    
+
+
+</body></html>

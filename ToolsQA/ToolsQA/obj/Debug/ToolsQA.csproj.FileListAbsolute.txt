@@ -1,0 +1,13 @@
+C:\Users\Mars\source\repos\ToolsQA\ToolsQA\bin\Debug\ToolsQA.exe.config
+C:\Users\Mars\source\repos\ToolsQA\ToolsQA\bin\Debug\ToolsQA.exe
+C:\Users\Mars\source\repos\ToolsQA\ToolsQA\bin\Debug\ToolsQA.pdb
+C:\Users\Mars\source\repos\ToolsQA\ToolsQA\obj\Debug\ToolsQA.csprojAssemblyReference.cache
+C:\Users\Mars\source\repos\ToolsQA\ToolsQA\obj\Debug\ToolsQA.csproj.CoreCompileInputs.cache
+C:\Users\Mars\source\repos\ToolsQA\ToolsQA\obj\Debug\ToolsQA.exe
+C:\Users\Mars\source\repos\ToolsQA\ToolsQA\obj\Debug\ToolsQA.pdb
+C:\Users\Mars\source\repos\ToolsQA\ToolsQA\bin\Debug\WebDriver.dll
+C:\Users\Mars\source\repos\ToolsQA\ToolsQA\bin\Debug\WebDriver.xml
+C:\Users\Mars\source\repos\ToolsQA\ToolsQA\obj\Debug\ToolsQA.csproj.CopyComplete
+C:\Users\Mars\source\repos\ToolsQA\ToolsQA\bin\Debug\nunit.framework.dll
+C:\Users\Mars\source\repos\ToolsQA\ToolsQA\bin\Debug\nunit.framework.pdb
+C:\Users\Mars\source\repos\ToolsQA\ToolsQA\bin\Debug\nunit.framework.xml

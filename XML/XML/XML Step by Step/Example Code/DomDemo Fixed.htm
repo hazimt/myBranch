@@ -1,0 +1,48 @@
+<!-- File Name: DomDemo Fixed.htm -->
+
+<HTML>
+
+<HEAD>
+
+   <TITLE>Book Description</TITLE>
+
+   <SCRIPT LANGUAGE="JavaScript" FOR="window" EVENT="ONLOAD">
+      Document = dsoBook.XMLDocument;
+      title.innerText=
+         Document.documentElement.childNodes(0).text;
+      author.innerText=
+         Document.documentElement.childNodes(1).text;
+      binding.innerText=
+         Document.documentElement.childNodes(2).text;
+      pages.innerText=
+         Document.documentElement.childNodes(3).text;
+      price.innerText=
+         Document.documentElement.childNodes(4).text;
+   </SCRIPT>
+   
+</HEAD>
+
+<BODY>
+
+   <XML ID="dsoBook" SRC="Book.xml"></XML>
+
+   <H2>Book Description</H2>
+ 
+   <SPAN STYLE="font-style:italic">Title: </SPAN>
+   <SPAN ID="title" STYLE="font-weight:bold"></SPAN>      
+   <BR>
+   <SPAN STYLE="font-style:italic">Author: </SPAN>
+   <SPAN ID="author"></SPAN>      
+   <BR>
+   <SPAN STYLE="font-style:italic">Binding: </SPAN>
+   <SPAN ID="binding"></SPAN>      
+   <BR>
+   <SPAN STYLE="font-style:italic">Number of pages: </SPAN>
+   <SPAN ID="pages"></SPAN>      
+   <BR>
+   <SPAN STYLE="font-style:italic">Price: </SPAN>
+   <SPAN ID="price"></SPAN>      
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,19 @@
+
+This page is an Overview Page for Week 2 Module. It is used in this learning module to guide you through the learning activities. 
+Goal                                                  
+Learn how to apply style sheet to an XML document. Work with compound XML documents. Create and apply namespaces to solve the problem of name collisions in compound documents.
+Objectives
+The students will listen to the class presentation and participate in the hands-on exercise to achieve the following objectives:
+·         Apply a style sheet to an XML document
+·          Understand compound documents and problem of name collision
+·         Declare and apply a namespace for XML vocabulary
+·         Apply a namespace to an attribute
+·         Declare a namespace within a CSS style sheet
+·         Apply a namespace to a style selector
+·         Use the escape character to apply a namespace to the selector
+·         Create a compound XML - XHTML document
+ 
+Instructions  
+1.    Take Tutorial 1 Quiz. The quiz is due on Monday next week. You can find it in Week 2 folder.
+2.    During the class we will complete Tutorial 2) from the text book. Please read the Tutorial 2 chapter at home.
+3.    Assignment 1 on Tut. 1 is posted. Please start working on it. It is due next week.

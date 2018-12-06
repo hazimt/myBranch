@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   New Perspectives on XML
+   Tutorial 4
+   Case Problem 1
+
+   Jazz Warehouse Vintage Albums Schema
+   Author: Hazim Mohaisen
+   Date:   05/30/2012
+
+   Filename:         music.xsd
+   Supporting Files: 
+ 
+-->
+<!-- Are lines 2 and 3 needed? -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- definitions of simple types -->
+  <!--Decalre the albumIDType custom type-->
+  <xsd:simpleType name="albumIDType">
+    <xsd:restriction base="xsd:ID">
+      <xsd:pattern value="JW\d{6}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!--Decalre the jazzType custom type-->
+  <xsd:simpleType name="jazzType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="New"/>
+      <xsd:enumeration value="Orleans"/>
+      <xsd:enumeration value="Swing"/>
+      <xsd:enumeration value="Bebop"/>
+      <xsd:enumeration value="Modern"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:element name="inventory">
+    <xsd:complexType>
+      <xsd:sequence>
+
+        <xsd:element name="album" minOccurs="1" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="title" type="xsd:string"/>
+              <xsd:element name="artist" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+              
+              
+              
+              <xsd:element name="tracks">
+                <xsd:complexType>
+                  <xsd:sequence>
+
+                    <xsd:element name="track" minOccurs="1" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:extension base="xsd:string">
+                            <xsd:attribute name="length" type="xsd:time" use="optional"/>
+                          </xsd:extension>                        
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+
+                  </xsd:sequence>
+                  <!--xs:time A time entered in the format hh:mm:ss-->
+                  <xsd:attribute name="length" type="xsd:time" use="optional"/>
+                </xsd:complexType>
+              </xsd:element>
+              
+              
+              
+            </xsd:sequence>
+            <!-- Declare album attributes -->
+            <xsd:attribute name="category" type="jazzType" use="required"/>
+            <xsd:attribute name="albumID" type="albumIDType" use="required"/>
+          </xsd:complexType>
+        </xsd:element>
+
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>  

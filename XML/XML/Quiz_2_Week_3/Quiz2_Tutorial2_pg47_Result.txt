@@ -1,0 +1,326 @@
+Select regrade mode    
+
+Choose a regrade mode 
+ Change points or correct answer 
+ Drop question 
+ Give full credit 
+This regrade will affect all users who submitted this Assessment containing this question. 
+   
+Regrade not available    
+
+This content item's settings prohibit regrade on this item.   
+Time expired    
+
+Your time has expired. The assessment has been automatically submitted. 
+  
+Regrade not available    
+
+This is a linked Assessment or Question. Only the owner has edit rights.   
+   
+Maximum number of choices allowed is {0}.
+Submitted by MOHAISEN, HAZIM (885001082) on 6/20/2012 3:11:39 PM
+
+Points Awarded 120.00 
+Points Missed 8.00 
+Percentage 93.8% 
+
+
+
+   1. 
+It is required that you use namespace prefixes for all of the elements in a compound XML document.
+A) True
+B) False
+
+Points Earned:  0.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   2. 
+You can declare a ____ namespace by omitting the prefix in the namespace declaration.
+A) main-level
+B) root
+C) base
+D) default
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): D 
+
+
+
+
+   3. 
+Name collisions are always avoidable with good planning.
+A) True
+B) False
+
+Points Earned:  0.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   4. 
+Which of the following supports the definition of namespaces using the escape character?
+A) Internet Explorer
+B) Firefox
+C) All of the above
+D) Opera
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   5. 
+To apply an XML namespace, you give elements and attributes ____ names.
+A) documented
+B) qualified
+C) registered
+D) unique
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   6. 
+Nothing prevents you from using almost any unique identifier to declare a namespace.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): True 
+
+
+
+
+   7. 
+____ serve as built-in mechanisms on the Web for generating unique addresses
+A) Host names
+B) URLs
+C) Client names
+D) Protocols
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   8. 
+One version of a ____ is a URL.
+A) URN
+B) URI
+C) URH
+D) URN
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   9. 
+The first step in applying a namespace to an XML document is to ____ the namespace.
+A) call
+B) invoke
+C) declare
+D) initiate
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+   10. 
+A ____ is a mechanism that permits elements from one vocabulary to be distinguished from elements in another.
+A) MML
+B) schematic
+C) CML
+D) namespace
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): D 
+
+
+
+
+   11. 
+Vocabularies like RSS and MathML cannot be combined within single documents.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   12. 
+All URIs are URLs.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   13. 
+A(n) ____ name is a name without a namespace reference.
+A) empty
+B) open
+C) null
+D) unqualified
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): D 
+
+
+
+
+   14. 
+What is the maximum number of namespace attributes you can declare within an element?
+A) 3
+B) There is no limit.
+C) 2
+D) 1
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   15. 
+One of the benefits of XML ____ is the ability to use simple element names to describe data.
+A) sort orders
+B) indices
+C) vocabularies
+D) glossaries
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+   16. 
+Given this declaration: <model xmlns:mod="http://jacksonelect.com/models”>the prefix is ____.
+
+A) xml
+B) mod
+C) model
+D) xmlns
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   17. 
+A URL does not have to actually point to a real site on the Web to be used to define a namespace.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): True 
+
+
+
+
+   18. 
+Common XHTML element names like title, name, first, last, or address are likely to be found in the thousands of XML vocabularies currently available.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): True 
+
+
+
+
+   19. 
+A namespace ____ identifies the namespace.
+A) registry
+B) model
+C) prefix
+D) keytag
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+   20. 
+A string of characters that uniquely identifies a resource is called a(n) ____.
+A) URM
+B) URP
+C) URI
+D) URH
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+   21. 
+An attribute name without a ____ is assumed to belong to the same namespace as the element that contains it.
+A) model
+B) link
+C) opening tag
+D) prefix
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): D 
+
+
+
+
+   22. 
+All browsers support the use of the @namespace rule.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   23. 
+Converting an HTML file to an XHTML file can be done by adding a(n) ____ declaration at the top of the file and setting the default namespace of the document to the XHTML vocabulary.
+A) Any of the above
+B) xsl
+C) xml
+D) xhtml
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+   24. 
+The purpose of a ____ is to provide a unique string of characters identifying a resource.
+A) protocol
+B) hostname
+C) URI
+D) client name
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+ 

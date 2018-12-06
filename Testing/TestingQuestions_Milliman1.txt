@@ -1,0 +1,175 @@
+1.Introduction : 
+Vending machine is a unit which provides food/drink in exchange of coins. 
+
+2.Goal : Test the functionality of vending machine 
+
+3.Team involved : 
+
+4.Bugs Information 
+
+5.Spec Links 
+
+6.Known Issues: 
+
+7.Test Scope : 
+
+
+Question: 
+Dinal made a soda despesing machine how would you test it?
+https://www.careercup.com/question?id=213691
+
+
+
+1) Functional test pass 
+What type of coins does the vending machine accept? 
+Verify what type power input does vending machine handle?(Voltage) 
+Verify what is the capacity of the vending machine 
+Verify what type of food does it contains? 
+
+2) Stress Testing:
+Verify that at what level vending machine stops accepting orders? 
+
+3) Load testing:
+verify what is the threshold of the machine
+
+4) Usability testing:
+verify who will use this machine i.e what is the age group 
+
+5) Security testing : 
+Verify what type of security concerns you want to capture? 
+
+6) Performance testing : 
+How many transacactions does this machine handles in a day? 
+
+7) Acceptance testing 
+how would user get money back if there is a problem in machine
+
+
+
+
+Functional testing
+Instability testing
+Usability testing
+Performance
+Stress
+Compatibility
+Capability testing
+Equivalence partioning /boundary value.
+
+
+
+
+Functional testing
+	check proper change 
+	check improper change
+	check proper itrem and improper item
+	no item is there .
+	more than available items stuffed in the tray
+	machine does not have change.?
+
+Instability testing
+check if vending machine can be inztalled properly with proper connection
+check if it is movable.
+
+Usability testing
+	check if vending machine has proper buttons
+	check if it has 0-9 numbers to select
+	check if it has coin return 
+	dispenser/provision for hands to fit in  to take the product
+	buttons are not too rough
+	check for the height of the operationabilty.
+
+Performance
+	how quickly it drops
+	test on differnt plugs and power 110 v 220 v 440v 
+	test on incremental loads of coins and keep selecting 
+	keep inserting coins continously for 1 hr then select
+
+
+Stress
+	shake the machine
+	switch on/switch off machine alternatingly and select it.
+	in severe cold/hot atmosphere does it work.
+	keep inserting coins continously for 1 hr then select
+	insert nothing and keep pressing
+
+Compatibility
+	different coins/dollars
+ 	takes a 1 dollr 5 dollar 100 dollar etc....
+ 	can vending machine work properly outside 
+
+
+Capability testing
+	what can vending machine do other than vending solid items ?
+	keep liquid and solid items 
+  	
+	can it be used just for vending coins?
+	(this is a useful feature for
+	 taking quarters!!)
+
+
+Equivalence partioning /boundary value.
+
+
+
+What is a bug?
+	 is an error, flaw, failure or fault in a computer program or system 	that causes it to produce an incorrect or unexpected result, or to 	behave in unintended ways.
+
+
+http://istqbexamcertification.com/what-is-the-difference-between-severity-and-priority/
+
+What is the Difference 
+severirty and priority?
+
+Severirty 
+Critical, Major, Moderate, Minor, Cosmetic
+
+Critical (Crash, Data Corruption, failed major functionality), 
+Major (like Critical but an alternative solution exist), 
+Moderate ( incorrect, incomplete or inconsistent results ), 
+Minor (no termination and does not damage the usability of the, working around the defects), 
+Cosmetic (Enhancement of the system, )
+	
+Priority?
+Low (irritant), Medium (defect should be resolved), High (defect must be resolved as soon as possible)
+
+
+Usually the severity is defined in terms of financial loss, 
+damage to environment, company’s reputation and loss of life. 
+
+Priority of a defect is related to how quickly a bug should be fixed and deployed to live servers.
+
+It is the extent to which the defect can affect the software. In other words it defines the impact that a given defect has on the system. For example: If an application or web page crashes when a remote link is clicked, in this case clicking the remote link by an user is rare but the impact of  application crashing is severe. So the severity is high but priority is low.
+
+
+
+
+
+what must appear in a bug report?
+
+
+
+what are the some of the things that must appear in a test plan?
+
+
+what is the BRD? FRS?
+
+Business requierment doucmet 
+ software requirement specification;
+
+Have you ever created 
+a test case 
+or where test cses given to you?
+and how many test cases did you execute
+
+what should be included in test case template?
+
+what is 
+ad-hoc testing?
+accessiblity testing?
+
+end-to-end testing?
+
+what interest you in most about website and application from user perspective for forturne 500 companes for a company using tablet or cell phone?
+
+

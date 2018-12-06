@@ -1,0 +1,56 @@
+<!-- File Name: GetElements.htm -->
+
+<HTML>
+
+<HEAD>
+
+   <TITLE>Element Finder</TITLE>
+
+   <SCRIPT LANGUAGE="JavaScript">
+      function ShowElements()
+         {
+         /* make sure user has entered text into the 
+            'Element name' box: */
+         if (ElementName.value == "")
+            {
+            ResultDiv.innerText = "<You must enter an element "    
+               + "name into 'Element name' box.>";
+            return;
+            }
+
+         /* get a NodeList collection of all matching Element 
+            nodes in the document: */
+         Document = dsoXML.XMLDocument;
+         NodeList = 
+            Document.getElementsByTagName (ElementName.value);
+        
+         /* store the XML markup for each Element node 
+            in ResultHTML: */
+         ResultHTML = "";
+         for (i=0; i < NodeList.length; ++i)
+            ResultHTML += NodeList(i).xml + "\n\n";
+
+         /* assign the stored results to the innerText property 
+            of the DIV: */
+         if (ResultHTML == "")
+            ResultDiv.innerText = "<no matching elements found>";
+         else
+            ResultDiv.innerText = ResultHTML;
+         }
+   </SCRIPT>
+   
+</HEAD>
+
+<BODY>
+
+   <XML ID="dsoXML" SRC="Inventory.xml"></XML>
+
+   <H2>Find Elements by Element Name</H2>
+   Element name: <INPUT TYPE="TEXT" ID="ElementName">&nbsp
+   <BUTTON ONCLICK="ShowElements()">Show Elements</BUTTON>
+   <HR>
+   <DIV ID=ResultDiv></DIV>
+   
+</BODY>
+
+</HTML>

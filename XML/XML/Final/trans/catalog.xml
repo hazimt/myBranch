@@ -1,0 +1,131 @@
+<?xml version="1.0" ?>
+<!--
+   XML Final Exam
+   Superstar Movies: Catalog of Movie and Actor Info.
+   Author: Hazim Mohaisen
+   Date:   6/18/2012
+
+   Filename:         catalog.xml
+-->
+<!--Processing Instruction linking the doucment to the score.xsl style sheet-->
+<?xml-stylesheet type="text/xsl" href="catalog.xsl"?>
+
+<catalog  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="catschema.xsd">
+  <movies>
+    <movie movieId="m0100" genre="drama">
+      <title>Monster's Ball</title>
+      <year>2001</year>
+      <length>111</length>
+      <topBilledActors actorIds="a0100" />
+    </movie>
+    
+    <movie movieId="m0101" genre="fantasy">
+      <title>X-Men</title>
+      <year>2000</year>
+      <length>104</length>
+      <topBilledActors actorIds="a0103" />
+    </movie>
+    
+    <movie movieId="m0107" genre="action" earningsRank="17">
+      <title>Lord of the Rings: The Fellowship of the Ring</title>
+      <year>2001</year>
+      <length>178</length>
+      <topBilledActors actorIds="a0103" />
+    </movie>
+    
+    <movie movieId="m0103" genre="comedy" earningsRank="14">
+      <title>Forrest Gump</title>
+      <year>1994</year>
+      <length>142</length>
+      <topBilledActors actorIds="a0105" />
+    </movie>
+    
+    <movie movieId="m0102" genre="action" earningsRank="50">
+      <title>Saving Private Ryan</title>
+      <year>1998</year>
+      <length>170</length>
+      <topBilledActors actorIds="a0104" />
+    </movie>
+    
+    <movie movieId="m0105" genre="comedy" earningsRank="14">
+      <title>Forrest Gump</title>
+      <year>1994</year>
+      <length>142</length>
+      <topBilledActors actorIds="a0106" />
+    </movie>
+    
+    <movie movieId="m0104" genre="drama">
+      <title>Philadelphia</title>
+      <year>1993</year>
+      <length>125</length>
+      <topBilledActors actorIds="a0107" />
+    </movie>
+
+    <movie movieId="m0106" genre="drama">
+      <title>Apollo 13</title>
+      <year>1995</year>
+      <length>140</length>
+      <topBilledActors actorIds="a0106" />
+    </movie>
+
+  </movies>
+  
+  <actors>
+    
+    <actor actorId="a0100" oscarWinner="yes">
+      <name>Halle Berry</name>
+      <date>1966-08-14</date>
+      <birthplace>Cleveland, Ohio</birthplace>
+      <role movie="m0100">Leticia Musgrove</role>
+      <role movie="m0101">Storm</role>
+    </actor>
+    
+    <actor actorId="a0102" oscarWinner="yes">
+      <name>Billy Bob Thornton</name>
+      <role movie="m0100">Hank Grotowski</role>
+    </actor>
+    
+    <actor actorId="a0103" oscarWinner="no">
+      <name>Ian McKellen</name>
+      <role movie="m0101">Magneto</role>
+      <role movie="m0105">Gandolf</role>
+      <role movie="m0107">Gandolf</role>
+    </actor>
+    
+    <actor actorId="a0101" oscarWinner="yes">
+      <name>Tom Hanks</name>
+      <date>1956-07-09</date>
+      <birthplace>Concord, California</birthplace>
+      <role movie="m0102">Captain John H. Miller</role>
+      <role movie="m0103">Forrest Gump</role>
+      <role movie="m0104">Andrew Beckett</role>
+    </actor>
+    
+    <actor actorId="a0104" oscarWinner="yes">
+      <name>Matt Damon</name>
+      <date>1970-10-08</date>
+      <birthplace>Cambridge, Massachusetts</birthplace>
+      <role movie="m0102">Private James Francis Ryan</role>
+    </actor>
+    
+    <actor actorId="a0105" oscarWinner="yes">
+      <name>Sally Field</name>
+      <birthplace>Pasadena, California</birthplace>
+      <role movie="m0103">Mrs. Gump</role>
+    </actor>
+    
+    <actor actorId="a0106"  oscarWinner="yes">
+      <name>Gary Sinise</name>
+      <role movie="m0103">Lt. Dan Taylor</role>
+      <role movie="m0106">Ken Mattingly</role>
+    </actor>
+    
+    <actor actorId="a0107" oscarWinner="yes">
+      <name>Denzel Washington</name>
+      <role movie="m0104">Joe Miller</role>
+    </actor>
+    
+  </actors>
+
+</catalog>

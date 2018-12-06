@@ -1,0 +1,373 @@
+Select regrade mode    
+
+Choose a regrade mode 
+ Change points or correct answer 
+ Drop question 
+ Give full credit 
+This regrade will affect all users who submitted this Assessment containing this question. 
+   
+Regrade not available    
+
+This content item's settings prohibit regrade on this item.   
+Time expired    
+
+Your time has expired. The assessment has been automatically submitted. 
+  
+Regrade not available    
+
+This is a linked Assessment or Question. Only the owner has edit rights.   
+   
+Maximum number of choices allowed is {0}.
+Submitted by MOHAISEN, HAZIM (885001082) on 6/20/2012 4:53:30 PM
+
+Points Awarded 130.00 
+Points Missed 18.00 
+Percentage 87.8% 
+
+
+
+   1. 
+The attributes of the attribute value type ____ contain unique text strings.
+A) NMTOKENS
+B) IDREF
+C) ID
+D) ENTITY
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): C 
+
+
+
+
+   2. 
+An element type declaration cannot specify the order in which elements appear in the document.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   3. 
+A DTD is entered into the document in a statement called a document ____ declaration.
+A) index
+B) type
+C) element
+D) basis
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   4. 
+Which of the following is accomplished by an attribute-list declaration?
+A) It indicates whether each attribute is required or optional.
+B) All of the above
+C) It specifies the data type of each attribute.
+D) It lists the names of all the attributes associated with a specific element.
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   5. 
+In some cases, the DTD for an XML vocabulary is placed in several locations.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): True 
+
+
+
+
+   6. 
+The DOCTYPE declaration has to be added to the document ____, after the XML declaration and before the document’s root element.
+A) prolog
+B) Any of the above
+C) epilog
+D) body
+
+Points Earned:  0.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   7. 
+Attribute-list declarations can be located anywhere within the document type declaration
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): True 
+
+
+
+
+   8. 
+When the ____ symbol is used with a choice list, the element can contain any number of occurrences of child elements or pcdata, or it can contain no content at all.
+A) +
+B) *
+C) ?
+D) ^
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   9. 
+Which of the following is a type of location for an external subset?
+A) qualified
+B) public
+C) internal
+D) undeclared
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   10. 
+Which of the following is a part into which a DTD can be divided?
+A) public identifier
+B) internal subset
+C) system identifier
+D) root element
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   11. 
+An element ____ declaration specifies an element’s name and indicates what kind of content the element can contain.
+A) type
+B) model
+C) content
+D) detail
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   12. 
+An element declaration can specify which of the following?
+A) an element’s name
+B) the order in which elements appear in the document
+C) what kind of content the element can contain
+D) All of the above
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): D 
+
+
+
+
+   13. 
+DTDs cannot be built into the XML parser.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   14. 
+How many DOCTYPE declarations are there in an XML document?
+A) 1
+B) There is no limit.
+C) 3
+D) 2
+
+Points Earned:  0.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   15. 
+Allowing an element to contain any type of content is a popular strategy for document validation.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   16. 
+The attributes of the attribute value type ____ contain lists of ID values separated by white space.
+A) ENTITY
+B) IDREFS
+C) CDATA
+D) NMTOKEN
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   17. 
+A ____ is a collection of rules that define the content and structure of an XML document.
+A) XMLNS
+B) validity glossary
+C) data structure
+D) DTD
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): D 
+
+
+
+
+   18. 
+Any ID attribute in any element is a candidate for an ID reference.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): True 
+
+
+
+
+   19. 
+The ____ symbol indicates that an element occurs zero or one time.
+A) ?
+B) +
+C) &
+D) ^
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   20. 
+There can be at most two DOCTYPE declarations in an XML document.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   21. 
+Most standard XML vocabularies have ____ identifiers.
+A) strict
+B) public
+C) system
+D) master
+
+Points Earned:  0.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   22. 
+Internal and external DTDs work the same way as embedded and external style sheets.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): True 
+
+
+
+
+   23. 
+The ____ symbol indicates that an element occurs at least once.
+A) ?
+B) ^
+C) &
+D) +
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): D 
+
+
+
+
+   24. 
+The order of declarations in a DTD is critical; they must be inserted in the order in which the elements appear in the document.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): False 
+
+
+
+
+   25. 
+To test for validity, an XML parser must be able to compare your XML document with the rules you set up in the DTD.
+A) True
+B) False
+
+Points Earned:  4.0/4.0   
+Correct Answer(s): True 
+
+
+
+
+   26. 
+The ____ value for the content model in an element declaration does not place any restrictions on the element’s content.
+A) EMPTY
+B) ANY
+C) Mixed
+D) #PCDATA
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+   27. 
+The ____ attribute default means that the attribute is optional.
+A) #IMPLIED
+B) #TOKEN
+C) #OPTIONAL
+D) #FIXED
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): A 
+
+
+
+
+   28. 
+____ is the simplest form for attribute text.
+A) IDREFS
+B) CDATA
+C) ID
+D) NMTOKENS
+
+Points Earned:  6.0/6.0   
+Correct Answer(s): B 
+
+
+
+
+ 

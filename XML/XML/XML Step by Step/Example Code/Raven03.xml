@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<!-- File Name: Raven03.XML -->
+
+<?xml-stylesheet type="text/css" href="Raven.css"?>
+
+<POEM>
+
+<html:IMG xmlns:html='http://www.w3c.org/TR/REC-html40/' 
+   SRC='Raven.bmp' ALIGN='LEFT' />
+
+<TITLE>The Raven</TITLE>
+
+<html:A xmlns:html='http://www.w3c.org/TR/REC-html40/' 
+   HREF='http://www.edgar.com'>
+   Edgar Allan Poe
+</html:A>
+
+<DATE>1845</DATE>
+
+<html:HR xmlns:html='http://www.w3c.org/TR/REC-html40/' />
+
+<STANZA>
+   <VERSE>Once upon a midnight dreary, while I pondered, weak and weary,</VERSE>
+   <VERSE>Over many a quaint and curious volume of forgotten lore&#8212;</VERSE>
+   <VERSE>While I nodded, nearly napping, suddenly there came a tapping,</VERSE>
+   <VERSE>As of some one gently rapping, rapping at my chamber door.</VERSE>
+   <VERSE>"'Tis some visitor," I muttered, "tapping at my chamber door&#8212;</VERSE>
+   <VERSE>Only this, and nothing more."</VERSE>
+</STANZA>
+
+<html:HR xmlns:html='http://www.w3c.org/TR/REC-html40/' />
+
+<STANZA>
+   <VERSE>Ah, distinctly I remember it was in the bleak December,</VERSE>
+   <VERSE>And each separate dying ember wrought its ghost upon the floor.</VERSE>
+   <VERSE>Eagerly I wished the morrow;&#8212;vainly I had sought to borrow</VERSE>
+   <VERSE>From my books surcease of sorrow&#8212;sorrow for the lost Lenore&#8212;</VERSE>
+   <VERSE>For the rare and radiant maiden whom the angels name Lenore&#8212;</VERSE>
+   <VERSE>Nameless here for evermore.</VERSE>
+</STANZA>
+
+</POEM>

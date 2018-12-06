@@ -1,0 +1,52 @@
+<!-- File Name: Inventory Single.htm -->
+
+<HTML>
+
+<HEAD>
+   <TITLE>Book Inventory</TITLE>
+</HEAD>
+
+<BODY>
+
+   <XML ID="dsoInventory" SRC="Inventory Big.xml"></XML>
+   
+   <H2>Book Description</H2>
+ 
+   <SPAN STYLE="font-style:italic">Title: </SPAN>
+   <SPAN DATASRC="#dsoInventory" DATAFLD="TITLE" 
+      STYLE="font-weight:bold"></SPAN>      
+   <BR>
+   <SPAN STYLE="font-style:italic">Author: </SPAN>
+   <SPAN DATASRC="#dsoInventory" DATAFLD="AUTHOR"></SPAN>      
+   <BR>
+   <SPAN STYLE="font-style:italic">Binding type: </SPAN>
+   <SPAN DATASRC="#dsoInventory" DATAFLD="BINDING"></SPAN>      
+   <BR>
+   <SPAN STYLE="font-style:italic">Number of pages: </SPAN>
+   <SPAN DATASRC="#dsoInventory" DATAFLD="PAGES"></SPAN>      
+   <BR>
+   <SPAN STYLE="font-style:italic">Price: </SPAN>
+   <SPAN DATASRC="#dsoInventory" DATAFLD="PRICE"></SPAN>      
+
+   <HR>
+
+   <BUTTON ONCLICK="dsoInventory.recordset.movefirst()">
+      |&lt; First
+   </BUTTON>
+   <BUTTON ONCLICK="dsoInventory.recordset.moveprevious();
+                    if (dsoInventory.recordset.BOF)
+                       dsoInventory.recordset.movenext()">
+      &lt; Back
+   </BUTTON>
+   <BUTTON ONCLICK="dsoInventory.recordset.movenext();
+                    if (dsoInventory.recordset.EOF)
+                       dsoInventory.recordset.moveprevious()">
+      Forward &gt;
+   </BUTTON>
+   <BUTTON ONCLICK="dsoInventory.recordset.movelast()">
+      Last &gt;|
+   </BUTTON>
+
+</BODY>
+
+</HTML>

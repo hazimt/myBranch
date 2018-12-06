@@ -1,0 +1,472 @@
+//Modified
+//Btree
+
+//http://www.cs.p=x.edu/~yangk/binarytreec.htm#del
+ 
+/* Head.h	Main Function	Add Function	Delete Function
+Min Tree	Check for Complete Tree	Print Function	 
+/*Programmer: Kirk Yang, Assignment =1, CS202, Inst. Fant, Winter 1998, This program albe to store movie record =n to a dynamically allocated memory, print in sort by title order, and =elete by movie title. record include movie title, movie review, and movie =ategory. This Program was use binary search tree structure. For more =nformation please e-mail Kirk at yangk@cs.pdx.edu */
+
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#define NULL 0
+
+
+/*This is the =tructure for each node, it have pointer to title, review and category =naddition it have pointer to left and right child */
+struct node
+{
+    char *title;
+    =har *review;
+    char =category;
+    struct node *left;
+    struct node *right;
+};
+
+
+/*Destructor */
+struct node * destructor(struct node *root);
+
+/*Belove are the funtions, =nclude add, print, delete, and some sub-delete functions */
+
+struct =ode * add(struct node *root, char temp[], char temp2[], char =emp3[]);
+struct node * print(struct node *root);
+struct node * del(struct node =root, char temp[]);
+struct node * searchDel(struct node*root, char temp[]);
+struct node * del_two_child(struct node *root, char =emp[], struct node *tempptr, struct node *temp2ptr);
+struct node * del_root_two_child(struct node *root, char temp[], struct node =tempptr, struct node *temp2ptr);
+struct node * check(struct node *root, =nt *keeper, int *level, int *l_final); 
+int mintree(int *keeper, =nt *l_final);
+
+/*This is the main function it include the =ain(), the constructor, destructor(), This is the function to contact with =he user, it will ask the user what to do next. All the function return type =as root pointer. This function need the following files: min.c del.c addprint.c check.c head.h. The following data was save in main.c. =his program was wrotten by Kirk Yang */
+
+
+/*This destructor =ill look like the print function, it will go to the left of the tree the =elete the data then go to the right of the tree then delete the data. =inally delete the root. */
+
+struct node * destructor(struct node *root) {
+
+/*Check if it was an empty tree. If not the go to left, =hen right.*/
+
+if(root!=NULL)
+{
+    root->left=destructor(root->left);
+    =oot->right=destructor(root->right);
+
+    /*Here us the function free to delete the data, first delete the =itle then the review 
+    fianlly the category */
+
+    free((struct node *)root->title);
+    free((struct node *)root->review);
+    free((struct node *)root->category);
+
+}
+else /*If it was empty tree go =ack. */
+return root;
+}
+
+/*This is the main function, it =ill ask user to enter data, and return type int 1, the data enter by the =ser determind which function it should call */ 
+
+main()
+{
+    int i;
+    int keeper=0;
+    int = level=0;
+    int =in=0;
+    int l_final=0;
+    char answer, =;
+    char input[50];        /*These =s just temperarty arrays to store data */
+    char temp[100];
+    char =emp2[100];
+    char temp3[50];
+
+    struct node *root=0; 
+
+    /*I use a always true for loop to keep =he program running. The loop will exit only when =BR>    the user enter a q or Q, Once the user enter q, it will set the loop =o false then it will exit.     
+    */
+
+    for(i=10; i>5; ++i) {
+
+    /* Print the main menu, it contain =nformation for the user to decide what to do next =/
+
+    printf("\nEnter A for add a new title\n");
+    printf("Enter P for print the titles\n");
+    printf("Enter D for delet a title\n");
+    =rintf("Enter C for check for min. Tree\n"); 
+    =rintf("Enter Q for quit the program\n\n");
+    printf("Please Enter =our choice now: ");
+
+    /*I only look at the =irst char the user enter, anything else I ignore */
+    scanf("%c%c", &answer, &c);
+
+    /*I =hange the char answer to a lower case */
+    answer=tolower(answer);
+
+    /*if the user =nter "A" then ask the user to enter informations about the movie */
+    if(answer=='a')
+    = {
+        printf("Enter a =itle Now: ");
+        =canf("%[^\n]%c", temp, &c);
+
+        =rintf("Enter a Review Now: ");
+        scanf("%[^\n]%c", temp2, &c);
+
+        =rintf("Enter a Category Now: ");
+        scanf("%[^\n]%c", temp3, &c);
+
+        =oot=add(root, temp, temp2, temp3);
+
+    =
+
+    /*if q was enter by the user, then delete all the data in the tree =nd then it will set the "i" 
+    for the for loop =o false */
+
+    else =f(answer=='q')
+    {
+        printf("\nEnter =he quit function\n\n");
+        printf("\nThank you using this program. Any question \nplease =-mail me at");
+        =rintf("\"yangk@cs.pdx.edu\"\n\n");
+     &nbs=;  =oot=destructor(root);
+
+       = i=2;
+    }
+
+    /*if the =nswer was "p" then call the print in a title sort order =/
+
+    else if(answer=='p')
+    {
+        root=print(root);
+
+    =
+
+    /*if the asnwer was "d" then ask user to enter a title to be =elete, then call
+    the delete function to delete the node (information) */
+
+    else if(answer=='d')
+    {
+        printf("\nEnter =elete Function \n\nEnter a Title to be delete: ");
+        =canf("%[^\n]%c", temp, &c);
+
+        =oot=del(root, temp);
+    }
+    
+    /*first call the check function to check =or # of node and level, then call the min function
+    =o determind if it was a minimum tree. The min function will reture =ne of the following: 
+    0, 1, 2. */
+
+    else =f(answer=='c')
+    {
+        keeper=0;
+        level=0;
+        l_final=0;
+
+        printf("\nChecking if it was min. Tree\n");
+
+        root=check(root, &keeper, &level, &l_final);
+
+        min=mintree(&keeper, &l_final);
+
+        =*Here is determind which message to print out for the user to read. */
+
+        =f(min==0)
+         &=bsp;  printf("\nThis is not MinTree\n");
+        else =f(min==2)
+         &=bsp;  printf("\nOops! there is no data in binary tree\n");
+        =lse
+           = printf("\nThis is a MinTree\n");
+    
+    }
+    /*any input by the =ser other then a, p, d, q, then print a error message =/
+    else
+        printf("\nError = input\n\n");
+
+        i--;    /*This is i-- is use because i is int, once =his program use many times =/
+           &=bsp;    /*The value i is too large and it will given a error. i-- is keep =he*/
+          &nbs=;     /*value always less then 10 and greater then 2 */
+
+    } /*end for =oop*/
+    return 1;
+}
+
+/*This is the add and print function. The =dd function will add the data to a binary tree. and the print =unction will print all the data in a binary tree in a sort order. This add =unction will use exact amount of 
+mememory to store the datas. another =s dynamic memory. This program need the following files: min.c del.c =heck.c main.c head.h in order to work. The following data was save in =ddprint.c. The return type of this function is root pointer. This program was =rotten by Kirk Yang. */ 
+
+
+
+/*This is the add function, it =ill check the binary tree for a spot to add a new
+movie, review, and =ategory. This function will return root */
+
+struct node *add(struct node *root, char temp[], char temp2[], =har temp3[])
+{
+    if(root==NULL) /*if is =ULL make a new node and copy data to the new node*/
+    {
+        root=(struct =ode *) malloc((unsigned)sizeof(struct node)); /*make new node
+
+        /*This is =he dynamic memoery allocation part. it will use perfect side to
+        store the data =uch as title, review, and category */
+
+        =oot->title=(char*)malloc((size_t)sizeof(char)*(strlen(temp)+1));
+        =oot->review=(char*)malloc((size_t)sizeof(char)*(strlen(temp2)+1));<=R>        strcpy(root->review, temp2); /*save data review*/
+
+        =oot->category=(char*)malloc((size_t)sizeof(char)*(strlen(temp3)+1))=
+        strcpy(root->category, temp3); /*save data review*/
+
+        root->left=NULL; /*set the children to NULL */
+        =oot->right=NULL;
+
+        = 
+        printf("\nThe =ollwing have been added\n\n");
+        printf("Title was: %s\n", root->title);
+        printf("Review was: %s\n", root->review);
+        printf("Category was: %s\n", root->category);
+        
+
+    } /*end if statement */
+
+    /*This part is looking for place in =inary tree to store the data*/
+    /*if title is less =hen the current title */
+
+    else if(strcmp(temp, root->title)< =)
+
+        /*then go to the left side of binary tree */
+        root->left=add(root->left, temp, temp2, temp3);
+    else
+
+        /*else go =o the right side of binary =ree*/
+        root->right=add(root->right, temp, temp2, temp3);
+    
+    return root;
+}
+
+/*This is the print function, it will print all =he number in the binary tree in sort order. This function will return = root*/
+
+struct node *print(struct node *root)
+{
+    =f(root!=NULL)     /*if the tree is not empty */
+    {
+
+        root->left=print(root->left); /*travil to the left */
+
+        /*print the =atas, include title, reveiw category */
+        printf("\nTitle: \t\t%s\nReview: \t%s\nCategory: \t%s\n", root->title, =oot->review, =oot->category);
+
+        root->right=print(root->right); /*then to the right */
+
+    }
+
+return root;
+}
+/*This =s the delete function. It will ask the user to ther a title to be =elete. Then it will compare the title with the title in the binary tree. but =t will use binary search to comparing. The following function need the =ollowing files: main.c addprint.c check.c min.c head.h, and the following =ata was save in del.c. This program was wrotten by Kirk yang */
+
+
+
+/*Here this function will delete if the match =as at the root. If not it will check for condition such as both of the =oot's child is not null or one of the root's child is null and others. */
+
+struct node * del(struct node*root, =har temp[]) {
+    struct node =tempptr=NULL;
+    struct node *temp2ptr; /*make a new pointer =/
+
+    if(root==NULL) /*if the tree was empty, print out an error =essage */
+    =
+        printf("\n%s was not found\n\n", temp);
+    }
+
+    /*if a match at the root */
+    else if(strcmp(temp, =oot->title)== 0)
+    =
+        if(root->right==NULL) /*check if it has right child. If it =as no right child */
+        =
+            tempptr=root; /*set temptr to root =/
+            = root=root->left; /*root move to the left child =/
+            = free((struct node*)tempptr->title); /*delete tempptr, this is =elete the =oot*/
+          &nb=p; free((struct =ode*)tempptr->review);
+       &=bsp;    free((struct =ode*)tempptr->category);
+       =     printf("\nDelete Success\n\n");
+        }
+
+        /*if it have =ight child or both of the right and left child is not NULL */
+        else =f((root->right)||((root->left)&&(root->right))!=NULL)=BR>        =
+            tempptr=root; /*make temp to root =/
+            = temp2ptr=root->left; /*set temp2 to the left side of the tree = =/
+            = root=root->right; /*root travel to the right =/
+            = root=del_root_two_child(root, temp, tempptr, temp2ptr);
+        }
+    }
+    else
+        =oot=searchDel(root, temp); /*else is the match was not at the =oot*/
+    return root;
+}
+
+/*search for a match to delete retrun =ype root*/
+struct node * searchDel(struct node*root, char temp[])
+{
+
+    struct node *tempptr;
+    struct node *temp2ptr=NULL;
+
+    if(root==NULL) =*if there isn't a match */
+    {
+        return 0;
+    }
+
+    else /*if a =atch */
+    =
+        /*compare the titles, if temp is less than root->title go left */
+        if(strcmp(temp, root->title) < 0) =BR>            root->left=searchDel(root->left, temp);
+        /*else go to =ight */
+        else =f(strcmp(temp, root->title) > =)
+            = root->right=searchDel(root->right, temp);
+
+        else /*if =ind a match set children to null and delete data */
+        =
+            if((root->left==NULL)&&(root->right==NULL)) =*del when both child is =ULL*/
+          &nb=p; =
+           &n=sp;    free((struct node*)root->title); /*delete =ode*/
+          &nb=p;     free((struct node*)root->review); /*delete =ode*/
+          &nb=p;     free((struct node*)root->category); /*delete =ode*/
+          &nb=p;     printf("\nDelete =uccess\n\n");
+
+        &nb=p;       =oot=NULL;
+         &nb=p;  =
+
+          &nbs=; else if(root->right==NULL) /*if there only left child =/
+            = =
+           &n=sp;    tempptr=root; /*tempptr equal to parent =/
+           &=bsp;    root=root->left; /*grandson connect to =randparent*/
+         &n=sp;      free((struct =ode*)tempptr->title);
+       &n=sp;        free((struct =ode*)tempptr->review);
+       &=bsp;        free((struct =ode*)tempptr->category);
+       =         printf("\nDelete =uccess\n\n");
+         &=bsp;  =
+
+          &nbs=; else if(root->left==NULL) /*Here is almost same as above. =f there are only right child =/
+            = =
+           &n=sp;    tempptr=root; /*make a temp to root and delete data =/
+           &=bsp;    =oot=root->right;
+        =        free((struct =ode*)tempptr->title);
+       &n=sp;        free((struct =ode*)tempptr->review);
+       &=bsp;        free((struct =ode*)tempptr->category);
+       =         printf("\nDelete =uccess\n\n");
+         &=bsp;  }         /*else loop =/
+
+          &nb=p; else      /*if it have two children =/
+            = =
+           &n=sp;    tempptr=root; /*set the left side of the tree to temp2 =/
+           &=bsp;    =emp2ptr=root->left;
+       &n=sp;        root=root->right; /*root travel to the right side =/
+           &=bsp;    root=del_two_child(root, temp, tempptr, temp2ptr); /*find the =arest left data =/
+
+          &nb=p; }
+
+        }
+    }
+    return root;
+}
+
+/*this is the delete node with two =hildren*/
+struct node * del_two_child(struct node *root, char temp[], struct node =tempptr, struct node *temp2ptr)
+{
+    if(root!=NULL)
+    {
+        root->left=del_two_child(root->left, temp, tempptr, temp2ptr);/*travel to the farest left data*/
+    = }
+    /*deleting data */
+    else
+    =
+        free((struct =ode*)tempptr->title);
+        free((struct =ode*)tempptr->review);
+        = free((struct =ode*)tempptr->category);
+       = printf("\nDelete =uccess\n\n");
+
+
+        tempptr=root;             =*copy data to root */
+        =oot=(struct node *) malloc((unsigned)sizeof(struct node)); /*make new node*/
+
+        =*root=new node */
+
+        =oot=root->left;
+        root=temp2ptr;          =*connet the left side of the tree with the root*/
+    }
+
+return root;
+}
+
+/*if the root have children then =se this function to delete the root*/
+/*This function is almost =ame as above function */
+struct node * del_root_two_child(struct node =root, char temp[], struct node *tempptr, struct node *temp2ptr)
+{
+    =f(root!=NULL)
+    {
+        root->left=del_root_two_child(root->left, temp, tempptr, temp2ptr);/*travel to the farest left*/
+    }
+    else
+    {
+        free((struct =ode*)tempptr->title);
+        free((struct =ode*)tempptr->review);
+        = free((struct =ode*)tempptr->category);
+       = printf("\nDelete =uccess\n\n");
+
+
+        tempptr=root; =nbsp;           &=bsp;    /*copy the data*/
+        root=(struct node *) malloc((unsigned)sizeof(struct node)); =*make new node*/
+        =oot=root->left;
+        root=temp2ptr; =nbsp;            = /*connect the left side of the tree.*/
+    }
+
+    return root;
+}
+/*This is =unction able to determind if the tree is minimum or not. The equation was that (((#ofnodes+1)<=(2^level))&&((#of =odes+1)>2^(level-1))) if both of the statment was true, then it was minimum tree, else it =as not minimum. There are special case such that both # of node and level =re zero, which empty tree, then print error on the main function. =his file need head.h, main.c addprint.c del.c check.c and must compile all =he c files together in order to work. The following data was save in =in.c file. This program wrotten by Kirk Yang*/
+
+
+
+int mintree(int *keeper, int *l_final)
+{
+    int powL; /*powL is equal to =^level */
+    int L; /*L is equal 2^(level-1) */         
+    =nt i;
+
+    powL=1;    /*I set =t to one because if powL=0 the powL*=2 =3D>zero*/
+    L=1;    /*same as above =/
+
+    for(i=*l_final; i>0; i--) /*Here I calculate 2^level*/
+        powL*=2;
+
+    for(i=*l_final; i>1; =--) /*Here I calcualate 2^(level-1) =/
+        L*=2;
+
+    /*Here is determind in it was =inimum tree. it use the equation of
+    (((# ofnodes+1)<=(2^level))&&((#of =odes+1)>2^(level-1))) */
+
+    =f((((*keeper)+1)<=powL)&&((*keeper)+1)>L)
+  =      return 1; /*return 1 if it was minimum tree =/
+    else =f((powL==1)&&(L==1))
+     &n=sp;  return 2; /*return 2 if it have no data in tree =/
+    else
+        return 0; =*return 0 if it was not a minimum tree*/
+}
+/*This function use recursive =o determind the number of nodes and level in a binary tree. The =eturn type was root pointer. This function need min.c main.c addprint.c del.c =ead.h files in order to work. This function must compile with the c =iles togeter. The following data was save in check.c; This program was =rotten by Kirk Yang.*/
+
+
+
+/*The check function will count the =umber of nodes and levels. it will count the left side of the tree first =hen count the right side of the tree. keeper is for the nuber of =odes. and level is for the height of tree */
+
+struct node *check(struct node *root, int *keeper, int *level, =nt *l_final)
+{
+
+    if(root!=NULL)     /*if the tree is not =mpty */
+    =
+        (*level)++; /*start to add the levels, and nodes*/
+        (*keeper)++;
+
+        root->left=check(root->left, keeper, level, l_final); =*travil to the left */
+        root->right=check(root->right, keeper, level, l_final); =*then to the right */
+        (*level)--;
+        
+    }    =BR>
+    
+    /*level is just temp level, it will go up =nd down, l_final is the final result I want. */
+    =f(*level>*l_final)
+        *l_final=*level;
+return root;
+}

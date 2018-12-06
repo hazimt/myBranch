@@ -1,0 +1,19 @@
+/* File Name: Raven02.css */
+
+POEM
+   {font-size:12pt}
+
+POEM, TITLE, AUTHOR, DATE, IMAGE, STANZA, VERSE
+   {display:block}
+
+DATE, STANZA
+   {margin-bottom:.25in}
+
+IMAGE
+   {background-image:url(Raven.bmp);
+    background-repeat:no-repeat;
+    background-position:center;
+    width:89px;
+    height:58px;
+    float:left}
+

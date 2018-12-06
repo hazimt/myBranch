@@ -1,0 +1,2049 @@
+/*
+BUILD ENGINEER 3 - TECH SCREEN
+
+PART ONE: DIAGNOSING BUILD ERRORS.
+
+
+1)
+
+You see the following errors in the build, what would you do?
+
+Offending file: d:\dbs\el\twac\private\msoserviceplatform\export\exports.noproj
+    Reason: Dependency target\x64\ship\msoserviceplatform\x-none\server\environment\autopilot\availabilitymanagerservice\serviceconfig.ini is missing in the dependency graph. This file is listed as an input in file d:\dbs\el\twac\private\msoserviceplatform\export\exports.noproj. This means the dependency file is not produced by any of the build targets that CloudBuild parsed. A missing dependency might occur because of using wildcards in file names, missing targets, using custom commands in the corresponding makefile.inc, having references to generated build files that are not produced during build (dead or deleted code), or having references to generated files that are not being generated into standard CloudBuild-supported output locations.
+    See rule wiki page for examples and more details: https://contoso.com/wiki/samplesite/ENL31100
+    
+    class Test
+    {
+    static void Main()
+    {
+    using (TexReader tr = File.OpenText("\ship\msoserviceplatform\x-none\server\environment\autopilot\availabilitymanagerservice\serviceconfig.ini"))
+    {
+      string text;
+      while (text = tr.ReadLine() != null)
+      
+        console.WriteLine(text);
+      }
+    
+    }
+
+
+Offending file: d:\dbs\el\twac\private\waccommon\export\exports.noproj
+    Reason: Dependency \\target\x64\ship\waccommon\x-none\settings\datacenter\collabwordinnerloop.ini is missing in the dependency graph. This file is listed as an input in file d:\dbs\el\twac\private\waccommon\export\exports.noproj. This means the dependency file is not produced by any of the build targets that CloudBuild parsed. A missing dependency might occur because of using wildcards in file names, missing targets, using custom commands in the corresponding makefile.inc, having references to generated build files that are not produced during build (dead or deleted code), or having references to generated files that are not being generated into standard CloudBuild-supported output locations.
+    See rule wiki page for examples and more details: https://contoso.com/wiki/samplesite/ENL31100
+    
+    
+    
+    
+    
+    
+2)
+
+We spend several hours fixing the above problem. We eventually fix it. We re-sync the tenant and try the forward integrate again. We now run into this below problem. What would you do?
+
+
+n:\Enlistment\Dev>ourSpecialTool.bat forward bld_version_May_9_2017_0002 -o ourSpecialProject -allowUnsafeFI
+Examining client...
+Using override ourSpecialProject
+Using label bld_version_May_9_2017_0002
+ERROR: You have files that intersect the override opened for edit:
+        //depot/devmainoverride/tenantwac/bibls/Common/AvailabilityLevelManager.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/ExcelServerSettings.ServiceSettings.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/Host/ExcelServerFeatureHelperMethods.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/LockAnalysisTree.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/ServiceSettings.xml
+        (plus 1420 more...)
+Logs: "n:\Enlistment\Logs\ourSpecialTool"
+
+
+
+
+
+*/
+
+
+
+
+/*
+
+PART TWO: FAMILIARITY WITH C# OR RELATED LANGUAGE
+(Candidate may convert this to Java, Javascript, Python at their discretion)
+
+1) Fix the merge conflict.
+2) Fix the code to do the right thing.
+
+*/
+
+
+using System;
+
+// Class to identify if a string of text is a palindrome
+
+// A palindrome is something which is the same read from both directions, ignoring spaces, capitalization, special characters.
+
+// Main function outputs the result for a sample set.
+
+// For example, these are palindromes:
+// aabbaa
+// aa bbaa
+// a'ab baa
+
+// These are not:
+// ababab
+// aab ba'
+
+
+
+class Solution
+{
+    
+    static string[] sample = {"bob", "joe", "aabbaa", "aa bbaa", "ababab"};
+    
+    static void Main(string[] args)
+    {
+        foreach (string test in sample)
+        {
+            Console.Write(test + " is ");
+            
+            if(!IsPalindrome(test))
+            {
+                Console.Write("not ");
+            }
+            
+            Console.WriteLine("a palindrome");
+        }
+    }
+    
+    static bool IsPalindrome(string test)
+    {
+     // Returns if the string is a palindrome
+        test = StripString(test);
+        char[] charArr = test.ToCharArray();
+/*<<<<ORIGINAL<<<<
+        for (int i=0; i<=test.Length; i++)
+        {
+            if(test[i] != test[test.Length])
+                return true;
+        }
+>>>THEIRS>>>>            
+        for(int i=0; i<=test.Length; i++)
+        {
+            if(test[i] != test[test.Length - i])
+                return true;
+        }
+/*<<<<YOURS<<<<*/
+        for(int i=0; i<=test.Length; i++)
+        {
+            if((charArr[i]) == (charArr[test.Length-i]))return true; 
+        }
+//====END====*/
+      
+        return false;
+    }
+    
+    static string StripString(string input)
+    {
+     // Strips the string to what we care about
+        input = NormalizeCasing(input);
+        
+        input = input.Remove('.');
+        input = input.Remove((int)',');
+        input = input.Remove((int)'>');
+        input = input.Remove((int)'<');
+        input = input.Remove((int)'?');
+        input = input.Remove((int)'\'');
+        
+        return input;
+        
+    }
+    
+    static string NormalizeCasing(string input)
+    {
+     // Returns the upper case version of input.
+        return input.ToLower();
+    }
+}
+
+
+hazim C++
+
+#include <iostream>
+using namespace std;
+
+// To execute C++, please define "int main()"
+int main() {
+  auto words = { "Hello, ", "World!", "\n" };
+  for (const string& word : words) {
+    cout << word;
+  }
+  return 0;
+}
+
+
+/* 
+Your previous C# content is preserved below:
+
+/*
+BUILD ENGINEER 3 - TECH SCREEN
+
+PART ONE: DIAGNOSING BUILD ERRORS.
+
+
+1)
+
+You see the following errors in the build, what would you do?
+
+Offending file: d:\dbs\el\twac\private\msoserviceplatform\export\exports.noproj
+    Reason: Dependency target\x64\ship\msoserviceplatform\x-none\server\environment\autopilot\availabilitymanagerservice\serviceconfig.ini is missing in the dependency graph. This file is listed as an input in file d:\dbs\el\twac\private\msoserviceplatform\export\exports.noproj. This means the dependency file is not produced by any of the build targets that CloudBuild parsed. A missing dependency might occur because of using wildcards in file names, missing targets, using custom commands in the corresponding makefile.inc, having references to generated build files that are not produced during build (dead or deleted code), or having references to generated files that are not being generated into standard CloudBuild-supported output locations.
+    See rule wiki page for examples and more details: https://contoso.com/wiki/samplesite/ENL31100
+    
+    class Test
+    {
+    static void Main()
+    {
+    using (TexReader tr = File.OpenText("\ship\msoserviceplatform\x-none\server\environment\autopilot\availabilitymanagerservice\serviceconfig.ini"))
+    {
+      string text;
+      while (text = tr.ReadLine() != null)
+      
+        console.WriteLine(text);
+      }
+    
+    }
+
+
+Offending file: d:\dbs\el\twac\private\waccommon\export\exports.noproj
+    Reason: Dependency \\target\x64\ship\waccommon\x-none\settings\datacenter\collabwordinnerloop.ini is missing in the dependency graph. This file is listed as an input in file d:\dbs\el\twac\private\waccommon\export\exports.noproj. This means the dependency file is not produced by any of the build targets that CloudBuild parsed. A missing dependency might occur because of using wildcards in file names, missing targets, using custom commands in the corresponding makefile.inc, having references to generated build files that are not produced during build (dead or deleted code), or having references to generated files that are not being generated into standard CloudBuild-supported output locations.
+    See rule wiki page for examples and more details: https://contoso.com/wiki/samplesite/ENL31100
+    
+    
+    
+    
+    
+    
+2)
+
+We spend several hours fixing the above problem. We eventually fix it. We re-sync the tenant and try the forward integrate again. We now run into this below problem. What would you do?
+
+
+n:\Enlistment\Dev>ourSpecialTool.bat forward bld_version_May_9_2017_0002 -o ourSpecialProject -allowUnsafeFI
+Examining client...
+Using override ourSpecialProject
+Using label bld_version_May_9_2017_0002
+ERROR: You have files that intersect the override opened for edit:
+        //depot/devmainoverride/tenantwac/bibls/Common/AvailabilityLevelManager.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/ExcelServerSettings.ServiceSettings.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/Host/ExcelServerFeatureHelperMethods.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/LockAnalysisTree.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/ServiceSettings.xml
+        (plus 1420 more...)
+Logs: "n:\Enlistment\Logs\ourSpecialTool"
+
+
+
+
+
+*/
+
+
+
+
+/*
+
+PART TWO: FAMILIARITY WITH C# OR RELATED LANGUAGE
+(Candidate may convert this to Java, Javascript, Python at their discretion)
+
+1) Fix the merge conflict.
+2) Fix the code to do the right thing.
+
+*/
+
+
+using System;
+
+// Class to identify if a string of text is a palindrome
+
+// A palindrome is something which is the same read from both directions, ignoring spaces, capitalization, special characters.
+
+// Main function outputs the result for a sample set.
+
+// For example, these are palindromes:
+// aabbaa
+// aa bbaa
+// a'ab baa
+
+// These are not:
+// ababab
+// aab ba'
+
+
+
+class Solution
+{
+    
+    static string[] sample = {"bob", "joe", "aabbaa", "aa bbaa", "ababab"};
+    
+    static void Main(string[] args)
+    {
+        foreach (string test in sample)
+        {
+            Console.Write(test + " is ");
+            
+            if(!IsPalindrome(test))
+            {
+                Console.Write("not ");
+            }
+            
+            Console.WriteLine("a palindrome");
+        }
+    }
+    
+    static bool IsPalindrome(string test)
+    {
+     // Returns if the string is a palindrome
+        test = StripString(test);
+        char[] charArr = test.ToCharArray();
+/*<<<<ORIGINAL<<<<
+        for (int i=0; i<=test.Length; i++)
+        {
+            if(test[i] != test[test.Length])
+                return true;
+        }
+>>>THEIRS>>>>            
+        for(int i=0; i<=test.Length; i++)
+        {
+            if(test[i] != test[test.Length - i])
+                return true;
+        }
+/*<<<<YOURS<<<<*/
+        for(int i=0; i<=test.Length; i++)
+        {
+            if((charArr[i]) == (charArr[test.Length-i]))return true; 
+        }
+//====END====*/
+      
+        return false;
+    }
+    
+    static string StripString(string input)
+    {
+     // Strips the string to what we care about
+        input = NormalizeCasing(input);
+        
+        input = input.Remove('.');
+        input = input.Remove((int)',');
+        input = input.Remove((int)'>');
+        input = input.Remove((int)'<');
+        input = input.Remove((int)'?');
+        input = input.Remove((int)'\'');
+        
+        return input;
+        
+    }
+    
+    static string NormalizeCasing(string input)
+    {
+     // Returns the upper case version of input.
+        return input.ToLower();
+    }
+}
+
+ */
+
+
+hazim mySQL
+/*
+CoderPad provides a basic SQL sandbox with the following schema.
+You can also use commands like `show tables` and `desc employees`
+
+employees                             projects
++---------------+---------+           +---------------+---------+
+| id            | int     |<----+  +->| id            | int     |
+| first_name    | varchar |     |  |  | title         | varchar |
+| last_name     | varchar |     |  |  | start_date    | date    |
+| salary        | int     |     |  |  | end_date      | date    |
+| department_id | int     |--+  |  |  | budget        | int     |
++---------------+---------+  |  |  |  +---------------+---------+
+                             |  |  |
+departments                  |  |  |  employees_projects
++---------------+---------+  |  |  |  +---------------+---------+
+| id            | int     |<-+  |  +--| project_id    | int     |
+| name          | varchar |     +-----| employee_id   | int     |
++---------------+---------+           +---------------+---------+
+*/
+
+SELECT e.first_name, e.last_name, e.salary,
+  d.name as department_name
+FROM employees   AS e
+JOIN departments AS d ON e.department_id = d.id;
+
+
+/* 
+Your previous C++ content is preserved below:
+
+#include <iostream>
+using namespace std;
+
+// To execute C++, please define "int main()"
+int main() {
+  auto words = { "Hello, ", "World!", "\n" };
+  for (const string& word : words) {
+    cout << word;
+  }
+  return 0;
+}
+
+
+/* 
+Your previous C# content is preserved below:
+
+/*
+BUILD ENGINEER 3 - TECH SCREEN
+
+PART ONE: DIAGNOSING BUILD ERRORS.
+
+
+1)
+
+You see the following errors in the build, what would you do?
+
+Offending file: d:\dbs\el\twac\private\msoserviceplatform\export\exports.noproj
+    Reason: Dependency target\x64\ship\msoserviceplatform\x-none\server\environment\autopilot\availabilitymanagerservice\serviceconfig.ini is missing in the dependency graph. This file is listed as an input in file d:\dbs\el\twac\private\msoserviceplatform\export\exports.noproj. This means the dependency file is not produced by any of the build targets that CloudBuild parsed. A missing dependency might occur because of using wildcards in file names, missing targets, using custom commands in the corresponding makefile.inc, having references to generated build files that are not produced during build (dead or deleted code), or having references to generated files that are not being generated into standard CloudBuild-supported output locations.
+    See rule wiki page for examples and more details: https://contoso.com/wiki/samplesite/ENL31100
+    
+    class Test
+    {
+    static void Main()
+    {
+    using (TexReader tr = File.OpenText("\ship\msoserviceplatform\x-none\server\environment\autopilot\availabilitymanagerservice\serviceconfig.ini"))
+    {
+      string text;
+      while (text = tr.ReadLine() != null)
+      
+        console.WriteLine(text);
+      }
+    
+    }
+
+
+Offending file: d:\dbs\el\twac\private\waccommon\export\exports.noproj
+    Reason: Dependency \\target\x64\ship\waccommon\x-none\settings\datacenter\collabwordinnerloop.ini is missing in the dependency graph. This file is listed as an input in file d:\dbs\el\twac\private\waccommon\export\exports.noproj. This means the dependency file is not produced by any of the build targets that CloudBuild parsed. A missing dependency might occur because of using wildcards in file names, missing targets, using custom commands in the corresponding makefile.inc, having references to generated build files that are not produced during build (dead or deleted code), or having references to generated files that are not being generated into standard CloudBuild-supported output locations.
+    See rule wiki page for examples and more details: https://contoso.com/wiki/samplesite/ENL31100
+    
+    
+    
+    
+    
+    
+2)
+
+We spend several hours fixing the above problem. We eventually fix it. We re-sync the tenant and try the forward integrate again. We now run into this below problem. What would you do?
+
+
+n:\Enlistment\Dev>ourSpecialTool.bat forward bld_version_May_9_2017_0002 -o ourSpecialProject -allowUnsafeFI
+Examining client...
+Using override ourSpecialProject
+Using label bld_version_May_9_2017_0002
+ERROR: You have files that intersect the override opened for edit:
+        //depot/devmainoverride/tenantwac/bibls/Common/AvailabilityLevelManager.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/ExcelServerSettings.ServiceSettings.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/Host/ExcelServerFeatureHelperMethods.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/LockAnalysisTree.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/ServiceSettings.xml
+        (plus 1420 more...)
+Logs: "n:\Enlistment\Logs\ourSpecialTool"
+
+
+
+
+
+*/
+
+
+
+
+/*
+
+PART TWO: FAMILIARITY WITH C# OR RELATED LANGUAGE
+(Candidate may convert this to Java, Javascript, Python at their discretion)
+
+1) Fix the merge conflict.
+2) Fix the code to do the right thing.
+
+*/
+
+
+using System;
+
+// Class to identify if a string of text is a palindrome
+
+// A palindrome is something which is the same read from both directions, ignoring spaces, capitalization, special characters.
+
+// Main function outputs the result for a sample set.
+
+// For example, these are palindromes:
+// aabbaa
+// aa bbaa
+// a'ab baa
+
+// These are not:
+// ababab
+// aab ba'
+
+
+
+class Solution
+{
+    
+    static string[] sample = {"bob", "joe", "aabbaa", "aa bbaa", "ababab"};
+    
+    static void Main(string[] args)
+    {
+        foreach (string test in sample)
+        {
+            Console.Write(test + " is ");
+            
+            if(!IsPalindrome(test))
+            {
+                Console.Write("not ");
+            }
+            
+            Console.WriteLine("a palindrome");
+        }
+    }
+    
+    static bool IsPalindrome(string test)
+    {
+     // Returns if the string is a palindrome
+        test = StripString(test);
+        char[] charArr = test.ToCharArray();
+/*<<<<ORIGINAL<<<<
+        for (int i=0; i<=test.Length; i++)
+        {
+            if(test[i] != test[test.Length])
+                return true;
+        }
+>>>THEIRS>>>>            
+        for(int i=0; i<=test.Length; i++)
+        {
+            if(test[i] != test[test.Length - i])
+                return true;
+        }
+/*<<<<YOURS<<<<*/
+        for(int i=0; i<=test.Length; i++)
+        {
+            if((charArr[i]) == (charArr[test.Length-i]))return true; 
+        }
+//====END====*/
+      
+        return false;
+    }
+    
+    static string StripString(string input)
+    {
+     // Strips the string to what we care about
+        input = NormalizeCasing(input);
+        
+        input = input.Remove('.');
+        input = input.Remove((int)',');
+        input = input.Remove((int)'>');
+        input = input.Remove((int)'<');
+        input = input.Remove((int)'?');
+        input = input.Remove((int)'\'');
+        
+        return input;
+        
+    }
+    
+    static string NormalizeCasing(string input)
+    {
+     // Returns the upper case version of input.
+        return input.ToLower();
+    }
+}
+
+ */
+ */
+
+hazim C++
+#include <iostream>
+using namespace std;
+
+// To execute C++, please define "int main()"
+int main() {
+  auto words = { "Hello, ", "World!", "\n" };
+  for (const string& word : words) {
+    cout << word;
+  }
+  return 0;
+}
+
+
+/* 
+Your previous MySQL content is preserved below:
+
+/*
+CoderPad provides a basic SQL sandbox with the following schema.
+You can also use commands like `show tables` and `desc employees`
+
+employees                             projects
++---------------+---------+           +---------------+---------+
+| id            | int     |<----+  +->| id            | int     |
+| first_name    | varchar |     |  |  | title         | varchar |
+| last_name     | varchar |     |  |  | start_date    | date    |
+| salary        | int     |     |  |  | end_date      | date    |
+| department_id | int     |--+  |  |  | budget        | int     |
++---------------+---------+  |  |  |  +---------------+---------+
+                             |  |  |
+departments                  |  |  |  employees_projects
++---------------+---------+  |  |  |  +---------------+---------+
+| id            | int     |<-+  |  +--| project_id    | int     |
+| name          | varchar |     +-----| employee_id   | int     |
++---------------+---------+           +---------------+---------+
+*/
+
+SELECT e.first_name, e.last_name, e.salary,
+  d.name as department_name
+FROM employees   AS e
+JOIN departments AS d ON e.department_id = d.id;
+
+
+/* 
+Your previous C++ content is preserved below:
+
+#include <iostream>
+using namespace std;
+
+// To execute C++, please define "int main()"
+int main() {
+  auto words = { "Hello, ", "World!", "\n" };
+  for (const string& word : words) {
+    cout << word;
+  }
+  return 0;
+}
+
+
+/* 
+Your previous C# content is preserved below:
+
+/*
+BUILD ENGINEER 3 - TECH SCREEN
+
+PART ONE: DIAGNOSING BUILD ERRORS.
+
+
+1)
+
+You see the following errors in the build, what would you do?
+
+Offending file: d:\dbs\el\twac\private\msoserviceplatform\export\exports.noproj
+    Reason: Dependency target\x64\ship\msoserviceplatform\x-none\server\environment\autopilot\availabilitymanagerservice\serviceconfig.ini is missing in the dependency graph. This file is listed as an input in file d:\dbs\el\twac\private\msoserviceplatform\export\exports.noproj. This means the dependency file is not produced by any of the build targets that CloudBuild parsed. A missing dependency might occur because of using wildcards in file names, missing targets, using custom commands in the corresponding makefile.inc, having references to generated build files that are not produced during build (dead or deleted code), or having references to generated files that are not being generated into standard CloudBuild-supported output locations.
+    See rule wiki page for examples and more details: https://contoso.com/wiki/samplesite/ENL31100
+    
+    class Test
+    {
+    static void Main()
+    {
+    using (TexReader tr = File.OpenText("\ship\msoserviceplatform\x-none\server\environment\autopilot\availabilitymanagerservice\serviceconfig.ini"))
+    {
+      string text;
+      while (text = tr.ReadLine() != null)
+      
+        console.WriteLine(text);
+      }
+    
+    }
+
+
+Offending file: d:\dbs\el\twac\private\waccommon\export\exports.noproj
+    Reason: Dependency \\target\x64\ship\waccommon\x-none\settings\datacenter\collabwordinnerloop.ini is missing in the dependency graph. This file is listed as an input in file d:\dbs\el\twac\private\waccommon\export\exports.noproj. This means the dependency file is not produced by any of the build targets that CloudBuild parsed. A missing dependency might occur because of using wildcards in file names, missing targets, using custom commands in the corresponding makefile.inc, having references to generated build files that are not produced during build (dead or deleted code), or having references to generated files that are not being generated into standard CloudBuild-supported output locations.
+    See rule wiki page for examples and more details: https://contoso.com/wiki/samplesite/ENL31100
+    
+    
+    
+    
+    
+    
+2)
+
+We spend several hours fixing the above problem. We eventually fix it. We re-sync the tenant and try the forward integrate again. We now run into this below problem. What would you do?
+
+
+n:\Enlistment\Dev>ourSpecialTool.bat forward bld_version_May_9_2017_0002 -o ourSpecialProject -allowUnsafeFI
+Examining client...
+Using override ourSpecialProject
+Using label bld_version_May_9_2017_0002
+ERROR: You have files that intersect the override opened for edit:
+        //depot/devmainoverride/tenantwac/bibls/Common/AvailabilityLevelManager.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/ExcelServerSettings.ServiceSettings.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/Host/ExcelServerFeatureHelperMethods.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/LockAnalysisTree.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/ServiceSettings.xml
+        (plus 1420 more...)
+Logs: "n:\Enlistment\Logs\ourSpecialTool"
+
+
+
+
+
+*/
+
+
+
+
+/*
+
+PART TWO: FAMILIARITY WITH C# OR RELATED LANGUAGE
+(Candidate may convert this to Java, Javascript, Python at their discretion)
+
+1) Fix the merge conflict.
+2) Fix the code to do the right thing.
+
+*/
+
+
+using System;
+
+// Class to identify if a string of text is a palindrome
+
+// A palindrome is something which is the same read from both directions, ignoring spaces, capitalization, special characters.
+
+// Main function outputs the result for a sample set.
+
+// For example, these are palindromes:
+// aabbaa
+// aa bbaa
+// a'ab baa
+
+// These are not:
+// ababab
+// aab ba'
+
+
+
+class Solution
+{
+    
+    static string[] sample = {"bob", "joe", "aabbaa", "aa bbaa", "ababab"};
+    
+    static void Main(string[] args)
+    {
+        foreach (string test in sample)
+        {
+            Console.Write(test + " is ");
+            
+            if(!IsPalindrome(test))
+            {
+                Console.Write("not ");
+            }
+            
+            Console.WriteLine("a palindrome");
+        }
+    }
+    
+    static bool IsPalindrome(string test)
+    {
+     // Returns if the string is a palindrome
+        test = StripString(test);
+        char[] charArr = test.ToCharArray();
+/*<<<<ORIGINAL<<<<
+        for (int i=0; i<=test.Length; i++)
+        {
+            if(test[i] != test[test.Length])
+                return true;
+        }
+>>>THEIRS>>>>            
+        for(int i=0; i<=test.Length; i++)
+        {
+            if(test[i] != test[test.Length - i])
+                return true;
+        }
+/*<<<<YOURS<<<<*/
+        for(int i=0; i<=test.Length; i++)
+        {
+            if((charArr[i]) == (charArr[test.Length-i]))return true; 
+        }
+//====END====*/
+      
+        return false;
+    }
+    
+    static string StripString(string input)
+    {
+     // Strips the string to what we care about
+        input = NormalizeCasing(input);
+        
+        input = input.Remove('.');
+        input = input.Remove((int)',');
+        input = input.Remove((int)'>');
+        input = input.Remove((int)'<');
+        input = input.Remove((int)'?');
+        input = input.Remove((int)'\'');
+        
+        return input;
+        
+    }
+    
+    static string NormalizeCasing(string input)
+    {
+     // Returns the upper case version of input.
+        return input.ToLower();
+    }
+}
+
+ */
+ */
+ */
+
+
+
+hazim javascript
+var _ = require('underscore');
+
+function sayHello() {
+  console.log('Hello, World');
+}
+
+_.times(5, sayHello);
+
+
+/* 
+Your previous C++ content is preserved below:
+
+#include <iostream>
+using namespace std;
+
+// To execute C++, please define "int main()"
+int main() {
+  auto words = { "Hello, ", "World!", "\n" };
+  for (const string& word : words) {
+    cout << word;
+  }
+  return 0;
+}
+
+
+/* 
+Your previous MySQL content is preserved below:
+
+/*
+CoderPad provides a basic SQL sandbox with the following schema.
+You can also use commands like `show tables` and `desc employees`
+
+employees                             projects
++---------------+---------+           +---------------+---------+
+| id            | int     |<----+  +->| id            | int     |
+| first_name    | varchar |     |  |  | title         | varchar |
+| last_name     | varchar |     |  |  | start_date    | date    |
+| salary        | int     |     |  |  | end_date      | date    |
+| department_id | int     |--+  |  |  | budget        | int     |
++---------------+---------+  |  |  |  +---------------+---------+
+                             |  |  |
+departments                  |  |  |  employees_projects
++---------------+---------+  |  |  |  +---------------+---------+
+| id            | int     |<-+  |  +--| project_id    | int     |
+| name          | varchar |     +-----| employee_id   | int     |
++---------------+---------+           +---------------+---------+
+*/
+
+SELECT e.first_name, e.last_name, e.salary,
+  d.name as department_name
+FROM employees   AS e
+JOIN departments AS d ON e.department_id = d.id;
+
+
+/* 
+Your previous C++ content is preserved below:
+
+#include <iostream>
+using namespace std;
+
+// To execute C++, please define "int main()"
+int main() {
+  auto words = { "Hello, ", "World!", "\n" };
+  for (const string& word : words) {
+    cout << word;
+  }
+  return 0;
+}
+
+
+/* 
+Your previous C# content is preserved below:
+
+/*
+BUILD ENGINEER 3 - TECH SCREEN
+
+PART ONE: DIAGNOSING BUILD ERRORS.
+
+
+1)
+
+You see the following errors in the build, what would you do?
+
+Offending file: d:\dbs\el\twac\private\msoserviceplatform\export\exports.noproj
+    Reason: Dependency target\x64\ship\msoserviceplatform\x-none\server\environment\autopilot\availabilitymanagerservice\serviceconfig.ini is missing in the dependency graph. This file is listed as an input in file d:\dbs\el\twac\private\msoserviceplatform\export\exports.noproj. This means the dependency file is not produced by any of the build targets that CloudBuild parsed. A missing dependency might occur because of using wildcards in file names, missing targets, using custom commands in the corresponding makefile.inc, having references to generated build files that are not produced during build (dead or deleted code), or having references to generated files that are not being generated into standard CloudBuild-supported output locations.
+    See rule wiki page for examples and more details: https://contoso.com/wiki/samplesite/ENL31100
+    
+    class Test
+    {
+    static void Main()
+    {
+    using (TexReader tr = File.OpenText("\ship\msoserviceplatform\x-none\server\environment\autopilot\availabilitymanagerservice\serviceconfig.ini"))
+    {
+      string text;
+      while (text = tr.ReadLine() != null)
+      
+        console.WriteLine(text);
+      }
+    
+    }
+
+
+Offending file: d:\dbs\el\twac\private\waccommon\export\exports.noproj
+    Reason: Dependency \\target\x64\ship\waccommon\x-none\settings\datacenter\collabwordinnerloop.ini is missing in the dependency graph. This file is listed as an input in file d:\dbs\el\twac\private\waccommon\export\exports.noproj. This means the dependency file is not produced by any of the build targets that CloudBuild parsed. A missing dependency might occur because of using wildcards in file names, missing targets, using custom commands in the corresponding makefile.inc, having references to generated build files that are not produced during build (dead or deleted code), or having references to generated files that are not being generated into standard CloudBuild-supported output locations.
+    See rule wiki page for examples and more details: https://contoso.com/wiki/samplesite/ENL31100
+    
+    
+    
+    
+    
+    
+2)
+
+We spend several hours fixing the above problem. We eventually fix it. We re-sync the tenant and try the forward integrate again. We now run into this below problem. What would you do?
+
+
+n:\Enlistment\Dev>ourSpecialTool.bat forward bld_version_May_9_2017_0002 -o ourSpecialProject -allowUnsafeFI
+Examining client...
+Using override ourSpecialProject
+Using label bld_version_May_9_2017_0002
+ERROR: You have files that intersect the override opened for edit:
+        //depot/devmainoverride/tenantwac/bibls/Common/AvailabilityLevelManager.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/ExcelServerSettings.ServiceSettings.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/Host/ExcelServerFeatureHelperMethods.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/LockAnalysisTree.cs
+        //depot/devmainoverride/tenantwac/bibls/Common/ServiceSettings.xml
+        (plus 1420 more...)
+Logs: "n:\Enlistment\Logs\ourSpecialTool"
+
+
+
+
+
+*/
+
+
+
+
+/*
+
+PART TWO: FAMILIARITY WITH C# OR RELATED LANGUAGE
+(Candidate may convert this to Java, Javascript, Python at their discretion)
+
+1) Fix the merge conflict.
+2) Fix the code to do the right thing.
+
+*/
+
+
+using System;
+
+// Class to identify if a string of text is a palindrome
+
+// A palindrome is something which is the same read from both directions, ignoring spaces, capitalization, special characters.
+
+// Main function outputs the result for a sample set.
+
+// For example, these are palindromes:
+// aabbaa
+// aa bbaa
+// a'ab baa
+
+// These are not:
+// ababab
+// aab ba'
+
+
+
+class Solution
+{
+    
+    static string[] sample = {"bob", "joe", "aabbaa", "aa bbaa", "ababab"};
+    
+    static void Main(string[] args)
+    {
+        foreach (string test in sample)
+        {
+            Console.Write(test + " is ");
+            
+            if(!IsPalindrome(test))
+            {
+                Console.Write("not ");
+            }
+            
+            Console.WriteLine("a palindrome");
+        }
+    }
+    
+    static bool IsPalindrome(string test)
+    {
+     // Returns if the string is a palindrome
+        test = StripString(test);
+        char[] charArr = test.ToCharArray();
+/*<<<<ORIGINAL<<<<
+        for (int i=0; i<=test.Length; i++)
+        {
+            if(test[i] != test[test.Length])
+                return true;
+        }
+>>>THEIRS>>>>            
+        for(int i=0; i<=test.Length; i++)
+        {
+            if(test[i] != test[test.Length - i])
+                return true;
+        }
+/*<<<<YOURS<<<<*/
+        for(int i=0; i<=test.Length; i++)
+        {
+            if((charArr[i]) == (charArr[test.Length-i]))return true; 
+        }
+//====END====*/
+      
+        return false;
+    }
+    
+    static string StripString(string input)
+    {
+     // Strips the string to what we care about
+        input = NormalizeCasing(input);
+        
+        input = input.Remove('.');
+        input = input.Remove((int)',');
+        input = input.Remove((int)'>');
+        input = input.Remove((int)'<');
+        input = input.Remove((int)'?');
+        input = input.Remove((int)'\'');
+        
+        return input;
+        
+    }
+    
+    static string NormalizeCasing(string input)
+    {
+     // Returns the upper case version of input.
+        return input.ToLower();
+    }
+}
+
+ */
+ */
+ */
+ */
+
+hazim Python 3
+def say_hello():
+    print('Hello, World')
+
+for i in range(5):
+    say_hello()
+
+
+# 
+# Your previous Ruby content is preserved below:
+# 
+# def say_hello
+#   puts 'Hello, World'
+# end
+# 
+# 5.times { say_hello }
+# 
+# 
+# # 
+# # Your previous Python 3 content is preserved below:
+# # 
+# # def say_hello():
+# #     print('Hello, World')
+# # 
+# # for i in range(5):
+# #     say_hello()
+# # 
+# # 
+# # # 
+# # # Your previous Visual Basic content is preserved below:
+# # # 
+# # # ' To run VB.net code, please define a "Sub Main"
+# # # ' on the top level Module
+# # # 
+# # # Module Solution
+# # #     Sub Main()
+# # #         Console.WriteLine ("Hello, World")
+# # #     End Sub
+# # # End Module
+# # # 
+# # # 
+# # # ' 
+# # # ' Your previous Ruby content is preserved below:
+# # # ' 
+# # # ' def say_hello
+# # # '   puts 'Hello, World'
+# # # ' end
+# # # ' 
+# # # ' 5.times { say_hello }
+# # # ' 
+# # # ' 
+# # # ' # 
+# # # ' # Your previous C content is preserved below:
+# # # ' # 
+# # # ' # #include <stdio.h>
+# # # ' # 
+# # # ' # // To execute C, please define "int main()"
+# # # ' # 
+# # # ' # int main() {
+# # # ' #   for (int i = 0; i < 5; i++) {
+# # # ' #     printf("Hello, World\n");
+# # # ' #   }
+# # # ' #   return 0;
+# # # ' # }
+# # # ' # 
+# # # ' # 
+# # # ' # /* 
+# # # ' # Your previous Python 3 content is preserved below:
+# # # ' # 
+# # # ' # def say_hello():
+# # # ' #     print('Hello, World')
+# # # ' # 
+# # # ' # for i in range(5):
+# # # ' #     say_hello()
+# # # ' # 
+# # # ' # 
+# # # ' # # 
+# # # ' # # Your previous JavaScript content is preserved below:
+# # # ' # # 
+# # # ' # # var _ = require('underscore');
+# # # ' # # 
+# # # ' # # function sayHello() {
+# # # ' # #   console.log('Hello, World');
+# # # ' # # }
+# # # ' # # 
+# # # ' # # _.times(5, sayHello);
+# # # ' # # 
+# # # ' # # 
+# # # ' # # /* 
+# # # ' # # Your previous C++ content is preserved below:
+# # # ' # # 
+# # # ' # # #include <iostream>
+# # # ' # # using namespace std;
+# # # ' # # 
+# # # ' # # // To execute C++, please define "int main()"
+# # # ' # # int main() {
+# # # ' # #   auto words = { "Hello, ", "World!", "\n" };
+# # # ' # #   for (const string& word : words) {
+# # # ' # #     cout << word;
+# # # ' # #   }
+# # # ' # #   return 0;
+# # # ' # # }
+# # # ' # # 
+# # # ' # # 
+# # # ' # # /* 
+# # # ' # # Your previous MySQL content is preserved below:
+# # # ' # # 
+# # # ' # # /*
+# # # ' # # CoderPad provides a basic SQL sandbox with the following schema.
+# # # ' # # You can also use commands like `show tables` and `desc employees`
+# # # ' # # 
+# # # ' # # employees                             projects
+# # # ' # # +---------------+---------+           +---------------+---------+
+# # # ' # # | id            | int     |<----+  +->| id            | int     |
+# # # ' # # | first_name    | varchar |     |  |  | title         | varchar |
+# # # ' # # | last_name     | varchar |     |  |  | start_date    | date    |
+# # # ' # # | salary        | int     |     |  |  | end_date      | date    |
+# # # ' # # | department_id | int     |--+  |  |  | budget        | int     |
+# # # ' # # +---------------+---------+  |  |  |  +---------------+---------+
+# # # ' # #                              |  |  |
+# # # ' # # departments                  |  |  |  employees_projects
+# # # ' # # +---------------+---------+  |  |  |  +---------------+---------+
+# # # ' # # | id            | int     |<-+  |  +--| project_id    | int     |
+# # # ' # # | name          | varchar |     +-----| employee_id   | int     |
+# # # ' # # +---------------+---------+           +---------------+---------+
+# # # ' # # */
+# # # ' # # 
+# # # ' # # SELECT e.first_name, e.last_name, e.salary,
+# # # ' # #   d.name as department_name
+# # # ' # # FROM employees   AS e
+# # # ' # # JOIN departments AS d ON e.department_id = d.id;
+# # # ' # # 
+# # # ' # # 
+# # # ' # # /* 
+# # # ' # # Your previous C++ content is preserved below:
+# # # ' # # 
+# # # ' # # #include <iostream>
+# # # ' # # using namespace std;
+# # # ' # # 
+# # # ' # # // To execute C++, please define "int main()"
+# # # ' # # int main() {
+# # # ' # #   auto words = { "Hello, ", "World!", "\n" };
+# # # ' # #   for (const string& word : words) {
+# # # ' # #     cout << word;
+# # # ' # #   }
+# # # ' # #   return 0;
+# # # ' # # }
+# # # ' # # 
+# # # ' # # 
+# # # ' # # /* 
+# # # ' # # Your previous C# content is preserved below:
+# # # ' # # 
+# # # ' # # /*
+# # # ' # # BUILD ENGINEER 3 - TECH SCREEN
+# # # ' # # 
+# # # ' # # PART ONE: DIAGNOSING BUILD ERRORS.
+# # # ' # # 
+# # # ' # # 
+# # # ' # # 1)
+# # # ' # # 
+# # # ' # # You see the following errors in the build, what would you do?
+# # # ' # # 
+# # # ' # # Offending file: d:\dbs\el\twac\private\msoserviceplatform\export\exports.noproj
+# # # ' # #     Reason: Dependency target\x64\ship\msoserviceplatform\x-none\server\environment\autopilot\availabilitymanagerservice\serviceconfig.ini is missing in the dependency graph. This file is listed as an input in file d:\dbs\el\twac\private\msoserviceplatform\export\exports.noproj. This means the dependency file is not produced by any of the build targets that CloudBuild parsed. A missing dependency might occur because of using wildcards in file names, missing targets, using custom commands in the corresponding makefile.inc, having references to generated build files that are not produced during build (dead or deleted code), or having references to generated files that are not being generated into standard CloudBuild-supported output locations.
+# # # ' # #     See rule wiki page for examples and more details: https://contoso.com/wiki/samplesite/ENL31100
+# # # ' # #     
+# # # ' # #     class Test
+# # # ' # #     {
+# # # ' # #     static void Main()
+# # # ' # #     {
+# # # ' # #     using (TexReader tr = File.OpenText("\ship\msoserviceplatform\x-none\server\environment\autopilot\availabilitymanagerservice\serviceconfig.ini"))
+# # # ' # #     {
+# # # ' # #       string text;
+# # # ' # #       while (text = tr.ReadLine() != null)
+# # # ' # #       
+# # # ' # #         console.WriteLine(text);
+# # # ' # #       }
+# # # ' # #     
+# # # ' # #     }
+# # # ' # # 
+# # # ' # # 
+# # # ' # # Offending file: d:\dbs\el\twac\private\waccommon\export\exports.noproj
+# # # ' # #     Reason: Dependency \\target\x64\ship\waccommon\x-none\settings\datacenter\collabwordinnerloop.ini is missing in the dependency graph. This file is listed as an input in file d:\dbs\el\twac\private\waccommon\export\exports.noproj. This means the dependency file is not produced by any of the build targets that CloudBuild parsed. A missing dependency might occur because of using wildcards in file names, missing targets, using custom commands in the corresponding makefile.inc, having references to generated build files that are not produced during build (dead or deleted code), or having references to generated files that are not being generated into standard CloudBuild-supported output locations.
+# # # ' # #     See rule wiki page for examples and more details: https://contoso.com/wiki/samplesite/ENL31100
+# # # ' # #     
+# # # ' # #     
+# # # ' # #     
+# # # ' # #     
+# # # ' # #     
+# # # ' # #     
+# # # ' # # 2)
+# # # ' # # 
+# # # ' # # We spend several hours fixing the above problem. We eventually fix it. We re-sync the tenant and try the forward integrate again. We now run into this below problem. What would you do?
+# # # ' # # 
+# # # ' # # 
+# # # ' # # n:\Enlistment\Dev>ourSpecialTool.bat forward bld_version_May_9_2017_0002 -o ourSpecialProject -allowUnsafeFI
+# # # ' # # Examining client...
+# # # ' # # Using override ourSpecialProject
+# # # ' # # Using label bld_version_May_9_2017_0002
+# # # ' # # ERROR: You have files that intersect the override opened for edit:
+# # # ' # #         //depot/devmainoverride/tenantwac/bibls/Common/AvailabilityLevelManager.cs
+# # # ' # #         //depot/devmainoverride/tenantwac/bibls/Common/ExcelServerSettings.ServiceSettings.cs
+# # # ' # #         //depot/devmainoverride/tenantwac/bibls/Common/Host/ExcelServerFeatureHelperMethods.cs
+# # # ' # #         //depot/devmainoverride/tenantwac/bibls/Common/LockAnalysisTree.cs
+# # # ' # #         //depot/devmainoverride/tenantwac/bibls/Common/ServiceSettings.xml
+# # # ' # #         (plus 1420 more...)
+# # # ' # # Logs: "n:\Enlistment\Logs\ourSpecialTool"
+# # # ' # # 
+# # # ' # # 
+# # # ' # # 
+# # # ' # # 
+# # # ' # # 
+# # # ' # # */
+# # # ' # # 
+# # # ' # # 
+# # # ' # # 
+# # # ' # # 
+# # # ' # # /*
+# # # ' # # 
+# # # ' # # PART TWO: FAMILIARITY WITH C# OR RELATED LANGUAGE
+# # # ' # # (Candidate may convert this to Java, Javascript, Python at their discretion)
+# # # ' # # 
+# # # ' # # 1) Fix the merge conflict.
+# # # ' # # 2) Fix the code to do the right thing.
+# # # ' # # 
+# # # ' # # */
+# # # ' # # 
+# # # ' # # 
+# # # ' # # using System;
+# # # ' # # 
+# # # ' # # // Class to identify if a string of text is a palindrome
+# # # ' # # 
+# # # ' # # // A palindrome is something which is the same read from both directions, ignoring spaces, capitalization, special characters.
+# # # ' # # 
+# # # ' # # // Main function outputs the result for a sample set.
+# # # ' # # 
+# # # ' # # // For example, these are palindromes:
+# # # ' # # // aabbaa
+# # # ' # # // aa bbaa
+# # # ' # # // a'ab baa
+# # # ' # # 
+# # # ' # # // These are not:
+# # # ' # # // ababab
+# # # ' # # // aab ba'
+# # # ' # # 
+# # # ' # # 
+# # # ' # # 
+# # # ' # # class Solution
+# # # ' # # {
+# # # ' # #     
+# # # ' # #     static string[] sample = {"bob", "joe", "aabbaa", "aa bbaa", "ababab"};
+# # # ' # #     
+# # # ' # #     static void Main(string[] args)
+# # # ' # #     {
+# # # ' # #         foreach (string test in sample)
+# # # ' # #         {
+# # # ' # #             Console.Write(test + " is ");
+# # # ' # #             
+# # # ' # #             if(!IsPalindrome(test))
+# # # ' # #             {
+# # # ' # #                 Console.Write("not ");
+# # # ' # #             }
+# # # ' # #             
+# # # ' # #             Console.WriteLine("a palindrome");
+# # # ' # #         }
+# # # ' # #     }
+# # # ' # #     
+# # # ' # #     static bool IsPalindrome(string test)
+# # # ' # #     {
+# # # ' # #      // Returns if the string is a palindrome
+# # # ' # #         test = StripString(test);
+# # # ' # #         char[] charArr = test.ToCharArray();
+# # # ' # # /*<<<<ORIGINAL<<<<
+# # # ' # #         for (int i=0; i<=test.Length; i++)
+# # # ' # #         {
+# # # ' # #             if(test[i] != test[test.Length])
+# # # ' # #                 return true;
+# # # ' # #         }
+# # # ' # # >>>THEIRS>>>>            
+# # # ' # #         for(int i=0; i<=test.Length; i++)
+# # # ' # #         {
+# # # ' # #             if(test[i] != test[test.Length - i])
+# # # ' # #                 return true;
+# # # ' # #         }
+# # # ' # # /*<<<<YOURS<<<<*/
+# # # ' # #         for(int i=0; i<=test.Length; i++)
+# # # ' # #         {
+# # # ' # #             if((charArr[i]) == (charArr[test.Length-i]))return true; 
+# # # ' # #         }
+# # # ' # # //====END====*/
+# # # ' # #       
+# # # ' # #         return false;
+# # # ' # #     }
+# # # ' # #     
+# # # ' # #     static string StripString(string input)
+# # # ' # #     {
+# # # ' # #      // Strips the string to what we care about
+# # # ' # #         input = NormalizeCasing(input);
+# # # ' # #         
+# # # ' # #         input = input.Remove('.');
+# # # ' # #         input = input.Remove((int)',');
+# # # ' # #         input = input.Remove((int)'>');
+# # # ' # #         input = input.Remove((int)'<');
+# # # ' # #         input = input.Remove((int)'?');
+# # # ' # #         input = input.Remove((int)'\'');
+# # # ' # #         
+# # # ' # #         return input;
+# # # ' # #         
+# # # ' # #     }
+# # # ' # #     
+# # # ' # #     static string NormalizeCasing(string input)
+# # # ' # #     {
+# # # ' # #      // Returns the upper case version of input.
+# # # ' # #         return input.ToLower();
+# # # ' # #     }
+# # # ' # # }
+# # # ' # # 
+# # # ' # #  */
+# # # ' # #  */
+# # # ' # #  */
+# # # ' # #  */
+# # # ' # 
+# # # ' #  */
+# # # ' 
+# # # 
+# # 
+# 
+
+
+
+
+hazim Visual Basic
+' To run VB.net code, please define a "Sub Main"
+' on the top level Module
+
+Module Solution
+    Sub Main()
+        Console.WriteLine ("Hello, World")
+    End Sub
+End Module
+
+
+' 
+' Your previous Ruby content is preserved below:
+' 
+' def say_hello
+'   puts 'Hello, World'
+' end
+' 
+' 5.times { say_hello }
+' 
+' 
+' # 
+' # Your previous C content is preserved below:
+' # 
+' # #include <stdio.h>
+' # 
+' # // To execute C, please define "int main()"
+' # 
+' # int main() {
+' #   for (int i = 0; i < 5; i++) {
+' #     printf("Hello, World\n");
+' #   }
+' #   return 0;
+' # }
+' # 
+' # 
+' # /* 
+' # Your previous Python 3 content is preserved below:
+' # 
+' # def say_hello():
+' #     print('Hello, World')
+' # 
+' # for i in range(5):
+' #     say_hello()
+' # 
+' # 
+' # # 
+' # # Your previous JavaScript content is preserved below:
+' # # 
+' # # var _ = require('underscore');
+' # # 
+' # # function sayHello() {
+' # #   console.log('Hello, World');
+' # # }
+' # # 
+' # # _.times(5, sayHello);
+' # # 
+' # # 
+' # # /* 
+' # # Your previous C++ content is preserved below:
+' # # 
+' # # #include <iostream>
+' # # using namespace std;
+' # # 
+' # # // To execute C++, please define "int main()"
+' # # int main() {
+' # #   auto words = { "Hello, ", "World!", "\n" };
+' # #   for (const string& word : words) {
+' # #     cout << word;
+' # #   }
+' # #   return 0;
+' # # }
+' # # 
+' # # 
+' # # /* 
+' # # Your previous MySQL content is preserved below:
+' # # 
+' # # /*
+' # # CoderPad provides a basic SQL sandbox with the following schema.
+' # # You can also use commands like `show tables` and `desc employees`
+' # # 
+' # # employees                             projects
+' # # +---------------+---------+           +---------------+---------+
+' # # | id            | int     |<----+  +->| id            | int     |
+' # # | first_name    | varchar |     |  |  | title         | varchar |
+' # # | last_name     | varchar |     |  |  | start_date    | date    |
+' # # | salary        | int     |     |  |  | end_date      | date    |
+' # # | department_id | int     |--+  |  |  | budget        | int     |
+' # # +---------------+---------+  |  |  |  +---------------+---------+
+' # #                              |  |  |
+' # # departments                  |  |  |  employees_projects
+' # # +---------------+---------+  |  |  |  +---------------+---------+
+' # # | id            | int     |<-+  |  +--| project_id    | int     |
+' # # | name          | varchar |     +-----| employee_id   | int     |
+' # # +---------------+---------+           +---------------+---------+
+' # # */
+' # # 
+' # # SELECT e.first_name, e.last_name, e.salary,
+' # #   d.name as department_name
+' # # FROM employees   AS e
+' # # JOIN departments AS d ON e.department_id = d.id;
+' # # 
+' # # 
+' # # /* 
+' # # Your previous C++ content is preserved below:
+' # # 
+' # # #include <iostream>
+' # # using namespace std;
+' # # 
+' # # // To execute C++, please define "int main()"
+' # # int main() {
+' # #   auto words = { "Hello, ", "World!", "\n" };
+' # #   for (const string& word : words) {
+' # #     cout << word;
+' # #   }
+' # #   return 0;
+' # # }
+' # # 
+' # # 
+' # # /* 
+' # # Your previous C# content is preserved below:
+' # # 
+' # # /*
+' # # BUILD ENGINEER 3 - TECH SCREEN
+' # # 
+' # # PART ONE: DIAGNOSING BUILD ERRORS.
+' # # 
+' # # 
+' # # 1)
+' # # 
+' # # You see the following errors in the build, what would you do?
+' # # 
+' # # Offending file: d:\dbs\el\twac\private\msoserviceplatform\export\exports.noproj
+' # #     Reason: Dependency target\x64\ship\msoserviceplatform\x-none\server\environment\autopilot\availabilitymanagerservice\serviceconfig.ini is missing in the dependency graph. This file is listed as an input in file d:\dbs\el\twac\private\msoserviceplatform\export\exports.noproj. This means the dependency file is not produced by any of the build targets that CloudBuild parsed. A missing dependency might occur because of using wildcards in file names, missing targets, using custom commands in the corresponding makefile.inc, having references to generated build files that are not produced during build (dead or deleted code), or having references to generated files that are not being generated into standard CloudBuild-supported output locations.
+' # #     See rule wiki page for examples and more details: https://contoso.com/wiki/samplesite/ENL31100
+' # #     
+' # #     class Test
+' # #     {
+' # #     static void Main()
+' # #     {
+' # #     using (TexReader tr = File.OpenText("\ship\msoserviceplatform\x-none\server\environment\autopilot\availabilitymanagerservice\serviceconfig.ini"))
+' # #     {
+' # #       string text;
+' # #       while (text = tr.ReadLine() != null)
+' # #       
+' # #         console.WriteLine(text);
+' # #       }
+' # #     
+' # #     }
+' # # 
+' # # 
+' # # Offending file: d:\dbs\el\twac\private\waccommon\export\exports.noproj
+' # #     Reason: Dependency \\target\x64\ship\waccommon\x-none\settings\datacenter\collabwordinnerloop.ini is missing in the dependency graph. This file is listed as an input in file d:\dbs\el\twac\private\waccommon\export\exports.noproj. This means the dependency file is not produced by any of the build targets that CloudBuild parsed. A missing dependency might occur because of using wildcards in file names, missing targets, using custom commands in the corresponding makefile.inc, having references to generated build files that are not produced during build (dead or deleted code), or having references to generated files that are not being generated into standard CloudBuild-supported output locations.
+' # #     See rule wiki page for examples and more details: https://contoso.com/wiki/samplesite/ENL31100
+' # #     
+' # #     
+' # #     
+' # #     
+' # #     
+' # #     
+' # # 2)
+' # # 
+' # # We spend several hours fixing the above problem. We eventually fix it. We re-sync the tenant and try the forward integrate again. We now run into this below problem. What would you do?
+' # # 
+' # # 
+' # # n:\Enlistment\Dev>ourSpecialTool.bat forward bld_version_May_9_2017_0002 -o ourSpecialProject -allowUnsafeFI
+' # # Examining client...
+' # # Using override ourSpecialProject
+' # # Using label bld_version_May_9_2017_0002
+' # # ERROR: You have files that intersect the override opened for edit:
+' # #         //depot/devmainoverride/tenantwac/bibls/Common/AvailabilityLevelManager.cs
+' # #         //depot/devmainoverride/tenantwac/bibls/Common/ExcelServerSettings.ServiceSettings.cs
+' # #         //depot/devmainoverride/tenantwac/bibls/Common/Host/ExcelServerFeatureHelperMethods.cs
+' # #         //depot/devmainoverride/tenantwac/bibls/Common/LockAnalysisTree.cs
+' # #         //depot/devmainoverride/tenantwac/bibls/Common/ServiceSettings.xml
+' # #         (plus 1420 more...)
+' # # Logs: "n:\Enlistment\Logs\ourSpecialTool"
+' # # 
+' # # 
+' # # 
+' # # 
+' # # 
+' # # */
+' # # 
+' # # 
+' # # 
+' # # 
+' # # /*
+' # # 
+' # # PART TWO: FAMILIARITY WITH C# OR RELATED LANGUAGE
+' # # (Candidate may convert this to Java, Javascript, Python at their discretion)
+' # # 
+' # # 1) Fix the merge conflict.
+' # # 2) Fix the code to do the right thing.
+' # # 
+' # # */
+' # # 
+' # # 
+' # # using System;
+' # # 
+' # # // Class to identify if a string of text is a palindrome
+' # # 
+' # # // A palindrome is something which is the same read from both directions, ignoring spaces, capitalization, special characters.
+' # # 
+' # # // Main function outputs the result for a sample set.
+' # # 
+' # # // For example, these are palindromes:
+' # # // aabbaa
+' # # // aa bbaa
+' # # // a'ab baa
+' # # 
+' # # // These are not:
+' # # // ababab
+' # # // aab ba'
+' # # 
+' # # 
+' # # 
+' # # class Solution
+' # # {
+' # #     
+' # #     static string[] sample = {"bob", "joe", "aabbaa", "aa bbaa", "ababab"};
+' # #     
+' # #     static void Main(string[] args)
+' # #     {
+' # #         foreach (string test in sample)
+' # #         {
+' # #             Console.Write(test + " is ");
+' # #             
+' # #             if(!IsPalindrome(test))
+' # #             {
+' # #                 Console.Write("not ");
+' # #             }
+' # #             
+' # #             Console.WriteLine("a palindrome");
+' # #         }
+' # #     }
+' # #     
+' # #     static bool IsPalindrome(string test)
+' # #     {
+' # #      // Returns if the string is a palindrome
+' # #         test = StripString(test);
+' # #         char[] charArr = test.ToCharArray();
+' # # /*<<<<ORIGINAL<<<<
+' # #         for (int i=0; i<=test.Length; i++)
+' # #         {
+' # #             if(test[i] != test[test.Length])
+' # #                 return true;
+' # #         }
+' # # >>>THEIRS>>>>            
+' # #         for(int i=0; i<=test.Length; i++)
+' # #         {
+' # #             if(test[i] != test[test.Length - i])
+' # #                 return true;
+' # #         }
+' # # /*<<<<YOURS<<<<*/
+' # #         for(int i=0; i<=test.Length; i++)
+' # #         {
+' # #             if((charArr[i]) == (charArr[test.Length-i]))return true; 
+' # #         }
+' # # //====END====*/
+' # #       
+' # #         return false;
+' # #     }
+' # #     
+' # #     static string StripString(string input)
+' # #     {
+' # #      // Strips the string to what we care about
+' # #         input = NormalizeCasing(input);
+' # #         
+' # #         input = input.Remove('.');
+' # #         input = input.Remove((int)',');
+' # #         input = input.Remove((int)'>');
+' # #         input = input.Remove((int)'<');
+' # #         input = input.Remove((int)'?');
+' # #         input = input.Remove((int)'\'');
+' # #         
+' # #         return input;
+' # #         
+' # #     }
+' # #     
+' # #     static string NormalizeCasing(string input)
+' # #     {
+' # #      // Returns the upper case version of input.
+' # #         return input.ToLower();
+' # #     }
+' # # }
+' # # 
+' # #  */
+' # #  */
+' # #  */
+' # #  */
+' # 
+' #  */
+' 
+
+hazim Perl
+use strict;
+use warnings;
+use Data::Dumper;
+
+for (my $count = 5; $count >= 1; $count--) {
+  print "Hello, World #$count\n";
+}
+
+
+# 
+# Your previous Java content is preserved below:
+# 
+# import java.io.*;
+# import java.util.*;
+# 
+# /*
+#  * To execute Java, please define "static void main" on a class
+#  * named Solution.
+#  *
+#  * If you need more classes, simply define them inline.
+#  */
+# 
+# class Solution {
+#   public static void main(String[] args) {
+#     ArrayList<String> strings = new ArrayList<String>();
+#     strings.add("Hello, World!");
+#     strings.add("Welcome to CoderPad.");
+#     strings.add("This pad is running Java 8.");
+# 
+#     for (String string : strings) {
+#       System.out.println(string);
+#     }
+#   }
+# }
+# 
+# 
+# /* 
+# Your previous Python 2 content is preserved below:
+# 
+# def say_hello():
+#     print 'Hello, World'
+# 
+# for i in xrange(5):
+#     say_hello()
+# 
+# 
+# # 
+# # Your previous Python 3 content is preserved below:
+# # 
+# # def say_hello():
+# #     print('Hello, World')
+# # 
+# # for i in range(5):
+# #     say_hello()
+# # 
+# # 
+# # # 
+# # # Your previous Ruby content is preserved below:
+# # # 
+# # # def say_hello
+# # #   puts 'Hello, World'
+# # # end
+# # # 
+# # # 5.times { say_hello }
+# # # 
+# # # 
+# # # # 
+# # # # Your previous Python 3 content is preserved below:
+# # # # 
+# # # # def say_hello():
+# # # #     print('Hello, World')
+# # # # 
+# # # # for i in range(5):
+# # # #     say_hello()
+# # # # 
+# # # # 
+# # # # # 
+# # # # # Your previous Visual Basic content is preserved below:
+# # # # # 
+# # # # # ' To run VB.net code, please define a "Sub Main"
+# # # # # ' on the top level Module
+# # # # # 
+# # # # # Module Solution
+# # # # #     Sub Main()
+# # # # #         Console.WriteLine ("Hello, World")
+# # # # #     End Sub
+# # # # # End Module
+# # # # # 
+# # # # # 
+# # # # # ' 
+# # # # # ' Your previous Ruby content is preserved below:
+# # # # # ' 
+# # # # # ' def say_hello
+# # # # # '   puts 'Hello, World'
+# # # # # ' end
+# # # # # ' 
+# # # # # ' 5.times { say_hello }
+# # # # # ' 
+# # # # # ' 
+# # # # # ' # 
+# # # # # ' # Your previous C content is preserved below:
+# # # # # ' # 
+# # # # # ' # #include <stdio.h>
+# # # # # ' # 
+# # # # # ' # // To execute C, please define "int main()"
+# # # # # ' # 
+# # # # # ' # int main() {
+# # # # # ' #   for (int i = 0; i < 5; i++) {
+# # # # # ' #     printf("Hello, World\n");
+# # # # # ' #   }
+# # # # # ' #   return 0;
+# # # # # ' # }
+# # # # # ' # 
+# # # # # ' # 
+# # # # # ' # /* 
+# # # # # ' # Your previous Python 3 content is preserved below:
+# # # # # ' # 
+# # # # # ' # def say_hello():
+# # # # # ' #     print('Hello, World')
+# # # # # ' # 
+# # # # # ' # for i in range(5):
+# # # # # ' #     say_hello()
+# # # # # ' # 
+# # # # # ' # 
+# # # # # ' # # 
+# # # # # ' # # Your previous JavaScript content is preserved below:
+# # # # # ' # # 
+# # # # # ' # # var _ = require('underscore');
+# # # # # ' # # 
+# # # # # ' # # function sayHello() {
+# # # # # ' # #   console.log('Hello, World');
+# # # # # ' # # }
+# # # # # ' # # 
+# # # # # ' # # _.times(5, sayHello);
+# # # # # ' # # 
+# # # # # ' # # 
+# # # # # ' # # /* 
+# # # # # ' # # Your previous C++ content is preserved below:
+# # # # # ' # # 
+# # # # # ' # # #include <iostream>
+# # # # # ' # # using namespace std;
+# # # # # ' # # 
+# # # # # ' # # // To execute C++, please define "int main()"
+# # # # # ' # # int main() {
+# # # # # ' # #   auto words = { "Hello, ", "World!", "\n" };
+# # # # # ' # #   for (const string& word : words) {
+# # # # # ' # #     cout << word;
+# # # # # ' # #   }
+# # # # # ' # #   return 0;
+# # # # # ' # # }
+# # # # # ' # # 
+# # # # # ' # # 
+# # # # # ' # # /* 
+# # # # # ' # # Your previous MySQL content is preserved below:
+# # # # # ' # # 
+# # # # # ' # # /*
+# # # # # ' # # CoderPad provides a basic SQL sandbox with the following schema.
+# # # # # ' # # You can also use commands like `show tables` and `desc employees`
+# # # # # ' # # 
+# # # # # ' # # employees                             projects
+# # # # # ' # # +---------------+---------+           +---------------+---------+
+# # # # # ' # # | id            | int     |<----+  +->| id            | int     |
+# # # # # ' # # | first_name    | varchar |     |  |  | title         | varchar |
+# # # # # ' # # | last_name     | varchar |     |  |  | start_date    | date    |
+# # # # # ' # # | salary        | int     |     |  |  | end_date      | date    |
+# # # # # ' # # | department_id | int     |--+  |  |  | budget        | int     |
+# # # # # ' # # +---------------+---------+  |  |  |  +---------------+---------+
+# # # # # ' # #                              |  |  |
+# # # # # ' # # departments                  |  |  |  employees_projects
+# # # # # ' # # +---------------+---------+  |  |  |  +---------------+---------+
+# # # # # ' # # | id            | int     |<-+  |  +--| project_id    | int     |
+# # # # # ' # # | name          | varchar |     +-----| employee_id   | int     |
+# # # # # ' # # +---------------+---------+           +---------------+---------+
+# # # # # ' # # */
+# # # # # ' # # 
+# # # # # ' # # SELECT e.first_name, e.last_name, e.salary,
+# # # # # ' # #   d.name as department_name
+# # # # # ' # # FROM employees   AS e
+# # # # # ' # # JOIN departments AS d ON e.department_id = d.id;
+# # # # # ' # # 
+# # # # # ' # # 
+# # # # # ' # # /* 
+# # # # # ' # # Your previous C++ content is preserved below:
+# # # # # ' # # 
+# # # # # ' # # #include <iostream>
+# # # # # ' # # using namespace std;
+# # # # # ' # # 
+# # # # # ' # # // To execute C++, please define "int main()"
+# # # # # ' # # int main() {
+# # # # # ' # #   auto words = { "Hello, ", "World!", "\n" };
+# # # # # ' # #   for (const string& word : words) {
+# # # # # ' # #     cout << word;
+# # # # # ' # #   }
+# # # # # ' # #   return 0;
+# # # # # ' # # }
+# # # # # ' # # 
+# # # # # ' # # 
+# # # # # ' # # /* 
+# # # # # ' # # Your previous C# content is preserved below:
+# # # # # ' # # 
+# # # # # ' # # /*
+# # # # # ' # # BUILD ENGINEER 3 - TECH SCREEN
+# # # # # ' # # 
+# # # # # ' # # PART ONE: DIAGNOSING BUILD ERRORS.
+# # # # # ' # # 
+# # # # # ' # # 
+# # # # # ' # # 1)
+# # # # # ' # # 
+# # # # # ' # # You see the following errors in the build, what would you do?
+# # # # # ' # # 
+# # # # # ' # # Offending file: d:\dbs\el\twac\private\msoserviceplatform\export\exports.noproj
+# # # # # ' # #     Reason: Dependency target\x64\ship\msoserviceplatform\x-none\server\environment\autopilot\availabilitymanagerservice\serviceconfig.ini is missing in the dependency graph. This file is listed as an input in file d:\dbs\el\twac\private\msoserviceplatform\export\exports.noproj. This means the dependency file is not produced by any of the build targets that CloudBuild parsed. A missing dependency might occur because of using wildcards in file names, missing targets, using custom commands in the corresponding makefile.inc, having references to generated build files that are not produced during build (dead or deleted code), or having references to generated files that are not being generated into standard CloudBuild-supported output locations.
+# # # # # ' # #     See rule wiki page for examples and more details: https://contoso.com/wiki/samplesite/ENL31100
+# # # # # ' # #     
+# # # # # ' # #     class Test
+# # # # # ' # #     {
+# # # # # ' # #     static void Main()
+# # # # # ' # #     {
+# # # # # ' # #     using (TexReader tr = File.OpenText("\ship\msoserviceplatform\x-none\server\environment\autopilot\availabilitymanagerservice\serviceconfig.ini"))
+# # # # # ' # #     {
+# # # # # ' # #       string text;
+# # # # # ' # #       while (text = tr.ReadLine() != null)
+# # # # # ' # #       
+# # # # # ' # #         console.WriteLine(text);
+# # # # # ' # #       }
+# # # # # ' # #     
+# # # # # ' # #     }
+# # # # # ' # # 
+# # # # # ' # # 
+# # # # # ' # # Offending file: d:\dbs\el\twac\private\waccommon\export\exports.noproj
+# # # # # ' # #     Reason: Dependency \\target\x64\ship\waccommon\x-none\settings\datacenter\collabwordinnerloop.ini is missing in the dependency graph. This file is listed as an input in file d:\dbs\el\twac\private\waccommon\export\exports.noproj. This means the dependency file is not produced by any of the build targets that CloudBuild parsed. A missing dependency might occur because of using wildcards in file names, missing targets, using custom commands in the corresponding makefile.inc, having references to generated build files that are not produced during build (dead or deleted code), or having references to generated files that are not being generated into standard CloudBuild-supported output locations.
+# # # # # ' # #     See rule wiki page for examples and more details: https://contoso.com/wiki/samplesite/ENL31100
+# # # # # ' # #     
+# # # # # ' # #     
+# # # # # ' # #     
+# # # # # ' # #     
+# # # # # ' # #     
+# # # # # ' # #     
+# # # # # ' # # 2)
+# # # # # ' # # 
+# # # # # ' # # We spend several hours fixing the above problem. We eventually fix it. We re-sync the tenant and try the forward integrate again. We now run into this below problem. What would you do?
+# # # # # ' # # 
+# # # # # ' # # 
+# # # # # ' # # n:\Enlistment\Dev>ourSpecialTool.bat forward bld_version_May_9_2017_0002 -o ourSpecialProject -allowUnsafeFI
+# # # # # ' # # Examining client...
+# # # # # ' # # Using override ourSpecialProject
+# # # # # ' # # Using label bld_version_May_9_2017_0002
+# # # # # ' # # ERROR: You have files that intersect the override opened for edit:
+# # # # # ' # #         //depot/devmainoverride/tenantwac/bibls/Common/AvailabilityLevelManager.cs
+# # # # # ' # #         //depot/devmainoverride/tenantwac/bibls/Common/ExcelServerSettings.ServiceSettings.cs
+# # # # # ' # #         //depot/devmainoverride/tenantwac/bibls/Common/Host/ExcelServerFeatureHelperMethods.cs
+# # # # # ' # #         //depot/devmainoverride/tenantwac/bibls/Common/LockAnalysisTree.cs
+# # # # # ' # #         //depot/devmainoverride/tenantwac/bibls/Common/ServiceSettings.xml
+# # # # # ' # #         (plus 1420 more...)
+# # # # # ' # # Logs: "n:\Enlistment\Logs\ourSpecialTool"
+# # # # # ' # # 
+# # # # # ' # # 
+# # # # # ' # # 
+# # # # # ' # # 
+# # # # # ' # # 
+# # # # # ' # # */
+# # # # # ' # # 
+# # # # # ' # # 
+# # # # # ' # # 
+# # # # # ' # # 
+# # # # # ' # # /*
+# # # # # ' # # 
+# # # # # ' # # PART TWO: FAMILIARITY WITH C# OR RELATED LANGUAGE
+# # # # # ' # # (Candidate may convert this to Java, Javascript, Python at their discretion)
+# # # # # ' # # 
+# # # # # ' # # 1) Fix the merge conflict.
+# # # # # ' # # 2) Fix the code to do the right thing.
+# # # # # ' # # 
+# # # # # ' # # */
+# # # # # ' # # 
+# # # # # ' # # 
+# # # # # ' # # using System;
+# # # # # ' # # 
+# # # # # ' # # // Class to identify if a string of text is a palindrome
+# # # # # ' # # 
+# # # # # ' # # // A palindrome is something which is the same read from both directions, ignoring spaces, capitalization, special characters.
+# # # # # ' # # 
+# # # # # ' # # // Main function outputs the result for a sample set.
+# # # # # ' # # 
+# # # # # ' # # // For example, these are palindromes:
+# # # # # ' # # // aabbaa
+# # # # # ' # # // aa bbaa
+# # # # # ' # # // a'ab baa
+# # # # # ' # # 
+# # # # # ' # # // These are not:
+# # # # # ' # # // ababab
+# # # # # ' # # // aab ba'
+# # # # # ' # # 
+# # # # # ' # # 
+# # # # # ' # # 
+# # # # # ' # # class Solution
+# # # # # ' # # {
+# # # # # ' # #     
+# # # # # ' # #     static string[] sample = {"bob", "joe", "aabbaa", "aa bbaa", "ababab"};
+# # # # # ' # #     
+# # # # # ' # #     static void Main(string[] args)
+# # # # # ' # #     {
+# # # # # ' # #         foreach (string test in sample)
+# # # # # ' # #         {
+# # # # # ' # #             Console.Write(test + " is ");
+# # # # # ' # #             
+# # # # # ' # #             if(!IsPalindrome(test))
+# # # # # ' # #             {
+# # # # # ' # #                 Console.Write("not ");
+# # # # # ' # #             }
+# # # # # ' # #             
+# # # # # ' # #             Console.WriteLine("a palindrome");
+# # # # # ' # #         }
+# # # # # ' # #     }
+# # # # # ' # #     
+# # # # # ' # #     static bool IsPalindrome(string test)
+# # # # # ' # #     {
+# # # # # ' # #      // Returns if the string is a palindrome
+# # # # # ' # #         test = StripString(test);
+# # # # # ' # #         char[] charArr = test.ToCharArray();
+# # # # # ' # # /*<<<<ORIGINAL<<<<
+# # # # # ' # #         for (int i=0; i<=test.Length; i++)
+# # # # # ' # #         {
+# # # # # ' # #             if(test[i] != test[test.Length])
+# # # # # ' # #                 return true;
+# # # # # ' # #         }
+# # # # # ' # # >>>THEIRS>>>>            
+# # # # # ' # #         for(int i=0; i<=test.Length; i++)
+# # # # # ' # #         {
+# # # # # ' # #             if(test[i] != test[test.Length - i])
+# # # # # ' # #                 return true;
+# # # # # ' # #         }
+# # # # # ' # # /*<<<<YOURS<<<<*/
+# # # # # ' # #         for(int i=0; i<=test.Length; i++)
+# # # # # ' # #         {
+# # # # # ' # #             if((charArr[i]) == (charArr[test.Length-i]))return true; 
+# # # # # ' # #         }
+# # # # # ' # # //====END====*/
+# # # # # ' # #       
+# # # # # ' # #         return false;
+# # # # # ' # #     }
+# # # # # ' # #     
+# # # # # ' # #     static string StripString(string input)
+# # # # # ' # #     {
+# # # # # ' # #      // Strips the string to what we care about
+# # # # # ' # #         input = NormalizeCasing(input);
+# # # # # ' # #         
+# # # # # ' # #         input = input.Remove('.');
+# # # # # ' # #         input = input.Remove((int)',');
+# # # # # ' # #         input = input.Remove((int)'>');
+# # # # # ' # #         input = input.Remove((int)'<');
+# # # # # ' # #         input = input.Remove((int)'?');
+# # # # # ' # #         input = input.Remove((int)'\'');
+# # # # # ' # #         
+# # # # # ' # #         return input;
+# # # # # ' # #         
+# # # # # ' # #     }
+# # # # # ' # #     
+# # # # # ' # #     static string NormalizeCasing(string input)
+# # # # # ' # #     {
+# # # # # ' # #      // Returns the upper case version of input.
+# # # # # ' # #         return input.ToLower();
+# # # # # ' # #     }
+# # # # # ' # # }
+# # # # # ' # # 
+# # # # # ' # #  */
+# # # # # ' # #  */
+# # # # # ' # #  */
+# # # # # ' # #  */
+# # # # # ' # 
+# # # # # ' #  */
+# # # # # ' 
+# # # # # 
+# # # # 
+# # # 
+# # 
+# 
+#  */
+

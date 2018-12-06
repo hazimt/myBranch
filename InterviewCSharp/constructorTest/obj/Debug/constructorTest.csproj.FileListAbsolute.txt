@@ -1,0 +1,7 @@
+C:\Users\Mars\source\MyownCode\InterviewCSharp\constructorTest\obj\Debug\constructorTest.csprojAssemblyReference.cache
+C:\Users\Mars\source\MyownCode\InterviewCSharp\constructorTest\obj\Debug\constructorTest.csproj.CoreCompileInputs.cache
+C:\Users\Mars\source\MyownCode\InterviewCSharp\constructorTest\bin\Debug\constructorTest.exe.config
+C:\Users\Mars\source\MyownCode\InterviewCSharp\constructorTest\bin\Debug\constructorTest.exe
+C:\Users\Mars\source\MyownCode\InterviewCSharp\constructorTest\bin\Debug\constructorTest.pdb
+C:\Users\Mars\source\MyownCode\InterviewCSharp\constructorTest\obj\Debug\constructorTest.exe
+C:\Users\Mars\source\MyownCode\InterviewCSharp\constructorTest\obj\Debug\constructorTest.pdb

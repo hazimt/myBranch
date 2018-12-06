@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   New Perspectives on XML
+   Tutorial 4
+   Case Problem 2
+
+   Canvasser list schema
+   Author: Adrian Balasa
+   Date: 06/12/2012  
+
+   Filename:         canvlist.xsd
+   Supporting Files: clist.xsd, lib.xsd
+ 
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:lib="http://epacmo.org/library"
+           xmlns:clist="http://epacmo.org/contributors"
+           xmlns="http://epacmo.org/canvassers"
+           targetNamespace="http://epacmo.org/canvassers/ns">
+    
+    <xs:import namespace="http://epacmo.org/library"
+                   schemaLocation="lib.xsd"/>
+    <xs:import namespace="http://epacmo.org/contributors"
+               schemaLocation="clist.xsd"/>
+
+  <xs:element name="canvassers">
+    <xs:complexType >
+        <xs:sequence>
+            <xs:element name="canvasser" minOccurs="1" maxOccurs="unbounded" >
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="name" type="lib:nameType"/>
+                        <xs:element name="address" type="lib:addressType"/>
+                        <xs:element name="phone"  maxOccurs="unbounded" type="lib:phoneType"/>
+                        <xs:element name="collected" type="xs:positiveInteger"/>
+                        <xs:element ref="clist:contributions" />
+                    </xs:sequence>
+                    <xs:attribute name="id"  type="xs:ID"/>
+                    <xs:attribute name="list"  type="xs:IDREFS"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        
+    </xs:complexType>
+  </xs:element>
+    
+    
+    
+</xs:schema>

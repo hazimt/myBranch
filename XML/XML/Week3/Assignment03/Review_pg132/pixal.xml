@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!--
+   New Perspectives on XML
+   Tutorial 3
+   Review Assignment
+
+   Products from Pixal Inc.
+   Author: Hazim Mohaisen
+   Date:   05/15/2012
+
+   Filename:         pixal.xml
+   Supporting Files: hw.dtd, hwlist.xml, sw.dtd, swlist.xml
+ 
+-->
+
+
+<!-- Declare an Internal DTD subset for root element -->
+<!DOCTYPE product_list
+[
+
+  <!-- Internal DTD declaration -->
+  <!ELEMENT product_list (hlist, slist)>
+
+  <!-- Confirm if this is correct -->
+  <!-- External "general" entity declaration referencing the xml-->
+  <!ENTITY hw_list SYSTEM  "hwlist.xml">
+  <!ENTITY sw_list SYSTEM "swlist.xml">
+
+  <!-- External "parameter" entity declaration referencing the .dtd -->
+  <!-- Hardware list DTD-->
+  <!ENTITY % hw_dtd SYSTEM "hw.dtd">
+  <!-- Software list DTD-->
+  <!ENTITY % sw_dtd SYSTEM "sw.dtd">
+
+  <!-- Hardware list DTD-->
+  %hw_dtd;
+  <!-- Software list DTD-->
+  %sw_dtd;
+
+  
+]>
+
+<product_list>
+  <!-- Referencing a general entity -->
+  &hw_list;
+  &sw_list;
+</product_list>

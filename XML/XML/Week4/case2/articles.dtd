@@ -1,0 +1,20 @@
+<!--
+   New Perspectives on XML
+   Tutorial 3
+   Case Problem 2
+
+   List of news article files
+   Author: 
+   Date:   
+
+   Filename:         articles.dtd
+   Supporting Files: 
+-->
+
+<!NOTATION HTM SYSTEM "text/htm">
+<!ENTITY news801 SYSTEM "article801.html" NDATA HTM>
+<!ENTITY news802 SYSTEM "article802.html" NDATA HTM>
+<!ENTITY news803 SYSTEM "article803.html" NDATA HTM>
+<!ENTITY news804 SYSTEM "article804.html" NDATA HTM>
+<!ENTITY news805 SYSTEM "article805.html" NDATA HTM>
+

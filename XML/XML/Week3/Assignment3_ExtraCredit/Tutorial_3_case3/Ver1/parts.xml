@@ -1,0 +1,56 @@
+<!--
+   New Perspectives on XML
+   Tutorial 3
+   Case Problem 3
+
+   Jackson Electronics Warehouse Summary
+      Author: Hazim Mohaisen
+      Date:   05/15/2012
+      
+   Filename:         parts.xml
+   Supporting Files: 
+-->
+
+<pa:parts xmlns:pa="http://wwww.jacksonelect.com/parts">
+   <pa:part pid="chx201" model="pr205 pr105">
+    <pa:title>Chassis and Roller Kit</pa:title>
+    <pa:description>JChassis and rollers/JE series</pa:description>
+    <pa:in_stock>817</pa:in_stock>
+   </pa:part>
+
+   <pa:part pid="fa100-5" model="pr205 pr105">
+    <pa:title>Fuser Assembly</pa:title>
+    <pa:description>Fuser assembly/JE series</pa:description>
+    <pa:in_stock>1253</pa:in_stock>      
+   </pa:part>
+
+  <pa:part pid="eng005-2" model="pr205 pr105">
+    <pa:title>Engine Kit</pa:title>
+    <pa:description>Printer engine kit/JE series</pa:description>
+    <pa:in_stock>3895</pa:in_stock>     
+  </pa:part>
+
+  <pa:part pid="cbx-450V4" model="pr205">
+    <pa:title>Controller board</pa:title>
+    <pa:description>PR205 printer controller board</pa:description>
+    <pa:in_stock>412</pa:in_stock>     
+  </pa:part>
+
+  <pa:part pid="tn01-53" model="pr205">
+    <pa:title>Toner Kit</pa:title>
+    <pa:description>PR205 toner kit (b,m,c,y)</pa:description>
+    <pa:in_stock>397</pa:in_stock>   
+  </pa:part>
+
+  <pa:part pid="cbx-050V4" model="pr105">
+    <pa:title>Controller board</pa:title>
+    <pa:description>PR105 printer controller board</pa:description>
+    <pa:in_stock>278</pa:in_stock>     
+  </pa:part>
+
+  <pa:part pid="tn01-003" model="pr105">
+    <pa:title>Toner Kit</pa:title>
+    <pa:description>PR105 toner kit (b,m,c,y)</pa:description>
+    <pa:in_stock>198</pa:in_stock>   
+  </pa:part>
+</pa:parts>

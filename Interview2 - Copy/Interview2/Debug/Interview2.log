@@ -1,0 +1,7 @@
+﻿  Interview2.cpp
+d:\me\dropbox\programming\interview2\interview2\interview2.cpp(388): warning C4101: 'myp2': unreferenced local variable
+d:\me\dropbox\programming\interview2\interview2\interview2.cpp(1075): warning C4101: 'temp': unreferenced local variable
+d:\me\dropbox\programming\interview2\interview2\interview2.cpp(1335): warning C4101: 'curPos': unreferenced local variable
+d:\me\dropbox\programming\interview2\interview2\interview2.cpp(1335): warning C4101: 'root': unreferenced local variable
+d:\me\dropbox\programming\interview2\interview2\interview2.cpp(296): warning C4172: returning address of local variable or temporary: ws
+  Interview2.vcxproj -> D:\me\Dropbox\Programming\Interview2\Debug\Interview2.exe

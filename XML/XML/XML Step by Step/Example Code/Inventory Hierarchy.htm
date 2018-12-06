@@ -1,0 +1,46 @@
+<!-- File Name: Inventory Hierarchy.htm -->
+
+<HTML>
+
+<HEAD>
+   <TITLE>Inventory of Classic English Literature</TITLE>
+</HEAD>
+
+<BODY>
+
+   <XML ID="dsoInventory" SRC="Inventory Hierarchy.xml"></XML>
+   
+   <TABLE DATASRC="#dsoInventory" BORDER="1">
+      <THEAD>
+         <TH>Classic English Literature</TH>
+      </THEAD>
+      <TR>
+         <TD><SPAN DATAFLD="CATNAME"></SPAN></TD>
+      </TR>
+      <TR>
+         <TD>
+            <TABLE DATASRC="#dsoInventory" DATAFLD="BOOK" 
+               BORDER="0" CELLSPACING="10">
+               <THEAD>
+                  <TH>Title</TH>
+                  <TH>Author</TH>
+                  <TH>Binding</TH>
+                  <TH>Pages</TH>
+                  <TH>Price</TH>
+               </THEAD>     
+               <TR ALIGN="CENTER">
+                  <TD><SPAN DATAFLD="TITLE" 
+                     STYLE="font-style:italic"></SPAN></TD>
+                  <TD><SPAN DATAFLD="AUTHOR"></SPAN></TD>
+                  <TD><SPAN DATAFLD="BINDING"></SPAN></TD>
+                  <TD><SPAN DATAFLD="PAGES"></SPAN></TD>
+                  <TD><SPAN DATAFLD="PRICE"></SPAN></TD>
+               </TR>
+            </TABLE>
+         </TD>
+      </TR>
+   </TABLE>      
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,48 @@
+Steps
+https://almvm.azurewebsites.net/labs/vsts/selenium/
+
+
+	Virtual Machine free
+	https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
+
+
+	Git
+	https://hazimm.visualstudio.com/MyFirstProject
+	https://hazimm.visualstudio.com/MyFirstProject/_git/MyFirstProject
+
+
+
+https://www.google.com/search?ei=vPc3W4XdGqer0PEPiqQX&q=selenium+soap+api&oq=selenium+soap+api&gs_l=psy-ab.3...2896.3592.0.3832.4.4.0.0.0.0.91.273.4.4.0..2..0...1.1.64.psy-ab..0.3.218...0i20i263k1j0i10k1j0i22i30k1j0i22i10i30k1j33i21k1.0.Kj8nyBbDj6Y
+
+https://www.guru99.com/using-soapui-selenium.html
+
+
+Selenium & C#
+http://toolsqa.com/selenium-c-sharp/
+
+
+
+
+---------------------------
+Microsoft Visual Studio
+---------------------------
+TF30063: You are not authorized to access https://hazimm.visualstudio.com/.
+---------------------------
+OK   
+---------------------------
+
+
+http://toolsqa.com/selenium-c-sharp/
+
+
+1. Download and Install Visual Studio
+http://toolsqa.com/selenium-webdriver/c-sharp/download-and-install-visual-studio/
+
+2. Set Up Selenium WebDriver with Visual Studio in C#
+http://toolsqa.com/selenium-webdriver/c-sharp/set-up-selenium-webdriver-with-visual-studio-in-c/
+
+3. How to write Selenium Test using NUnit Framework
+http://toolsqa.com/selenium-webdriver/c-sharp/how-to-write-selenium-test-using-nunit-framework/
+
+
+

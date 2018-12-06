@@ -1,0 +1,58 @@
+/*
+   New Perspectives on XML
+   Tutorial 2
+   Case Problem 2
+   Filename: math.css
+
+   Author: Hazim Mohaisen
+   Date:   05/12/2012
+
+
+   This file contains styles used in the MathWeb Web site
+
+*/
+@namespace ml url(http://www.w3.org/1998/Math/MathML);
+
+
+ml|html {background: white url(back.jpg) repeat-y; margin: 0px}
+
+ml|#logo {position: absolute; top: 0px; left: 0px; width: 100%; background-color: white; 
+       border-bottom: 1px solid black; padding: 0px; margin: 0px}
+
+ml|#links {position: absolute; top: 85px; left: 0px; width: 118px}
+
+ml|h1 {font-family: Arial, Helvetica, sans-serif; letter-spacing: 10; margin: 0px}
+
+ml|#main {position:absolute; top: 90px; margin-left: 188px; padding: 15px; 
+       border-left: 1px solid black}
+
+ml|#main p {text-align: justify}
+
+ml|p#eq1, ml|p#eq2, ml|p#eq3, ml|p#eq4 {text-align: center}
+
+ml|p#note {margin-top: 50px; border-top: 1px solid black; font-size: 9pt; 
+        text-align: center; font-style: italic}
+
+ml|mrow {color: blue}
+
+/* Place namespace escape styles below */
+ml\:html {background: white url(back.jpg) repeat-y; margin: 0px}
+
+ml\:#logo {position: absolute; top: 0px; left: 0px; width: 100%; background-color: white; 
+       border-bottom: 1px solid black; padding: 0px; margin: 0px}
+
+ml\:#links {position: absolute; top: 85px; left: 0px; width: 118px}
+
+ml\:h1 {font-family: Arial, Helvetica, sans-serif; letter-spacing: 10; margin: 0px}
+
+ml\:#main {position:absolute; top: 90px; margin-left: 188px; padding: 15px; 
+       border-left: 1px solid black}
+
+ml\:#main p {text-align: justify}
+
+ml\:p#eq1, ml\:p#eq2, ml\:p#eq3, ml\:p#eq4 {text-align: center}
+
+ml\:p#note {margin-top: 50px; border-top: 1px solid black; font-size: 9pt; 
+        text-align: center; font-style: italic}
+
+ml\:mrow {color: blue}

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<!-- File Name: Raven04.xml -->
+
+<?xml-stylesheet type="text/css" href="Raven04.css"?>
+
+<POEM>
+<TITLE>The Raven</TITLE>
+<AUTHOR>
+   Edgar Allan Poe
+   <AUTHOR-BIO>Edgar Allan Poe was an American writer who lived from 1809 to 1849.</AUTHOR-BIO>
+</AUTHOR>  
+<DATE>1845</DATE>
+<IMAGE/>
+<STANZA>
+   <VERSE>Once upon a midnight dreary, while I pondered, weak and weary,</VERSE>
+   <VERSE>Over many a quaint and curious volume of forgotten lore&#8212;</VERSE>
+   <VERSE>While I nodded, nearly napping, suddenly there came a tapping,</VERSE>
+   <VERSE>As of some one gently rapping, rapping at my chamber door.</VERSE>
+   <VERSE>"'Tis some visitor," I muttered, "tapping at my chamber door&#8212;</VERSE>
+   <LASTVERSE>Only this, and nothing more."</LASTVERSE>
+</STANZA>
+<IMAGE/>
+<STANZA>
+   <VERSE>Ah, distinctly I remember it was in the bleak December,</VERSE>
+   <VERSE>And each separate dying ember wrought its ghost upon the floor.</VERSE>
+   <VERSE>Eagerly I wished the morrow;&#8212;vainly I had sought to borrow</VERSE>
+   <VERSE>From my books surcease of sorrow&#8212;sorrow for the lost Lenore&#8212;</VERSE>
+   <VERSE>For the rare and radiant maiden whom the angels name Lenore&#8212;</VERSE>
+   <LASTVERSE>Nameless here for evermore.</LASTVERSE>
+</STANZA>
+<IMAGE/>
+<STANZA>
+   <VERSE>And the silken sad uncertain rustling of each purple curtain</VERSE>
+   <VERSE>Thrilled me&#8212;filled me with fantastic terrors never felt before;</VERSE>
+   <VERSE>So that now, to still the beating of my heart, I stood repeating:</VERSE>
+   <VERSE>"'Tis some visitor entreating entrance at my chamber door&#8212;</VERSE>
+   <VERSE>Some late visitor entreating entrance at my chamber door;</VERSE>
+   <LASTVERSE>This it is, and nothing more."</LASTVERSE>
+</STANZA>
+<IMAGE/>
+<STANZA>
+   <VERSE>Presently my soul grew stronger; hesitating then no longer,</VERSE>
+   <VERSE>"Sir," said I, "or Madam, truly your forgiveness I implore;</VERSE>
+   <VERSE>But the fact is I was napping, and so gently you came rapping,</VERSE>
+   <VERSE>And so faintly you came tapping, tapping at my chamber door,</VERSE>
+   <VERSE>That I scarce was sure I heard you"&#8212;here I opened wide the door;&#8212;</VERSE>
+   <LASTVERSE>Darkness there, and nothing more.</LASTVERSE>
+</STANZA>
+</POEM>

@@ -1,0 +1,255 @@
+1. Describe what the MysteryFunction1 does
+2. Review the code (Provide any suggestion, fixes or concerns)
+3. Provide test cases to ensure code works properly
+
+using System;
+
+public class Person
+{
+
+    public string Name;
+
+    public Person[] Aquaintances;
+
+
+    public Person(string name, Person[] Acquaintances)
+    {
+        if (String.IsNullOrWhiteSpace(name))
+        {
+            throw new ArgumentException("Name cannot be null or white space.", "name");
+        }
+
+        this.Name = name;
+        this.Acquaintances = acquaintance;
+    }
+
+    public bool MysteryFunction1(string name)
+    {
+        if (string.IsNullOrWhiteSapce(name))
+        {
+            throw new ArgumentException("Name cannot be null or white space.", "name");
+        }
+
+        stack<Person> myStack = new stack<Person>();
+
+        foreach (Person acquaintance in this.Acquaintances)
+	    {
+		    myStack.Push(acquaintance);
+	    }
+
+        do
+        {
+            var person = myStack.Pop();
+            if (person.Name.Equals(name))
+            {
+                return true;
+            }
+
+            foreach (Person acquaintance in person.Acquaintances)
+            {
+                myStack.Push(acquaintance);
+            }
+
+        } while (myStack.Count >= 0);
+
+        return false;
+    }
+
+}
+
+
+
+It returns true if an aquintance is found and false otherwise
+
+Effectively it's searching for IsAcquantance
+
+Test Cases
+emtpy name
+empty Acquintance 
+List of Acquintance names and no match
+List of Aquintance names with one match
+
+
+
+
+
+Implement a method that generates a reverse Fibonacci series of numbers when the first 2 numbers are provided. Provide test cases to ensure code works properly.
+
+Example: 80, 50, 30, 20, 10, 10, 0
+
+void RFib(int n1, int n1)
+{
+	unsigned int temp=n2;
+	if (n2 >= n1) throw new exception{"n2 must be greater than n1"};
+	
+	while (temp>0)
+	{
+		Console.Write("{0}, ", temp);
+		n2 = n1;
+		n1 = temp - n1;
+		temp = n2;
+	}	
+}
+	
+	
+	
+Increment & Decrement - Find the Bugs!
+
+The following code is intended to increment/decrement A and B until A is equal to X and B is equal to Y. Find the bugs!
+
+public static void MakeTheNumbersMatch(int a, int b, int x, int y)
+{
+	while (a !=x && b!=y)
+	{
+		if (a > x)
+		{
+			a++;
+		}
+		else
+		{
+			a--;
+		}
+		
+		if (b > y)
+		{
+			b++;
+		}
+		else
+		{
+			b--;
+		}
+	}
+}
+
+
+
+
+while (a !=x || b!=y)
+
+if (a > x)
+{
+	a--;
+}	
+elseif (a < x)
+{
+	a++;
+}
+
+if (b > y)
+	b--;
+elseif (b < y)
+	b++;
+}
+
+
+1. A = x, B = y
+2. A < x, B = y
+3. A > x, B = y
+4. A = x, B > y
+5. A = x, B < y
+6. A = x, B > y
+7. A > x, B < y
+8. A < x, B < y
+9. A < x, B > y
+
+
+
+
+
+
+You are tasked with migrating data between two systems that store movie metadata. The first system, which you are to use as input, keeps their movie metadata in the following structure:
+
+MovieName		ContributorType		ContributorName
+Pulp Fiction		Driector		Quentin Tarantino
+Pulp Fiction		Actor			John Travolta
+
+The second system, which you are to output to, uses the follwoing object for movie information:
+
+class MovieInformation
+{
+	public string Name{get;set;}
+	public str]ing Director(get;set;}
+	public List<string> Actors {get;set;}
+}
+
+The first system provides an IDataReader that lets you access their data.  Their data is always sorted on MovieName. You can call Read on the IDataReader to move the cursor to the next entry, and you can call GetString on teh IDataReader to get the movie name, contributor type, and contributor name. For example, with teh above data, if you were to call:
+
+	MovieDataReader dataReader = new MoviedataReader();
+	int movieNameOrdinal = dataReader.GetOrdinal("MovieName");
+	int contributor TypeOrdinal = dataReader.GetOrdinal("ContributorType");
+	int contributorNameOrdinal = dtaReader.GetOrdinal("ContribtuorName");
+	
+	while (dataReader.Read())
+	{
+		string movieName = dataReader.GetString(movieNameOrdinal);
+		string contributorType = daataReader.GetString(contributorTypeOrdinal);
+		string contributorName = dataReader.GetString(contributorNameOrdinal);
+	}
+	
+Then at the end of the first iteration of this wile loop, movieName would be the "Pulp Fiction", contributorType would be "Director" and ContributorName would be "Quentin Tarantino".
+
+The second system provides a single mehtod for posting movie information to their DB. This method should only ever be called once per movie:
+
+	class MovieInformationDatabase
+	{
+		public void SaveMovieInformation(MovieInformation information)
+		{
+		}
+	}
+
+Implement a method that migrates all of the data from the first system to the second system.
+
+
+Solution:
+
+if (dic.ContainKey(movieName)) movInfo = dictionary[MovieName];
+else
+{
+	movInfo = new MovieInformation();
+	dic.Add(movInfo);
+}
+
+class MovieInformation
+{
+	public string Name{get;set;}
+	public string Director{get;set;}
+	public List<string> Actors{get;set;}
+}
+
+void MigrateData(MovieInformationDatabase db)
+{
+	dictionary <string, MovieInformation> dic = new Dictionary <string, MovieInformation>();
+	
+	if (dic.ContainsKey(movieName)) movInfo = dictionary[movieName];
+	else
+	{
+		movInfo = new MovieInformation();
+		dic.Add(movInfo);
+	}
+	
+	if (ContributorType == 'Director") 
+		movInfo.Director = Director;
+	else
+		movInfo.Actor.Add(Actor);
+}
+
+
+movieDataReader dataReader = new MovieDataReader();
+int movieNameOrdinal = dataReader.GetOrdinal("MovieName");
+int cointributorNameOrdinal = dataReader.GetOrdinal("ContributorType");
+int contibutorNameOrdinal = dataReader.GetOrdinal("ContributorName");
+
+while (dataReader.Read())
+{
+	string movieName = dataReader.GetString(movieNameOrdinal);
+	string contributorType = dataReader.GetString(contributorTypeOrdinal);
+	string contributorName = dataReader.GetString(Contributor.nameOrdinal);
+	
+class MovieInformationDatabase
+{
+	public void SaveMovieInformation(MovieInformation information)
+	{
+	
+	}
+}
+

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   New Perspectives on XML
+   Tutorial 4
+   Case Problem 4
+
+   MediaMart Online Music
+   Author: Hazim Mohaisen
+   Date:   05/30/2012
+
+-->
+
+<mv:movies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mv="http://mediamart.com/movies/ns"
+       xsi:schemaLocation="http://mediamart.com/movies/ns movies.xsd">
+
+   <movie genre = "Comedy" year = "1974" format = "VHS" price = "$9.95" >
+      <title>The Sting</title>
+      <actor>Paul Newman</actor>
+      <actor>Robert Redford</actor>
+   </movie>
+   <movie genre = "Drama" year = "1939" format = "VHS" price = "$9.95" >
+      <title>Mr. Smith Goes to Washington</title>
+      <actor>James Stewart</actor>
+      <actor>Claude Raines</actor>
+      <actor>Jean Arthur</actor>
+   </movie>
+   <movie genre = "Fantasy" year = "2001" format = "DVD" price = "$19.95" >
+      <title>The Fellowship of the Ring</title>
+      <actor>Ian McKellen</actor>
+      <actor>Orlando Bloom</actor>
+      <actor>Elijah Wood</actor>
+   </movie>
+   <movie genre = "Fantasy" year = "2002" format = "DVD" price = "$19.95" >
+      <title>The Two Towers</title>
+      <actor>Ian McKellen</actor>
+      <actor>Orlando Bloom</actor>
+      <actor>Elijah Wood</actor>
+   </movie>
+   <movie genre = "Fantasy" year = "2003" format = "DVD" price = "$19.95" >
+      <title>The Return of the King</title>
+      <actor>Ian McKellen</actor>
+      <actor>Orlando Bloom</actor>
+      <actor>Elijah Wood</actor>
+   </movie>
+   <movie genre = "Drama" year = "1995" format = "DVD" price = "$8.95" >
+      <title>Crimson Tide</title>
+      <actor>Denzel Washington</actor>
+      <actor>Gene Hackman</actor>
+   </movie>
+   <movie genre = "Drama" year = "1992" format = "VHS" price = "$9.95" >
+      <title>Unforgiven</title>
+      <actor>Clint Eastwood</actor>
+      <actor>Gene Hackman</actor>
+      <actor>Morgan Freeman</actor>
+      <actor>Richard Harris</actor>
+   </movie>
+   <movie genre = "Children" year = "1989" format = "DVD" price = "$12.95" >
+      <title>The Little Mermaid</title>
+   </movie>
+   <movie genre = "Comedy" year = "1979" format = "VHS" price = "$7.95" >
+      <title>Manhattan</title>
+      <actor>Woody Allen</actor>
+      <actor>Diane Keaton</actor>
+      <actor>Mariel Hemingway</actor>
+   </movie>
+   <movie genre = "Drama" year = "1976" format = "VHS" price = "$8.95" >
+      <title>Rocky</title>
+      <actor>Sylvester Stallone</actor>
+      <actor>Talia Shire</actor>
+   </movie>
+   <movie genre = "Drama" year = "1972" format = "DVD" price = "$12.95" >
+      <title>The Godfather</title>
+      <actor>Marlon Brando</actor>
+      <actor>Al Pacino</actor>
+      <actor>Diane Keaton</actor>
+      <actor>Robert Duval</actor>
+      <actor>James Caan</actor>
+      <actor>Talia Shire</actor>
+   </movie>
+   <movie genre = "Comedy" year = "1971" format = "VHS" price = "$9.95" >
+      <title>Harold and Maude</title>
+      <actor>Bud Cort</actor>
+      <actor>Ruth Gordon</actor>
+   </movie>
+   <movie genre = "Drama" year = "1953" format = "VHS" price = "$9.95" >
+      <title>Stalag 17</title>
+      <actor>William Holden</actor>
+   </movie>
+
+</mv:movies>

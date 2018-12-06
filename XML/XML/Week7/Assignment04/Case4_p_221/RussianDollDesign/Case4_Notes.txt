@@ -1,0 +1,20 @@
+Case Problem 4 p.221 (see notes below) -- 50 pts.
+a. Diagrams (see notes) -- 20 pts.
+
+
+Important notes
+Case Problem 4
+• The tutorial asks you to create XML files from text content provided. To make the work a little
+bit easier for you, I created those files. You can skip step 1 of the tutorial. The files are posted in
+the Assignment 4 folder in case4.zip file.
+
+• Please do step 2, draw the diagrams, using any software you like. I use PowerPoint. You can
+borrow my file jazz_tree_diagram.pptx from Week 2 folder to start your work with it. Please
+make sure the diagrams you submit are in some common file format -- PDF or JPG or ppt. This
+will allow me to open and grade your files.
+
+• In step 5 the book tells you to use external entities. That means using DTDs. You do not have to
+do it the way the book suggests. Just combine 3 XML documents: books, movies, and music in
+one document by copying-pasting all the elements including roots with the namespace
+attributes.
+

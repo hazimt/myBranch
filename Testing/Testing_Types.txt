@@ -1,0 +1,72 @@
+https://www.codeproject.com/Tips/351122/What-is-software-testing-What-are-the-different-ty
+
+
+Examples of Testing Methodologies are Unit Testing, Integration Testing, System Testing, Performance Testing etc. Each testing methodology has a defined test objective, test strategy and deliverables. Types of testing
+
+There are many types of testing like
+    Unit Testing
+    Integration Testing
+    Functional Testing
+    System Testing
+    Stress Testing
+    Performance Testing
+    Usability Testing
+    Acceptance Testing
+    Regression Testing
+    Beta Testing   
+
+
+Basics of software testing
+
+There are two basics of software testing: blackbox testing and whitebox testing.
+
+
+Blackbox Testing
+
+Black box testing is a testing technique that ignores the internal mechanism of the system and focuses on the output generated against any input and execution of the system. 
+It is also called "functional testing".
+
+
+
+
+Whitebox Testing 
+
+White box testing is a testing technique that takes into account the internal mechanism of a system. 
+It is also called "structural testing" and "glass box testing".
+
+Black box testing is often used for validation and white box testing is often used for verification.  
+
+
+
+Black box testing ---> validation which is "functional testing"
+white box testing ---> verification which is "structural testing" and "glass box testing"
+
+
+
+
+
+Software Testing
+
+Software testing is the process of evaluation a software item to detect differences between given input and expected output. 
+Also to assess the feature of A software item. 
+Testing assesses the quality of the product. 
+Software testing is a process that should be done during the development process. 
+In other words software testing is a verification and validation process.
+
+
+
+
+Verification (product satisfies the conditions imposed at start of development)
+
+Verification is the process to make sure the product satisfies the conditions imposed at the start of the development phase. 
+In other words, to make sure the product behaves the way we want it to.
+
+
+
+Validation (according to cusotmer requirements)
+
+Validation is the process to make sure the product satisfies the specified requirements at the end of the development phase. 
+In other words, to make sure the product is built as per customer requirements.
+
+
+

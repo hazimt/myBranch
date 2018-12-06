@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- Convert this html doc to xhtml doc-->
+
+<!--
+   New Perspectives on XML
+   Tutorial 2
+   Review Assignment
+
+   Jackson Electronics Laser4C Printer
+   Author:  Hazim Mohaisen
+   Date:    05/09/2010
+
+   Filename:         pr205.xml
+   Supporting Files: files.css, je.css, logo.jpg, pr205.jpg, printer.css
+-->
+
+ <!-- Set this to be the default namesapce for the xhtml elements below-->
+ <!-- set cont to be the namespace for the contributions elements-->
+ <!-- set ag to be the namespace for the agents elements-->
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:prnt="http://www.jaksonelect.com/printers/"
+      xmlns:dwnld="http://wwww.jacksonelect.com/files">
+
+<head>
+<title>Jackson Electronics Laser4C Printer</title>
+<link href="je.css" rel="stylesheet" type="text/css" />
+<link href="print.css" rel="Stylesheet" type="text/css" />
+<link href="files.css" rel="Stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="logo"><img src="logo.jpg" alt="" /></div>
+
+<h1>Product</h1>
+    <prnt:printer id="pr205">
+       <prnt:name>JE Laser4C</prnt:name>
+       <prnt:description>
+       With a price appropriate for the home-office budget, the Jackson Electronics Laser4C
+       is color laserjet printer suited for a high-end business. You'll enjoy the compact design
+       that fits anywhere on your desktop and with a first page print speed of less than
+       20 seconds (in full color!) you won't be caught waiting for your latest flyer or
+       business report. 
+       </prnt:description>
+       <prnt:price>$399.95</prnt:price>
+    </prnt:printer>
+
+<div id="img"><img src="pr205.jpg" alt="" /></div>
+
+   <prnt:specs>
+      <prnt:item>BW Print Speed: 8 ppm</prnt:item>
+      <prnt:item>Color Print Speed: 8 ppm</prnt:item>
+      <prnt:item>BW Print Resolution: 600 x 600 dpi</prnt:item>
+      <prnt:item>Color Print Resolution: 600 x 600 dpi</prnt:item>
+      <prnt:item>Connectivity: 1 USB, 1 Ethernet</prnt:item>
+      <prnt:item>Dimensions: 16 x 17.8 x 14.6 in</prnt:item>
+   </prnt:specs>
+
+<h1>File Downloads</h1>
+
+<div id="filetitles">
+   <span id="col1">Name</span>
+   <span id="col2">Date</span>
+   <span id="col3">Size</span>
+   <span id="col4">Rev</span>
+   <span id="col5">File</span>
+</div>
+
+<div id="filetitles">
+    <dwnld:files id="files_pr205">
+        <dwnld:file>
+            <dwnld:name>Laser4C Driver</dwnld:name>
+            <dwnld:date>13 Feb 2008</dwnld:date>
+            <dwnld:size>13 MB</dwnld:size>
+            <dwnld:rev>2.1</dwnld:rev>
+            <dwnld:item><a href="temp.htm">jelaser4crev21.exe</a></dwnld:item>
+    </dwnld:file>
+</div>
+<div id="filetitles">
+    <dwnld:file>
+        <dwnld:name>Laser4C Printing System</dwnld:name>
+        <dwnld:date>21 Nov 2007</dwnld:date>
+        <dwnld:size>82 MB</dwnld:size>
+        <dwnld:rev>4.3</dwnld:rev>
+        <dwnld:item><a href="temp.htm">jeprintsys43.exe</a></dwnld:item>
+    </dwnld:file>
+</div>
+<div id="filetitles">
+    <dwnld:file>
+        <dwnld:name>Laser4C Plug and Play Bundle</dwnld:name>
+        <dwnld:date>28 Sep 2007</dwnld:date>
+        <dwnld:size>13 MB</dwnld:size>
+        <dwnld:rev>5.6</dwnld:rev>
+        <dwnld:item><a href="temp.htm">jepnp56.exe</a></dwnld:item>
+    </dwnld:file>
+</div>
+<div id="filetitles">
+    <dwnld:file>
+        <dwnld:name>Laser4C Firmware Update</dwnld:name>
+        <dwnld:date>21 Feb 2008</dwnld:date>
+        <dwnld:size>1.2 MB</dwnld:size>
+        <dwnld:rev>20080221</dwnld:rev>
+        <dwnld:item><a href="temp.htm">jelaserfw6.exe</a></dwnld:item>
+    </dwnld:file>
+</div>
+
+</body>
+</html>

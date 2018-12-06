@@ -1,0 +1,7 @@
+
+What is the role of a developer in a Test Plan
+
+Learn from mistakes (that's what bugs are)
+A tester is not discovering bugs to show someone down, the idea is to learn from mistakes and avoid repeating them in future. A culture of constructive criticism can be of great help.
+
+

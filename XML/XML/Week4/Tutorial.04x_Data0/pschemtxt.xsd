@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+   New Perspectives on XML
+   Tutorial 4
+   Tutorial Case
+
+   Patient list schema
+   Author: 
+   Date:   
+
+   Filename:         pschema.xsd
+   Supporting Files: 
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- Simple Type elements -->
+  <xs:element name="lastName" type="xs:string"/>
+  <xs:element name="firstName" type ="xs:string"/>
+  <xs:element name="dateOfBirth" type="xs:string"/>
+  <xs:element name="age" type="xs:string"/>
+  <xs:element name="stage" type="xs:string"/>
+  <xs:element name="comment" type="xs:string"/>
+  
+  <!-- Declare attributes in the scheam-->
+  <xs:attribute name="patID" type="xs:string"/>
+  <xs:attribute name="onStudy" type="xs:string"/>
+  <xs:attribute name="scale" type="xs:string"/>
+  
+  
+  
+</xs:schema>

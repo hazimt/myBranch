@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   New Perspectives on XML
+   Tutorial 4
+   Case Problem 4
+
+   MediaMart Online Music
+   Author: Hazim Mohaisen
+   Date:   05/30/2012
+
+-->
+<mu:music xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mu="http://mediamart.com/music/ns"
+       xsi:schemaLocation="http://mediamart.com/music/ns music.xsd">
+
+   <album genre = "Rock" format = "Cassette" price = "$12.95" >
+      <artist>The Beatles</artist>
+       <title>Abbey Road</title>
+   </album>
+
+   <album genre = "Rock" format = "CD" price = "$14.95">
+      <artist>The Beatles</artist>
+       <title>The White Album</title>
+   </album>
+
+   <album genre = "Jazz" format = "CD" price = "$11.50">
+      <artist>Mile Davis</artist>
+       <title>Cookin'</title>
+   </album>
+
+   <album genre = "Opera" format = "CD" price = "$29.95">
+      <artist>Richard Wagner</artist>
+       <title>Das Rheingold</title>
+   </album>
+
+   <album genre = "Rock" format = "Cassette" price = "$14.95">
+      <artist>Jethro Tull</artist>
+       <title>Stand Up</title>
+   </album>
+
+   <album genre = "Classical" format = "CD" price = "$17.48">
+      <artist>Richard Strauss</artist>
+       <title>Wind Concertos</title>
+   </album>
+
+   <album genre = "Classical" format = "CD" price = "$21.55">
+      <artist>Antonin Dvorak</artist>
+       <title>The 8th Symphony</title>
+   </album>
+
+   <album genre = "Rock" format = "Cassette" price = "$14.95">
+      <artist>The Police</artist>
+       <title>The Police</title>
+   </album>
+
+   <album genre = "Jazz" format = "CD" price = "$19.95">
+      <artist>Duke Ellington</artist>
+       <title>Live at Newport</title>
+   </album>
+
+   <album genre = "Classical" format = "CD" price = "$11.95">
+      <artist>Carl Orff</artist>
+       <title>Carmina Burana</title>
+   </album>
+
+   <album genre = "Opera" format = "CD" price = "$29.95">
+      <artist>Giuseppe Verdi</artist>
+       <title>Aida</title>
+   </album>
+
+
+</mu:music>

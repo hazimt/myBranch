@@ -1,0 +1,46 @@
+/* File Name: Raven04.css */
+
+POEM
+   {font-size:12pt;
+    width:5.5in;
+    padding:1em;
+    border-width:1px;
+    background-color:rgb(225,225,225)}
+
+POEM, TITLE, AUTHOR, DATE, STANZA
+   {display:block;
+    margin-bottom:1em}
+
+AUTHOR-BIO
+   {display:none}
+
+TITLE, AUTHOR, DATE
+   {font-family:Arial,sans-serif;
+    text-align:center}
+
+DATE
+   {font-style:italic}
+
+TITLE
+   {font-size:16pt;
+    font-weight:bold;
+    letter-spacing:.25em}
+
+IMAGE
+   {background-image:url(RavShade.bmp);
+    background-repeat:no-repeat;
+    background-position:center;
+    width:89px;
+    height:58px;
+    float:left}
+
+STANZA
+   {color:navy;
+    line-height:1.25em}
+
+VERSE
+   {display:block}
+
+LASTVERSE
+   {display:block;
+    text-align:right}

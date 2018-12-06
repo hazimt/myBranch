@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   New Perspectives on XML
+   Tutorial 4
+   Case Problem 1
+
+   Jazz Warehouse Vintage Albums Schema
+   Author: Hazim Mohaisen
+   Date:   05/30/2012
+
+   Filename:         music.xsd
+   Supporting Files: 
+ 
+-->
+<!-- Are lines 2 and 3 needed? -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns="http://mediamart.com/products/ns"
+             targetNamespace="http://mediamart.com/products/ns"
+             xmlns:bk="http://mediamart.com/books/ns"
+             xmlns:mv="http://mediamart.com/movies/ns"
+             xmlns:mu="http://mediamart.com/music/ns">
+
+  <!-- definitions of simple types -->
+  <!--to add pat:patients add this-->
+  <!--namespace + schemalocation-->
+  <xsd:import namespace="http://mediamart.com/books/ns"
+             schemaLocation="books.xsd" />
+
+  <!--to add pat:patients add this-->
+  <!--namespace + schemalocation-->
+  <xsd:import namespace="http://mediamart.com/movies/ns"
+             schemaLocation="movies.xsd" />
+
+  <!--namespace + schemalocation-->
+  <xsd:import namespace="http://mediamart.com/music/ns"
+             schemaLocation="music.xsd" />
+
+  <xsd:element name="Media">
+    <xsd:complexType>
+      <xsd:sequence>
+
+        <xsd:element ref="bk:books"/>
+        <xsd:element ref="mv:movies"/>
+        <xsd:element ref="mu:music"/>
+
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

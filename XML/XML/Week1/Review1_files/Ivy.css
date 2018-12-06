@@ -1,0 +1,134 @@
+/*
+[Theme Wizard Settings]
+
+PORTAL_CSS=/AngelThemes/Themes/Redmond/portal.css
+SIDEBAR_BUTTONS_CSS=/AngelThemes/Themes/Square Yellow Glass/buttons.css
+BANNER_CSS=/AngelThemes/themes/(None)/banner.css
+NUGGET_CSS=/AngelThemes/Themes/Shadow Box/nugget.css
+TOOLBAR_CSS=
+TITLEBAR_CSS=
+TABBAR_CSS=/AngelThemes/Themes/Rounded/tabbar.css
+TAB_CSS=/AngelThemes/Themes/Square/tab.css
+BUBBLE_CSS=/AngelThemes/Themes/Square Yellow Glass/bubble.css
+PORTAL_ICONS_CSS=
+TAB_ICONS_CSS=
+MAP_ICONS_CSS=
+SUBJECT_CSS=
+
+IMPORT_1=
+IMPORT_2=
+IMPORT_3=
+
+FONT_FACE=Tahoma,Verdana,Arial,Helvetica,sans-serif
+TEXT_SIZE=0.80em
+TEXT_ATTRIB=
+LINK_ATTRIB=
+HOVER_ATTRIB=
+
+PAGE_ATTRIB=
+BANNER_ATTRIB=
+TAB_ON_ATTRIB=
+TAB_OFF_ATTRIB=
+TABBAR_ATTRIB=
+TOOLBAR_ATTRIB=
+TITLEBAR_ATTRIB=
+NUGTITLE_ATTRIB=
+NUGBOX_ATTRIB=
+NOTE_ATTRIB=
+
+PAGE_BACKGROUND_COLOR=#FFFFDD
+PAGE_TEXT_COLOR=#000000
+PAGE_LINK_COLOR=#003300
+PAGE_HIGHLIGHT_COLOR=#006600
+TITLEBAR_TEXT_COLOR=
+TITLEBAR_BACKGROUND_COLOR=
+NOTE_TEXT_COLOR=
+NOTE_BACKGROUND_COLOR=
+PGTITLE_TEXT_COLOR=
+BREADCRUMB_BACKGROUND_COLOR=#669966
+BREADCRUMB_TEXT_COLOR=#FFFFFF
+
+BANNER_TEXT_COLOR=#006600
+BANNER_BACKGROUND_COLOR=#FFFFDD
+TOOLBAR_TEXT_COLOR=
+TOOLBAR_BACKGROUND_COLOR=
+NUGTITLE_TEXT_COLOR=#FFFFFF
+NUGTITLE_BACKGROUND_COLOR=#669966
+NUGBOX_TEXT_COLOR=#006600
+NUGBOX_BACKGROUND_COLOR=#FFFFFF
+
+TAB_OFF_TEXT_COLOR=#FFFFFF
+TAB_OFF_BACKGROUND_COLOR=#006600
+TAB_ON_TEXT_COLOR=#FFFFFF
+TAB_ON_BACKGROUND_COLOR=#669966
+
+MAP_TEXT_COLOR=
+MAP_BACKGROUND_COLOR=
+MAP_FOOTER_TEXT_COLOR=
+MAP_FOOTER_BACKGROUND_COLOR=
+
+[End Theme Wizard Settings]
+*/
+
+/*BEGIN_TEMPLATE*/
+@import url("/AngelThemes/_global.css");
+@import url("/AngelThemes/Themes/Redmond/portal.css");
+@import url("/AngelThemes/Themes/Square Yellow Glass/buttons.css");
+@import url("/AngelThemes/themes/(None)/banner.css");
+@import url("/AngelThemes/Themes/Shadow Box/nugget.css");
+@import url("/AngelThemes/Themes/Rounded/tabbar.css");
+@import url("/AngelThemes/Themes/Square/tab.css");
+@import url("/AngelThemes/Themes/Square Yellow Glass/bubble.css");
+/***********************************************************************
+* Styles and font sizes
+***********************************************************************/
+body { font-size:0.80em; }
+body, td, th { font-family:Tahoma,Verdana,Arial,Helvetica,sans-serif }
+a, body.toc .nugBody a {  }
+a:hover, body.toc .nugBody a:hover {  }
+body.bodyLessons, body.bodyDefault, body.bodyCalendar {  } 
+.toolbarDiv {  }
+.titlebarDiv {  }
+.shadedDiv {  }
+
+/***********************************************************************
+* Colors
+***********************************************************************/
+html, body, .rightCorner div, .leftCorner div, #subject_image { background-color:#FFFFDD }
+body { color:#000000; }
+a, body.toc .nugBody a { color:#003300; }
+a:hover, .highlight, a.highlight { color:#006600; }
+.pageTitle, .pageTitleSpan, .pageSubtitleSpan { }
+
+/* toolbar colors */
+.toolbarDiv { }
+.toolbarDiv, .toolbarDiv a, .toolbarDiv a:hover { }
+
+/* portal interface colors */
+body.interface, #tabMenu .rightCorner div, #tabMenu .leftCorner div { background-color:#669966; }
+body.interface, body.interface a, body.interface a:hover { color:#FFFFFF; }
+
+/* banner colors */
+#bannerSection .banner, #bannerSection .banner #tabMenu .rightCorner div, #bannerSection .banner #tabMenu .leftCorner div { background-color:#FFFFDD; }
+#bannerSection .banner, #bannerSection .banner a, #bannerSection .banner a:hover, #bannerSection .banner .pageTitle, #bannerSection .banner .pageTitle a, #bannerSection .banner .pageTitle a:hover { color:#006600; }
+
+/* tab colors */
+#bannerSection #tabMenu li a, #bannerSection #tabMenu li a:hover { background-color:#006600;color:#FFFFFF; }
+#bannerSection .tabbar, #bannerSection #tabMenu li a.active, #bannerSection #tabMenu li a.active:hover { background-color:#669966;color:#FFFFFF; }
+
+/* nugget colors */
+.nugTitle, #popup_title { background-color:#669966;color:#FFFFFF; }
+.nugTitle, .nugTitle a, .nugTitle a:hover, #popup_title a, #popup_title a:hover { color:#FFFFFF; }
+.nugTitle, .nugBody, .nugFooter, #popup { border-color:#FFFFFF; }
+.nugBody { background-color:#FFFFFF; }
+.nugBody, .nugBody a, .nugBody a:hover { color:#006600; }
+/* Note: If nugget body BG is set you need to handle custom styles for inline nuggets */
+html.toc, body.toc { background-color:#FFFFFF; }
+
+/* map colors */
+html.toc, body.toc { }
+body.toc, body.toc .nugBody a, body.toc .nugBody a:hover { }
+#guideMenu { }
+#guideMenu, #guideMenu a, #guideMenu a:hover { }
+
+/*END_TEMPLATE*/

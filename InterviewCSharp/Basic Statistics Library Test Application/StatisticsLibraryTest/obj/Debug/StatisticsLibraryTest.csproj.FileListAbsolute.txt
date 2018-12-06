@@ -1,0 +1,45 @@
+C:\Users\Pate\documents\visual studio 2015\Projects\StatisticsLibraryTest\StatisticsLibraryTest\bin\Debug\StatisticsLibraryTest.exe.config
+C:\Users\Pate\documents\visual studio 2015\Projects\StatisticsLibraryTest\StatisticsLibraryTest\bin\Debug\StatisticsLibraryTest.exe
+C:\Users\Pate\documents\visual studio 2015\Projects\StatisticsLibraryTest\StatisticsLibraryTest\bin\Debug\StatisticsLibraryTest.pdb
+C:\Users\Pate\documents\visual studio 2015\Projects\StatisticsLibraryTest\StatisticsLibraryTest\bin\Debug\StatisticsLibrary.pdb
+C:\Users\Pate\documents\visual studio 2015\Projects\StatisticsLibraryTest\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.AnalysisForm.resources
+C:\Users\Pate\documents\visual studio 2015\Projects\StatisticsLibraryTest\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.DistributionForm.resources
+C:\Users\Pate\documents\visual studio 2015\Projects\StatisticsLibraryTest\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.FunctionForm.resources
+C:\Users\Pate\documents\visual studio 2015\Projects\StatisticsLibraryTest\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.MainForm.resources
+C:\Users\Pate\documents\visual studio 2015\Projects\StatisticsLibraryTest\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.Properties.Resources.resources
+C:\Users\Pate\documents\visual studio 2015\Projects\StatisticsLibraryTest\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.XYScatterForm.resources
+C:\Users\Pate\documents\visual studio 2015\Projects\StatisticsLibraryTest\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.csproj.GenerateResource.Cache
+C:\Users\Pate\documents\visual studio 2015\Projects\StatisticsLibraryTest\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.exe
+C:\Users\Pate\documents\visual studio 2015\Projects\StatisticsLibraryTest\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.pdb
+C:\Users\Pate\documents\visual studio 2015\Projects\StatisticsLibraryTest\StatisticsLibraryTest\bin\Debug\StatisticsLibrary.dll
+C:\Users\Pate\documents\visual studio 2015\Projects\StatisticsLibraryTest\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.FDistributionParamForm.resources
+C:\Users\Pate\documents\visual studio 2015\Projects\StatisticsLibraryTest\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.csprojResolveAssemblyReference.cache
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic C%23 Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.csprojAssemblyReference.cache
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic C%23 Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.AnalysisForm.resources
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic C%23 Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.DistributionForm.resources
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic C%23 Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.FDistributionParamForm.resources
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic C%23 Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.FunctionForm.resources
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic C%23 Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.MainForm.resources
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic C%23 Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.Properties.Resources.resources
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic C%23 Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.XYScatterForm.resources
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic C%23 Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.csproj.GenerateResource.cache
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic C%23 Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.csproj.CoreCompileInputs.cache
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic C%23 Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.exe
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic C%23 Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.pdb
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic Statistics Library Test Application\StatisticsLibraryTest\bin\Debug\StatisticsLibraryTest.exe.config
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic Statistics Library Test Application\StatisticsLibraryTest\bin\Debug\StatisticsLibraryTest.exe
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic Statistics Library Test Application\StatisticsLibraryTest\bin\Debug\StatisticsLibraryTest.pdb
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic Statistics Library Test Application\StatisticsLibraryTest\bin\Debug\StatisticsLibrary.pdb
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.csprojAssemblyReference.cache
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.AnalysisForm.resources
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.DistributionForm.resources
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.FDistributionParamForm.resources
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.FunctionForm.resources
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.MainForm.resources
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.Properties.Resources.resources
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.XYScatterForm.resources
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.csproj.GenerateResource.cache
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.csproj.CoreCompileInputs.cache
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.csproj.CopyComplete
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.exe
+C:\Users\Mars\source\MyownCode\InterviewCSharp\Basic Statistics Library Test Application\StatisticsLibraryTest\obj\Debug\StatisticsLibraryTest.pdb

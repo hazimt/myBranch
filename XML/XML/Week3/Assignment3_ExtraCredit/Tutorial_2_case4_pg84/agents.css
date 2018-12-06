@@ -1,0 +1,46 @@
+/*
+   New Perspectives on XML
+   Tutorial 2
+   Case Problem 4
+   Filename: agents.css
+
+   Author:  Hazim Mohaisen
+   Date:    05/12/2012
+
+
+   This file contains styles used with agent information
+
+*/
+/*
+    declaring a namespace named ag in a css file 
+*/
+
+@namespace ag url(http://www.midwesthomes.com/agents);
+
+/* place the style declaration meaning add | and add \: i.e name space prefix */
+ag|agent 
+   {display: block; font-family: Arial, Helvetica, sans-serif; margin-top: 10px}
+
+ag|name  
+   {display: block; font-size: 14pt; letter-spacing: 4; color: blue}
+
+ag|phone 
+   {display: block; font-size: 10pt}
+
+ag|email 
+   {display: block; font-size: 10pt}
+
+
+/* place namespace escape style below */
+ag\:agent 
+   {display: block; font-family: Arial, Helvetica, sans-serif; margin-top: 10px}
+
+ag\:name  
+   {display: block; font-size: 14pt; letter-spacing: 4; color: blue}
+
+ag\:phone 
+   {display: block; font-size: 10pt}
+
+ag\:email 
+   {display: block; font-size: 10pt}
+

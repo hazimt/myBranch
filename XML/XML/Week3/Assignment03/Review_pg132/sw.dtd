@@ -1,0 +1,21 @@
+<!--
+   New Perspectives on XML
+   Tutorial 3
+   Review Assignment
+
+   Software list DTD
+   Author: Hazim Mohaisen
+   Date:   05/15/2012  
+
+   Filename:         sw.dtd
+   Supporting Files: 
+-->
+
+<!ELEMENT slist (software+)>
+<!ELEMENT software (title, company, sPrice)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT company (#PCDATA)>
+<!ELEMENT sPrice (#PCDATA)>
+
+<!ATTLIST title SID ID #REQUIRED>
+<!ATTLIST title OS (Macintosh | Windows | UNIX | Other) #REQUIRED>

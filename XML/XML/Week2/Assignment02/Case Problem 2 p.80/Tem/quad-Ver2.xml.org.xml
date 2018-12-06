@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- Convert this html doc to xhtml doc-->
+
+<!--
+   New Perspectives on XML
+   Tutorial 2
+   Case Problem 2
+
+   MathWeb: The Quadratic Formula
+
+   Author:  Hazim Mohaisen
+   Date:    05/12/2012
+
+   Filename:         quad.xml
+   Supporting Files: back.jpg, logo.jpg, math.css, side.jpg
+-->
+<ml:html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:ml="http://www.w3.org/1998/Math/MathML">
+
+<head>
+   <title>
+     <b>Solving the Quadratic Equations</b>
+   </title>
+  <link href="math.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="logo"><img src="logo.jpg" alt="MathWeb" /></div>
+<div id="links"><img src="side.jpg" alt="" /></div>
+
+<div id="main">
+   <h1>Solving the Quadratic Equation</h1>
+  <p>A <b>quadratic equation</b> is a polynomial equation of the second degree, having 
+   the general form:</p>
+
+  <p ml:id="eq1">
+    <ml:mrow>
+      <ml:mrow>
+        <ml:mn>a</ml:mn>
+        <ml:msup>
+          <ml:mi>x</ml:mi>
+            <ml:mn>2</ml:mn>
+        </ml:msup>
+        <ml:mo>+</ml:mo>
+        <ml:mrow>
+          <ml:mn>b</ml:mn>
+          <ml:mi>x</ml:mi>
+        </ml:mrow>
+        <ml:mo>+</ml:mo>
+        <ml:mn>c</ml:mn>
+      </ml:mrow>
+      <ml:mo>=</ml:mo>
+      <ml:mn>0</ml:mn>
+    </ml:mrow>
+</p>
+
+  <p>The letters a, b and c are called coefficients: a is the coefficient of 
+   <i>x</i><sup>2</sup>, b is the coefficient of <i>x</i>, and c is the constant coefficient. 
+   A quadratic equation has two complex roots (i.e., solutions for the unknown term <i>x</i>.) 
+   In some cases, these roots can have the same value. The roots can also belong to the realm 
+   of <b>complex numbers</b>. The values of the roots can be computed using the <b>quadratic 
+   formula</b> as shown below:</p>
+
+  <p id="eq2">
+    <ml:mrow>
+      <ml:mi>x</ml:mi>
+      <ml:mo>=</ml:mo>
+      <ml:mfrac>
+        <ml:mrow>
+          <ml:mrow>
+            <ml:mo>-</ml:mo>
+            <ml:mi>b</ml:mi>
+          </ml:mrow>
+          <ml:mo>&#177;</ml:mo>
+          <ml:msqrt>
+            <ml:mrow>
+              <ml:msup>
+                <ml:mi>b</ml:mi>
+                <ml:mn>2</ml:mn>
+              </ml:msup>
+              <ml:mo>-</ml:mo>
+              <ml:mrow>
+                <ml:mn>4</ml:mn>
+                  <ml:mi>a</ml:mi>
+                <ml:mi>c</ml:mi>
+              </ml:mrow>
+            </ml:mrow>
+          </ml:msqrt>
+        </ml:mrow>
+        <ml:mrow>
+          <ml:mn>2</ml:mn>
+          <ml:mi>a</ml:mi>
+        </ml:mrow>
+      </ml:mfrac>
+    </ml:mrow>
+</p>
+
+  <p>For example, the roots of the quadratic equation</p>
+
+  <p id="eq3">
+  </p>
+  <ml:mrow>
+    <ml:mrow>
+      <ml:mn>2</ml:mn>
+      <ml:msup>
+        <ml:mi>x</ml:mi>
+        <ml:mn>2</ml:mn>
+      </ml:msup>
+      <ml:mo>-</ml:mo>
+      <ml:mrow>
+        <ml:mn>14</ml:mn>
+        <ml:mi>x</ml:mi>
+      </ml:mrow>
+      <ml:mo>+</ml:mo>
+      <ml:mn>20</ml:mn>
+    </ml:mrow>
+    <ml:mo>=</ml:mo>
+    <ml:mn>0</ml:mn>
+  </ml:mrow>
+  <p>can be determined by first substituting 2 for a, -14 for b, and 20 for c</p>
+
+    <p id="eq4">
+      <ml:mrow>
+        <ml:mi>x</ml:mi>
+        <ml:mo>=</ml:mo>
+        <ml:mfrac>
+          <ml:mrow>
+            <ml:mrow>
+              <ml:mi>14</ml:mi>
+            </ml:mrow>
+            <ml:mo>&#177;</ml:mo>
+            <ml:msqrt>
+              <ml:mrow>
+                <ml:msup>
+                  <ml:mi>(-14)</ml:mi>
+                  <ml:mn>2</ml:mn>
+                </ml:msup>
+                <ml:mo>-</ml:mo>
+                <ml:mrow>
+                  <ml:mn>4</ml:mn>
+                    <ml:mi>(2)</ml:mi>
+                  <ml:mi>(20)</ml:mi>
+                </ml:mrow>
+              </ml:mrow>
+            </ml:msqrt>
+            </ml:mrow>
+            <ml:mrow>
+              <ml:mn>2</ml:mn>
+              <ml:mi>(2)</ml:mi>
+            </ml:mrow>
+            </ml:mfrac>
+            </ml:mrow>
+  </p>
+  <p>and then solving the expression, which gives the roots of the equation as either <i>x</i> = 5 or <i>x</i> = 2.</p>
+  <p id="note">Created using MathML and XHTML</p>
+</div>
+
+</body>
+</ml:html> 

@@ -1,0 +1,49 @@
+<!-- File Name: Inventory Attribute.htm -->
+
+<HTML>
+
+<HEAD>
+   <TITLE>Book Inventory</TITLE>
+</HEAD>
+
+<BODY>
+
+   <XML ID="dsoInventory" SRC="Inventory Valid.xml"></XML>
+
+   <H2>Book Inventory</H2>
+   
+   <TABLE DATASRC="#dsoInventory" BORDER="1" CELLPADDING="5">
+      <THEAD>
+         <TH>Title</TH>
+         <TH>Author</TH>
+         <TH>Binding</TH>
+         <TH>Pages</TH>
+         <TH>Price</TH>
+         <TH>In Stock?</TH>
+      </THEAD>     
+      <TR ALIGN="center">
+         <TD>
+            <TABLE DATASRC="#dsoInventory" DATAFLD="TITLE">
+            <TR>
+               <TD><SPAN DATAFLD="$TEXT"></SPAN></TD>
+            </TR>
+            </TABLE>
+         </TD>
+         <TD>
+            <TABLE DATASRC="#dsoInventory" DATAFLD="AUTHOR">
+            <TR>
+               <TD><SPAN DATAFLD="$TEXT"></SPAN></TD>
+               <TD><SPAN DATAFLD="Born"></SPAN></TD>
+            </TR>
+            </TABLE>
+         </TD>
+         <TD><SPAN DATAFLD="BINDING"></SPAN></TD>
+         <TD><SPAN DATAFLD="PAGES"></SPAN></TD>
+         <TD><SPAN DATAFLD="PRICE"></SPAN></TD>
+         <TD><SPAN DATAFLD="InStock"></SPAN></TD>
+      </TR>
+   </TABLE>
+
+</BODY>
+
+</HTML>
