@@ -1,0 +1,69 @@
+
+//leastCommonAncestor no driver
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TestCases
+{
+    public class testCase29
+    {
+        bool debug = false;
+
+        public void leastCommonAncestor(Node *pRoot, Node *pA, Node *pB, bool &a_found, bool &b_found, Node **ppLCA)
+        {
+            if(!pA || !pB)
+            {
+                std::cout << "Error!" << std::endl;
+                return;
+            }
+            if(*ppLCA || !pRoot) return;
+            if(pRoot->Val == pA->Val) a_found = true;
+            if(pRoot->Val == pB->Val) b_found = true;
+            if(!(*ppLCA) && a_found && b_found) /*A and B are the same nodes*/
+            {
+                *ppLCA = pRoot;
+                return;
+            }
+            
+            bool a_left_found = false, a_right_found = false, b_left_found = false, b_right_found = false;
+            leastCommonAncestor(pRoot->pLeft, pA, pB, &a_left_found, &b_left_found, ppLCA);
+            if(!(*ppLCA))
+            {
+                leastCommonAncestor(pRoot->pRight, pA, pB, &a_right_found, &b_right_found, ppLCA);
+            }
+            if(!(*ppLCA) && /*in case of there are several given nodes in the tree*/
+            (a_left_found && b_right_found) || (a_right_found && b_left_found) || /*different subtrees*/
+            (a_found && (b_left_found || b_right_found)) || (b_found &&(a_left_found || a_right_found))) /*LCA is one of given nodes*/
+            {
+                *ppLCA = pRoot;
+                return;
+            }
+            if(!a_found) a_found = a_left_found || a_right_found;
+            if(!b_found) b_found = b_left_found || b_right_found;
+        }
+    }
+    
+    public class leastCommonAncestorEx1
+    {
+        //Driver Function like main
+        public void driverCall()
+        {
+            Console.WriteLine(" 29_LeastCommonAncestor.cs  ");
+
+            testCase29 sn = new testCase29();
+
+// leastCommonAncestor(Node *pRoot, Node *pA, Node *pB, bool &a_found, bool &b_found, Node **ppLCA)
+            //Node *pRoot, Node *pA, Node *pB, bool &a_found, bool &b_found, Node **ppLCA
+
+            sn.leastCommonAncestor(pRoot, pA, pB, a_found, b_found, ppLCA);
+
+            Console.ReadLine();             
+        }
+    }
+
+}
+

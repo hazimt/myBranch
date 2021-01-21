@@ -1,0 +1,73 @@
+[{
+    "Employee": 1,
+    "Manager": 2
+},
+{
+    "Employee": 1,
+    "Manager": 3
+},
+{
+    "Employee": 1,
+    "Manager": 4
+},
+{
+    "Employee": 2,
+    "Manager": 5
+},
+{
+    "Employee": 2,
+    "Manager": 6
+},
+{
+    "Employee": 3,
+    "Manager": 7
+},
+{
+    "Employee": 4,
+    "Manager": 8
+},
+{
+    "Employee": 4,
+    "Manager": 9
+},
+{
+    "Employee": 4,
+    "Manager": 10
+},
+{
+    "Employee": 5,
+    "Manager": 11
+},
+{
+    "Employee": 11,
+    "Manager": 12
+},
+{
+    "Employee": 11,
+    "Manager": 13
+},
+{
+    "Employee": 7,
+    "Manager": 14
+},
+{
+    "Employee": 7,
+    "Manager": 15
+},
+{
+    "Employee": 15,
+    "Manager": 16
+},
+{
+    "Employee": 15,
+    "Manager": 17
+},
+{
+    "Employee": 15,
+    "Manager": 18
+},
+{
+    "Employee": 6,
+    "Manager": 13
+}
+]

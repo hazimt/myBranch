@@ -1,0 +1,82 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+//Singleton.cs
+
+/// <summary>
+/// First Singleton version
+/// </summary>
+
+namespace TestCases  //SingletonDemo
+{
+    //Singleton.cs
+    /*
+     *  Sealed restricts the inheritance
+     */
+
+     //sealed: means no one can inherit from Singleton because it's sealed
+    public sealed class Singleton
+    {
+        //To Find out if several obj are crated create two things: Counter, a constructor 
+        private static int counter = 0;
+
+        //Restrict the multiple instance creation
+        //1. All constructors private --> 1.1 This will cause inaccssible due to protection level. -->
+        // 1.2 Create a public field/Constructor.
+        // 1.3 Create a new private 
+        
+        //1.3 Create a new private field to prevent multiple instances.  
+        private static Singleton instance = null;
+        //2. change the class to a Sealed class so it can't be inhertied.
+        //1.2 This will indirectly give access to the private constrctor. 
+        public static Singleton GetInstance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new Singleton();
+                return instance;
+            }
+        }
+
+        private Singleton()
+        {
+            counter++;
+            Console.WriteLine("Counter Value " + counter.ToString());
+        }
+    
+        public void printDetails(string message)
+        {
+            Console.WriteLine(message);
+        }
+    }
+
+
+    //SingletonDemo
+    public class testCase9
+    {
+        public void SingletonDemoCall()
+        {
+            Console.WriteLine("Singleton Demo Call");
+            
+            //Step 1
+            Singleton s1 = Singleton.GetInstance;
+            s1.printDetails("From S1");
+
+            //Step 2
+            Singleton fromStudent = Singleton.GetInstance;
+            fromStudent.printDetails("from Student");
+
+            //Step 3
+            Singleton fromEmploy = Singleton.GetInstance;
+            fromEmploy.printDetails("from Employee");
+
+            Console.ReadLine();
+        }
+    }
+
+}
+

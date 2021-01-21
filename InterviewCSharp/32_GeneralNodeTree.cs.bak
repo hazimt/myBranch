@@ -1,0 +1,124 @@
+//https://stackoverflow.com/questions/40675162/install-a-nuget-package-in-visual-studio-code
+//Nuget
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.IO;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
+namespace TestCases
+{
+    public class testCase32
+    {
+        bool debug = false;        
+        public int somefn()
+        {
+
+            return 1;
+        }
+    }
+
+
+    //Copy the jason file in 32_OrgChart.json to https://json2csharp.com/json-to-csharp 
+    //It will generate the below class 
+    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
+    public class Node    {
+        public int Employee { get; set; } 
+        public int Manager { get; set; } 
+    }
+
+    public class Root
+    {
+        public int nodesize { get => nodesize; set => nodesize = value; }
+        public List<Node> node { get => node; set => node = value; } 
+    }
+
+    public class RootCollection
+    {
+        public List<Root> roots
+        {
+            get => roots;
+            set => roots = value; 
+        }
+    }
+    
+    public class DataSerializer
+    {
+        public object JasonDeserialize(Type dataType, string jasonFilePath)
+        {
+            JObject obj = null;
+
+            JsonSerializer jsonSerializer = new JsonSerializer();
+            
+            if (File.Exists(jasonFilePath))
+            {
+                StreamReader sr = new StreamReader(jasonFilePath);
+                JsonReader jsonReader = new JsonTextReader(sr);
+                obj = jsonSerializer.Deserialize(jsonReader) as JObject;
+                jsonReader.Close();
+                sr.Close();
+            }
+            
+            return obj.ToObject(dataType);
+        }
+        
+    }
+
+    //https://stackoverflow.com/questions/22191167/convert-json-string-to-c-sharp-object-list
+    public class readJasonFile
+    {
+        public void readjason()
+        {
+            //var model = JsonConvert.DeserializeObject<List<MatrixModel.RootObject>>(json);
+            //DataSerializer dataSerializer = new DataSerializer();
+            //Node n = null;
+
+            string jasonFilePath = @"C:\Users\Mars\source\myBranch\InterviewCSharp\InterviewQuestionsVisualCode\32_OrgChart.json";
+            Node node = new Node();
+
+            try
+            {
+                //List<Node> n = dataSerializer.JasonDeserialize(typeof(Node), jasonFilePath) as List<Node>;
+
+                //RootObject rootObj= JsonConvert.DeserializeObject<RootObject>(File.ReadAllText(pathFile));
+                List<Node> n = JsonConvert.DeserializeObject<List<Node>>(File.ReadAllText(jasonFilePath));
+                
+                Console.Write("The size of the org chart is: ");
+                Console.WriteLine(n.Count());
+
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            Console.ReadLine();             
+        }
+    }
+
+
+    public class generalNodeTreeJ
+    {
+
+        //Driver Function like main
+        public void driverCall()
+        {
+            Console.WriteLine(" 32_GeneralNodeTree.cs  ");
+
+            readJasonFile rjf = new readJasonFile();
+            rjf.readjason();
+            
+
+            Console.ReadLine();             
+        }
+
+
+
+
+    }
+
+}
+

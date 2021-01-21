@@ -1,0 +1,66 @@
+//LeastCommonAncestor type 2 no driver
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TestCases
+{
+    public class testCase30
+    {
+        bool debug = false;        
+        public int somefn()
+        {
+
+            return 1;
+        }
+
+        TreeNode lca(TreeNode root, TreeNode a, TreeNode b)
+        {
+            List<TreeNode> pathA = new ArrayList<>();
+            List<TreeNode> pathB = new ArrayList<>();
+            dfs(root, a, pathA);
+            dfs(root, b, pathB);
+            int i = 0;
+
+            while(pathA.get(i) == pathB.get(i)) 
+                i++;
+
+            return pathA.get(i-1);
+        }
+
+        boolean dfs(TreeNode root, Node a, List<TreeNode> path)
+        {
+            if(root==null) return false;
+
+            path.add(root);
+            if(root.equals(a)) return true;
+
+            if(dfs(root.left, a, path)) return true;
+            if(dfs(root.rigth, a, path)) return true;
+
+            path.remove(path.length() - 1);
+
+            return false;
+        }
+    }
+    
+    public class leastCommonAncestorEx2
+    {
+        //Driver Function like main
+        public void driverCall()
+        {
+            Console.WriteLine(" 30_LeastCommonAncestor.cs  ");
+
+            testCase30 sn = new testCase30();
+
+            sn.somefn();
+
+            Console.ReadLine();             
+        }
+    }
+
+}
+

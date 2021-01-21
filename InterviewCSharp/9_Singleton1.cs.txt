@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+//Singleton1.cs
+
+/// <summary>
+/// First Singleton1 version
+/// </summary>
+
+namespace TestCases  //SingletonDemo
+{
+    //Singleton1.cs
+    /*
+     *  Sealed restricts the inheritance
+     */
+
+     //sealed: means no one can inherit from Singleton1 because it's sealed
+    public sealed class Singleton1
+    {
+        private static int counter = 0;
+        private static readonly object obj = new object(); 
+
+        //private constructor means it can only be instantiated within the class itself ONLY.
+        private Singleton1()
+        {
+            counter++;
+            Console.WriteLine("Counter Value " + counter.ToString());
+        }
+
+        private static Singleton1 instance = null;
+
+        public static Singleton1 GetInstance
+        {
+            get 
+            {
+                if (instance == null)
+                        instance = new Singleton1();
+                
+                return instance;
+            }
+        } 
+
+    }
+
+
+    //SingletonDemo
+    public class testCase9b
+    {
+        public void SingletonCall()
+        {
+
+            Console.ReadLine();
+        }
+    }
+
+}
+

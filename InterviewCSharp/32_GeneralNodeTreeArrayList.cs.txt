@@ -1,0 +1,358 @@
+//https://java2blog.com/lowest-common-ancestor-n-ary-tree/
+
+//https://stackoverflow.com/questions/40675162/install-a-nuget-package-in-visual-studio-code
+//Nuget
+
+
+/*
+Output
+
+Programs: Hello World!
+Done
+ 32_GeneralNodeTree.cs
+The size of the org chart is: 18
+Root: 1
+First & Child Node: 1, 2
+___________________________________________________
+2, 1
+3, 1
+4, 1
+5, 2
+6, 2
+7, 3
+8, 4
+9, 4
+10, 4
+11, 5
+12, 11
+13, 11
+14, 7
+15, 7
+16, 15
+17, 15
+18, 15
+21, 18
+___________________________________________________
+i: 0: Manager: 1, Employee: 2
+i: 1: Manager: 1, Employee: 3
+i: 2: Manager: 1, Employee: 4
+i: 3: Manager: 2, Employee: 5
+i: 4: Manager: 2, Employee: 6
+i: 5: Manager: 3, Employee: 7
+i: 6: Manager: 4, Employee: 8
+i: 7: Manager: 4, Employee: 9
+i: 8: Manager: 4, Employee: 10
+i: 9: Manager: 5, Employee: 11
+i: 10: Manager: 11, Employee: 12
+i: 11: Manager: 11, Employee: 13
+i: 12: Manager: 7, Employee: 14
+i: 13: Manager: 7, Employee: 15
+i: 14: Manager: 15, Employee: 16
+i: 15: Manager: 15, Employee: 17
+i: 16: Manager: 15, Employee: 18
+i: 17: Manager: 18, Employee: 21
+___________________________________________________
+Plesae provide the names of the values of the two children nodes:
+
+
+*/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.IO;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
+namespace TestCases
+{
+    public class orgListList : List<orgList> { }  
+
+    public class orgList : List<org> { }
+
+    public class org
+    {
+        public int Manager { get; set; }
+        public string Employee { get; set; }
+    }
+
+
+
+
+
+
+
+
+    public static class GlobalVar
+    {
+        public const string JASONFILEPATH = @"C:\Users\Mars\source\myBranch\InterviewCSharp\InterviewQuestionsVisualCode\32_OrgChart.json";
+    }
+
+    //Copy the jason file in 32_OrgChart.json to https://json2csharp.com/json-to-csharp 
+    //It will generate the below class 
+    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
+    public class Node    {
+        public int Employee { get; set; } 
+        public int Manager { get; set; } 
+    }
+    
+    //https://csharp.net-tutorials.com/collections/lists/
+    //Simple List class example
+
+    public class processJasonFile
+    {
+        //public List<Node> readjason(string jasonFilePath, ref Node root)
+        public Arraylist<Node> readjason(string jasonFilePath, ref int root)
+        {
+            Node node = new Node();
+
+            try
+            {
+                //RootObject rootObj= JsonConvert.DeserializeObject<RootObject>(File.ReadAllText(pathFile));
+                List<Node> myNode = JsonConvert.DeserializeObject<List<Node>>(File.ReadAllText(jasonFilePath));
+                
+                Console.Write("The size of the org chart is: ");
+                Console.WriteLine(myNode.Count());
+                Console.WriteLine("Root: {0}", myNode[0].Manager);
+                //Root
+                root = myNode[0].Manager;
+                Console.WriteLine("First & Child Node: {0}, {1}", myNode[0].Manager, myNode[0].Employee);
+                
+                return myNode;
+
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return null;
+            }      
+        }
+
+
+
+
+
+
+
+        //public List<Node> readjason(string jasonFilePath, ref Node root)
+        //https://www.google.com/search?q=C%23+read+a+json+file+one+record+at+a+time&oq=C%23+read+a+json+file+one+record+at+a+time&aqs=chrome..69i57j69i58.7344j0j7&sourceid=chrome&ie=UTF-8
+        //https://stackoverflow.com/questions/14934360/how-to-deserialize-json-string-to-object-list-in-c-sharp-dot
+        public List<Node> readjasonOneItemAtATime(string jasonFilePath, ref int root)
+        {
+            Node node = new Node();
+
+            // for (int i = 0; i < orgListList.length; i++) {
+            //     tree[i] = new ArrayList<>();
+            // }
+
+            // int count = 18;
+            // ArrayList arr1 = new ArrayList();
+            // Console.WriteLine("-----------------2-----------------");
+            // for (int i = 1; i < count; i++)
+            // {
+            //     for (int j = 1; j < 3; j++)
+            //         arr1.Add(new ArrayList(new[] { "value " + j++, "value " + j++}));
+            // }
+
+            // Console.WriteLine("--------------3--------------------");
+            // foreach (ArrayList innerArr in arr)
+            // {
+            //     foreach (object element in innerArr)
+            //     {
+            //         // Do something with the elements.
+            //         Console.WriteLine("element" + element);
+            //     }
+            // }
+
+
+            try
+            {
+                //RootObject rootObj= JsonConvert.DeserializeObject<RootObject>(File.ReadAllText(pathFile));
+                List<Node> myNode = JsonConvert.DeserializeObject<List<Node>>(File.ReadAllText(jasonFilePath));
+                var fileJson = JToken.Parse(jasonFilePath);
+
+                foreach (var item in fileJson["orgchart"])
+                {
+                    // do stuff
+                    //orgListList
+                }
+
+            
+                Console.Write("The size of the org chart is: ");
+                Console.WriteLine(myNode.Count());
+                Console.WriteLine("Root: {0}", myNode[0].Manager);
+                //Root
+                root = myNode[0].Manager;
+                Console.WriteLine("First & Child Node: {0}, {1}", myNode[0].Manager, myNode[0].Employee);
+                
+                return myNode;
+
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return null;
+            }      
+        }
+
+
+
+
+
+
+
+
+
+
+
+        public void printTreeNode(List<Node> myNode)
+        {
+               //Example1 Sample#1 print nodes
+                Console.WriteLine("___________________________________________________");
+                foreach (Node nodeItems in myNode)
+                    Console.WriteLine("{0}, {1}", nodeItems.Employee, nodeItems.Manager);
+
+                Console.WriteLine("___________________________________________________");
+                //Example2 Sample#2 print nodes
+                for(int i = 0; i < myNode.Count; i++)
+                {
+                    Console.WriteLine("i: " + i + ": Manager: " + myNode[i].Manager + ", Employee: " + myNode[i].Employee);
+                }
+                Console.WriteLine("___________________________________________________");
+        }
+
+        static int lca = -1;
+        public static bool getLCA(int node, List<Node> tree, int child1, int child2)
+        {
+            /* if current node is equal to one of the nodes whose lca 
+            we are finding, then it is a potential candidate for 
+            being the lca.
+            */
+            bool self = node == child1 || node == child2 ? true : false;
+
+            int count = 0;
+
+            /* recurring for every child. and keeping a count of result
+            of how many times we are getting true.
+            */
+            for (int i = 0; i < tree.Count; i++)
+            {
+                node = tree[i].Manager;
+                if (getLCA(node, tree, child1, child2))
+                    count++;
+                //Console.WriteLine("Manager: " + tree[i].Manager + ", Employee: " + tree[i].Employee);
+            }
+
+            // foreach (Node child in tree)
+            //     if (getLCA(child.Manager, tree, child1, child2))
+            //         count++;
+
+            /* this is the main check, if current node itself is one of 
+            the node whose lca is to be found and its getting true from 
+            any of its child, then surely it is LCA of given nodes.
+            also, if we get true from exactly two sides, this means 
+            that current node is the node after which the path for 
+            both nodes diverge, and hence it is the LCA for given nodes.
+            */ 
+            if (((self && count == 1) || (count == 2))) {
+                /* lca will be set only once, as the parent of
+                lca will have the count==2 condition as true,
+                but that is not the correct answer.
+                */
+                if (lca == -1) {
+                    lca = node;
+                }
+                return true;
+            }
+            /* current node will return true only if either the 
+            current node is one of the given nodes, or one of its 
+            children return true for count == 2, we already handled it
+            while setting LCA.
+            */
+
+            return self || count == 1;
+        }
+
+        //https://stackoverflow.com/questions/55361628/how-do-i-print-out-a-tree-structure-in-c/55364949
+        //https://stackoverflow.com/questions/1649027/how-do-i-print-out-a-tree-structure.
+        // public class Node
+        // {
+        //     public string Name; // method name
+        //     public decimal Time; // time spent in method
+        //     public List<Node> Children;
+        // }
+        public void PrintTree(Node tree)
+        {
+            List<Node> firstStack = new List<Node>();
+            firstStack.Add(tree);
+
+            List<List<Node>> childListStack = new List<List<Node>>();
+            childListStack.Add(firstStack);
+
+            while (childListStack.Count > 0)
+            {
+                List<Node> childStack = childListStack[childListStack.Count - 1];
+
+                if (childStack.Count == 0)
+                {
+                    childListStack.RemoveAt(childListStack.Count - 1);
+                }
+                else
+                {
+                    tree = childStack[0];
+                    childStack.RemoveAt(0);
+
+                    string indent = "";
+                    for (int i = 0; i < childListStack.Count - 1; i++)
+                    {
+                        indent += (childListStack[i].Count > 0) ? "|  " : "   ";
+                    }
+
+                    Console.WriteLine(indent + "+- " + tree.Manager);
+
+                    if (tree.Employee != 0)
+                    {
+                        childListStack.Add(new List<Node>(tree.Employee));
+                    }
+                }
+            }
+        }
+        
+    }
+
+
+    public class generalNodeTreeJ
+    {
+
+        //Driver Function like main
+        public void driverCall()
+        {
+            Console.WriteLine(" 32_GeneralNodeTreeArrayList.cs  ");
+
+            //Node root = null;
+            int root = 0;
+            int child1 = -1;
+            int child2 = -1;
+
+//        public List<Node> readjason(string jasonFilePath, ref Node root)
+
+            processJasonFile rjf = new processJasonFile();
+            //rjf.readjason(GlobalVar.JASONFILEPATH);
+            List<Node> tree = rjf.readjason(GlobalVar.JASONFILEPATH, ref root);
+            rjf.printTreeNode(tree);
+
+            //Node root = null;
+            //rjf.PrintTree(root);
+
+            //rjf.findLCA()
+		    //rjf.getLCA(1, tree, scn.nextInt(), scn.nextInt());
+            Console.WriteLine("Plesae provide the names of the values of the two children nodes:", child1, child2);
+            processJasonFile.getLCA(root, tree, child1, child2);
+            //public void findLCA(int root, List<Node> tree, int child1, int child2)
+
+            Console.ReadLine();
+        }
+    }
+}
+

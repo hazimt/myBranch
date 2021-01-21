@@ -1,0 +1,97 @@
+//I simple long division program. It accepts two floating point numbers and the number of digits to caculate too. I cheated a little by using “/” in the program once.
+// Long Division including decimal
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TestCases
+{
+    public class addTwoHugeNosDec_C
+    {
+        public int takeawaydec(double deno, double nume)
+        {
+            int mult = 0; // Number of time decimal point is slide until all 0's are on right
+            while (1)
+            {
+                if ((deno) != floor(deno) || (nume) != floor(nume))
+                {
+                    mult++;
+                    deno *= 10; // Shift decimal by one
+                    nume *= 10;
+                }
+                else
+                {
+                    return mult;
+                }
+            }
+            return 0;
+        }
+    }
+
+
+
+    public class driver15
+    {
+        public void driverCall()
+        {
+            Console.WriteLine("driverCall: Hello World");
+            Console.WriteLine("");
+
+            addTwoHugeNosDec_C anc = new addTwoHugeNosDec_C();
+
+            // (Numerator / Denominator)
+            double num; //Numerator
+            double den; //Denominator
+
+            int c; // For number to the left of decimal place
+            int i, j = 0; // “i” is for sliding decimals to the left. “j” is cycle through printing decimal places
+            int e; // Number of Decimals Taken off of input numbers
+            long int final; // Number of demimal place till end
+            long unsigned int a; //To get rid of deviations created by double precision
+            long unsigned int b;
+
+            Console.WriteLine(” Advanced Long Division Calculator\n”);
+            Console.WriteLine(“\n Input Numerator: “);
+            Console.ReadLine(“% lf”, &num);
+            Console.WriteLine(“\n Input Denominator: “);
+            Console.ReadLine(“% lf”, &den);
+            Console.WriteLine(“\n Number of decimal places: “);
+            Console.ReadLine(“% d”, &final);
+            if (final != 0)
+            { // We don’t always need the decimal to show up
+                Console.WriteLine(“\n % .0f.”, floor(num / den)); // Just to get rid of first digits to the left of decimal (This program is made for the right decimal places)
+            }
+            else
+            {
+                Console.WriteLine(“\n % .0f”, floor(num / den));
+            }
+            e = anc.takeawaydec(den, num); // Will slide of decimal places till only zeros are on the right (Please don’t put any more than 6 decimals on end)
+            for (i = 0; i <= e; i++)
+            {
+                num *= 10;
+                den *= 10;
+            }
+            a = floor(num);
+            b = floor(den);
+            c = a / b;
+            while (1)
+            { // This will cycle through one decimal digit at a time and print each
+                j++;
+                if (j == final + 1)
+                { // Must add a decimal place due to it allays being one decimal less than input
+                    Console.ReadKey();
+                    return 0;
+                }
+                a = 10 * (a - (c * b));
+                c = a / b;
+                Console.WriteLine("%d", c);
+            }
+            Console.ReadKey(); 
+
+        }
+    }
+}
+

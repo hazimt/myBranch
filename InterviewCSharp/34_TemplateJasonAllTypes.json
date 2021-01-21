@@ -1,0 +1,90 @@
+  [
+    {
+      "Question": {
+        "QuestionId": 49,
+        "QuestionText": "Whats your name?",
+        "TypeId": 1,
+        "TypeName": "MCQ",
+        "Model": {
+          "options": [
+            {
+              "text": "Rahul",
+              "selectedMarks": "0"
+            },
+            {
+              "text": "Pratik",
+              "selectedMarks": "9"
+            },
+            {
+              "text": "Rohit",
+              "selectedMarks": "0"
+            }
+          ],
+          "maxOptions": 10,
+          "minOptions": 0,
+          "isAnswerRequired": true,
+          "selectedOption": "1",
+          "answerText": "",
+          "isRangeType": false,
+          "from": "",
+          "to": "",
+          "mins": "02",
+          "secs": "04"
+        }
+      },
+      "CheckType": "",
+      "S1": "",
+      "S2": "",
+      "S3": "",
+      "S4": "",
+      "S5": "",
+      "S6": "",
+      "S7": "",
+      "S8": "",
+      "S9": "Pratik",
+      "S10": "",
+      "ScoreIfNoMatch": "2"
+    },
+    {
+      "Question": {
+        "QuestionId": 51,
+        "QuestionText": "Are you smart?",
+        "TypeId": 3,
+        "TypeName": "True-False",
+        "Model": {
+          "options": [
+            {
+              "text": "True",
+              "selectedMarks": "7"
+            },
+            {
+              "text": "False",
+              "selectedMarks": "0"
+            }
+          ],
+          "maxOptions": 10,
+          "minOptions": 0,
+          "isAnswerRequired": false,
+          "selectedOption": "3",
+          "answerText": "",
+          "isRangeType": false,
+          "from": "",
+          "to": "",
+          "mins": "01",
+          "secs": "04"
+        }
+      },
+      "CheckType": "",
+      "S1": "",
+      "S2": "",
+      "S3": "",
+      "S4": "",
+      "S5": "",
+      "S6": "",
+      "S7": "True",
+      "S8": "",
+      "S9": "",
+      "S10": "",
+      "ScoreIfNoMatch": "2"
+    }
+  ]
